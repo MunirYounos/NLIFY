@@ -1,0 +1,943 @@
+{
+  "current": {
+    "sticky_announcement_bar": true,
+    "hero_header": false,
+    "collection_grid_animation": false,
+    "section_height": "xsmall",
+    "border_radius": 1,
+    "button_padding_x": 30,
+    "button_padding_y": 20,
+    "page_wrapper": "1248",
+    "zindex_drawer": "99",
+    "color_announcement_bg": "#f48300",
+    "color_nav_text": "#6d6d6d",
+    "color_default": "#f7f7f7",
+    "color_border": "#f7f7f7",
+    "color_headings": "#6d6d6d",
+    "color_body_text": "#676767",
+    "color_primary": "#83d0bd",
+    "color_secondary": "#444444",
+    "color_input": "#e5e5e5",
+    "color_drawer_bg": "#6d6d6d",
+    "color_drawer_default": "#808080",
+    "color_drawer_border": "#808080",
+    "color_drawer_primary": "#444444",
+    "color_drawer_button_text": "#ffffff",
+    "color_drawer_secondary": "#83d0bd",
+    "color_drawer_input": "#444444",
+    "color_drawer_overlay": "#dfdfdf",
+    "color_drawer_overlay_opacity": 50,
+    "color_footer_bg": "#444444",
+    "color_footer_default": "#f7f7f7",
+    "color_footer_border": "#f7f7f7",
+    "color_footer_primary": "#83d0bd",
+    "color_footer_button_text": "#ffffff",
+    "color_footer_secondary": "#83d0bd",
+    "color_footer_input": "#666666",
+    "color_overlay": "rgba(0,0,0,0)",
+    "opacity_overlay": 11,
+    "favicon": "shopify:\/\/shop_images\/favicon-32x32.png",
+    "header_font_size": 28,
+    "header_font_size_big": 50,
+    "header_transform": "uppercase",
+    "base_font_size": 14,
+    "dbtfy_cart_countdown": false,
+    "dbtfy_custom_currencies": false,
+    "dbtfy_instagram_feed": false,
+    "dbtfy_live_view": false,
+    "dbtfy_sales_pop": false,
+    "dbtfy_social_discount": true,
+    "dbtfy_upsell_popup": false,
+    "dbtfy_addtocart_animation_type": "shakeX",
+    "dbtfy_addtocart_animation_interval": 10,
+    "dbtfy_cart_countdown_time_mins": 19,
+    "dbtfy_delivery_time_position": "under_add_to_cart_button",
+    "dbtfy_delivery_time_prefix": "Order before 13:00 .. order sent today",
+    "dbtfy_delivery_time_separator": "-",
+    "dbtfy_delivery_time_suffix": "days",
+    "dbtfy_delivery_time_date": false,
+    "dbtfy_delivery_time_from": 7,
+    "dbtfy_delivery_time_to": 14,
+    "dbtfy_inventory_quantity_show_random": false,
+    "dbtfy_live_view_suffix": "are looking at this product",
+    "dbtfy_live_view_min": 62,
+    "dbtfy_live_view_max": 100,
+    "sections": {
+      "drawer-menu": {
+        "type": "drawer-menu",
+        "settings": {
+          "drawer_link_toggle": true,
+          "email": true,
+          "phone": true,
+          "show_social_medias": true,
+          "title": "Menu",
+          "drawer_top_link_list": "main-menu",
+          "drawer_bottom_link_list": "footer"
+        }
+      },
+      "announcement": {
+        "type": "announcement",
+        "blocks": {
+          "announcement-0": {
+            "type": "message",
+            "settings": {
+              "announcement_text": "<p>Free shipping worldwide | 30-Day free returns<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "announcement-0"
+        ],
+        "settings": {
+          "show_announcement": true,
+          "show_social": true,
+          "email": true,
+          "phone": true,
+          "left_message": "<p>Follow us!<\/p>",
+          "right_message": "<p>Get in touch with us<\/p>",
+          "announcement_autoplayspeed": 5
+        }
+      },
+      "header": {
+        "type": "header",
+        "settings": {
+          "main_menu_link_list": "main-menu",
+          "navigation_type": "center",
+          "logo_link": true,
+          "default_logo": "shopify:\/\/shop_images\/Anodyne_483x150px.png",
+          "inverted_logo": "shopify:\/\/shop_images\/Anodyne_white_483x150px.png",
+          "mobile_logo": "shopify:\/\/shop_images\/Anodyne_483x150px.png",
+          "default_logo_svg": "",
+          "inverted_logo_svg": "",
+          "mobile_logo_svg": "",
+          "logo_width": 200,
+          "logo_mobile_width": 100
+        }
+      },
+      "dbtfy-instagram-feed": {
+        "type": "dbtfy-instagram-feed",
+        "settings": {
+          "dbtfy_instagram_feed_icon": false,
+          "dbtfy_instagram_feed_access_token": "",
+          "dbtfy_instagram_feed_resolution": "low_resolution",
+          "dbtfy_instagram_feed_full_width": false,
+          "title": "From our Instagram",
+          "subtitle": "",
+          "dbtfy_instagram_feed_section_style": "section-border",
+          "dbtfy_instagram_feed_rows": "1",
+          "dbtfy_instagram_feed_desktop_grid": "6",
+          "dbtfy_instagram_feed_mobile_grid": "3"
+        }
+      },
+      "guarantee": {
+        "type": "guarantee",
+        "blocks": {
+          "guarantee-0": {
+            "type": "text",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Happy.png",
+              "guarantee_icon": "loyalty",
+              "title": "Our Guarantee",
+              "text": "<p>Share your guarantees with your customers.<\/p>",
+              "button_style": "btn-outline-primary",
+              "button_label": ""
+            }
+          },
+          "guarantee-1": {
+            "type": "text",
+            "settings": {
+              "guarantee_icon": "loyalty",
+              "title": "Our Guarantee",
+              "text": "<p>Share your guarantees with your customers.<\/p>",
+              "button_style": "btn-outline-primary",
+              "button_label": ""
+            }
+          },
+          "guarantee-2": {
+            "type": "text",
+            "settings": {
+              "guarantee_icon": "loyalty",
+              "title": "Our Guarantee",
+              "text": "<p>Share your guarantees with your customers.<\/p>",
+              "button_style": "btn-outline-primary",
+              "button_label": ""
+            }
+          },
+          "b0820161-063b-4b1a-9f03-5afb4890dd28": {
+            "type": "text",
+            "settings": {
+              "guarantee_icon": "loyalty",
+              "title": "Our Guarantee",
+              "text": "<p>Share your guarantees with your customers.<\/p>",
+              "button_style": "btn-outline-primary",
+              "button_label": ""
+            }
+          }
+        },
+        "block_order": [
+          "guarantee-0",
+          "guarantee-1",
+          "guarantee-2",
+          "b0820161-063b-4b1a-9f03-5afb4890dd28"
+        ],
+        "settings": {
+          "show_guarantee": true,
+          "guarantee_size": "xl",
+          "section_style": "section-blank"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "footer-0": {
+            "type": "text",
+            "settings": {
+              "column_width": 2,
+              "svg": "",
+              "logo_width": 150,
+              "title": "About Us",
+              "subtitle": "",
+              "text": "<p>Share store details, promotions, or brand content with your customers.<\/p>",
+              "email": true,
+              "phone": true
+            }
+          },
+          "footer-1": {
+            "type": "link_list",
+            "settings": {
+              "column_width": 1,
+              "title": "Quick Links",
+              "subtitle": "",
+              "footer_link_list": "footer"
+            }
+          },
+          "footer-2": {
+            "type": "newsletter",
+            "settings": {
+              "column_width": 2,
+              "title": "Subscribe to our newsletter",
+              "subtitle": "A short sentence describing what someone will receive by subscribing"
+            }
+          }
+        },
+        "block_order": [
+          "footer-0",
+          "footer-1",
+          "footer-2"
+        ],
+        "settings": {
+          "show_social_media": true,
+          "social_title": "Follow-us on social media!",
+          "show_payment_icons": true,
+          "show_shopify_footer": true,
+          "show_debutify_footer": true,
+          "custom_credential": ""
+        }
+      },
+      "dbtfy-upsell-popup": {
+        "type": "dbtfy-upsell-popup",
+        "blocks": {
+          "ead6eaa3-3da2-430c-91f3-c7efd70d0a6d": {
+            "type": "upsell",
+            "settings": {
+              "dbtfy_upsell_popup_title": "Special Offer!",
+              "dbtfy_upsell_popup_text": "<p>Add this product to your cart and get 20% OFF your entire order.<\/p>",
+              "dbtfy_upsell_popup_product_trigger": "test-product",
+              "dbtfy_upsell_popup_product_offer": "test-product",
+              "dbtfy_upsell_popup_icons": "card_giftcard",
+              "button_label": "Claim offer!",
+              "dbtfy_upsell_popup_discount_name": "20% DISCOUNT",
+              "dbtfy_upsell_popup_discount_amount": "20",
+              "dbtfy_upsell_popup_discount_type": "%"
+            }
+          }
+        },
+        "block_order": [
+          "ead6eaa3-3da2-430c-91f3-c7efd70d0a6d"
+        ],
+        "settings": {
+          "dbtfy_upsell_popup_width": "",
+          "dbtfy_upsell_popup_description": "See product details",
+          "dbtfy_upsell_popup_cart": "No thanks",
+          "dbtfy_upsell_popup_checkout": "Go to checkout →",
+          "text_alignment": "text-center",
+          "dbtfy_upsell_popup_range": 75
+        }
+      },
+      "dbtfy-quantity-breaks": {
+        "type": "dbtfy-quantity-breaks",
+        "blocks": {
+          "7e504242-7572-4e7e-9d85-50919a3706f4": {
+            "type": "discount",
+            "settings": {
+              "dbtfy_quantity_breaks_range": 3,
+              "dbtfy_quantity_breaks_discount_code": "Test 1",
+              "dbtfy_quantity_breaks_discount_amount": "25",
+              "dbtfy_quantity_breaks_discount_type": "%"
+            }
+          }
+        },
+        "block_order": [
+          "7e504242-7572-4e7e-9d85-50919a3706f4"
+        ],
+        "settings": {
+          "dbtfy_quantity_breaks_text": "",
+          "dbtfy_quantity_breaks_single_text": "Buy _COUNT_: _PRICE_ _SAVED_AMOUNT_",
+          "dbtfy_quantity_breaks_more_discount_text_before": "Add",
+          "dbtfy_quantity_breaks_more_discount_text_after": "more item to unlock",
+          "dbtfy_quantity_breaks_more_discount_text_after_percentage": "off",
+          "dbtfy_quantity_breaks_highest_discount_text": "Highest discount applied!"
+        }
+      },
+      "dbtfy-cart-upsell": {
+        "type": "dbtfy-cart-upsell",
+        "settings": {
+          "dbtfy_cart_upsell_button_style": "btn--primary"
+        }
+      },
+      "dbtfy-color-swatches": {
+        "type": "dbtfy-color-swatches",
+        "blocks": {
+          "8dc0fec8-6822-4f8d-a0e7-f5742507d4c1": {
+            "type": "swatch",
+            "settings": {
+              "title": "white",
+              "dbtfy_swatches_color_value": "#ffffff"
+            }
+          },
+          "9cf0c0bd-79f7-4404-a842-feab681bd8f6": {
+            "type": "swatch",
+            "settings": {
+              "title": "black",
+              "dbtfy_swatches_color_value": "#000000"
+            }
+          }
+        },
+        "block_order": [
+          "8dc0fec8-6822-4f8d-a0e7-f5742507d4c1",
+          "9cf0c0bd-79f7-4404-a842-feab681bd8f6"
+        ],
+        "settings": {}
+      },
+      "product-template": {
+        "type": "product-template",
+        "settings": {
+          "dbtfy_product_tabs_position": "under_addtocart",
+          "show_product_vendor": false,
+          "show_product_type": true,
+          "show_product_sku": false,
+          "product_title_large": false,
+          "show_product_tags": false,
+          "show_product_collections": false,
+          "enable_image_zoom": true,
+          "enable_video_looping": true,
+          "media_layout": "thumbnails",
+          "quantity_enabled": true,
+          "product_selector": "radio",
+          "show_product_description": true,
+          "description_full": true,
+          "dbtfy_product_description_position": "separate_section",
+          "description_style": "section-blank",
+          "text_alignment": "text-center",
+          "text_alignment_mobile": "small--text-center"
+        }
+      },
+      "dbtfy-upsell-bundles": {
+        "type": "dbtfy-upsell-bundles",
+        "blocks": {
+          "fee1dbee-a8e4-47bc-92c9-5d8341d45896": {
+            "type": "bundle",
+            "settings": {
+              "dbtfy_upsell_bundles_product_trigger": "test-product",
+              "dbtfy_upsell_bundles_product_offer_1": "test-product",
+              "dbtfy_upsell_bundles_product_offer_2": ""
+            }
+          }
+        },
+        "block_order": [
+          "fee1dbee-a8e4-47bc-92c9-5d8341d45896"
+        ],
+        "settings": {
+          "dbtfy_upsell_bundles_title": "Frequently bought together",
+          "dbtfy_upsell_bundles_subtitle": "",
+          "dbtfy_upsell_bundles_total": "Total price:",
+          "dbtfy_upsell_bundles_cart": "Add selected items",
+          "dbtfy_upsell_bundles_icons": "library_add_check",
+          "dbtfy_upsell_bundles_current": "This item:",
+          "section_style": "section-border",
+          "dbtfy_upsell_bundles_reviews": false,
+          "dbtfy_upsell_bundles_limit": "2",
+          "dbtfy_upsell_bundles_position": "product"
+        }
+      },
+      "product-row": {
+        "type": "product-row",
+        "blocks": {
+          "854c67c2-5fdd-4abb-92b9-1d885996fb4e": {
+            "type": "row",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/lu-hero3-1.jpg",
+              "title": "Posture Shirt promotes better posture",
+              "text": "<p>Improve your posture with the popular Posture Shirt™ 2.0 for men. A posture correcting t-shirt for men designed with the patented Neuroband™ technology which activates and stimulates your muscles. The ActivePosture® Posture Shirt™ 2.0 has documented effect and is the only posture correcting shirt on the market that has obtained a CE registration as a medical device. The shirt can help reduce pain in neck, shoulders and back.<br\/><br\/>Do you suffer from regular pain or tension? Then this might be a solution for you. This is not just a regular T-shirt: The Posture Shirt™ 2.0 from ActivePosture® is patented, registered as a medical device and has, as the only product of its kind on the market, a well-documented effect on pain and tension. Our customers in the UK have given us a star rating of <a href=\"https:\/\/www.trustpilot.com\/review\/activeposture.co.uk?languages=en&stars=5\" target=\"_blank\"><span style=\"text-decoration:underline\">4.5 out of 5.0<\/span><\/a>.<\/p>",
+              "section_style": "section-border",
+              "image_alignement": "right",
+              "text_alignment": "",
+              "type_row": "",
+              "tag_row": "",
+              "product_row": "",
+              "collection_row": ""
+            }
+          },
+          "df930fbd-f865-4cc5-b68f-66670dff3109": {
+            "type": "row",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/60days.jpg",
+              "title": "60 days return",
+              "text": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+              "section_style": "section-border",
+              "image_alignement": "left",
+              "text_alignment": "text-center",
+              "type_row": "",
+              "tag_row": "",
+              "product_row": "",
+              "collection_row": ""
+            }
+          },
+          "55516dbb-5fcb-4398-80b2-15052fd15a72": {
+            "type": "row",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/CE_be.jpg",
+              "title": "CE certified",
+              "text": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+              "section_style": "section-border",
+              "image_alignement": "right",
+              "text_alignment": "text-center",
+              "type_row": "",
+              "tag_row": "",
+              "product_row": "",
+              "collection_row": ""
+            }
+          }
+        },
+        "block_order": [
+          "854c67c2-5fdd-4abb-92b9-1d885996fb4e",
+          "df930fbd-f865-4cc5-b68f-66670dff3109",
+          "55516dbb-5fcb-4398-80b2-15052fd15a72"
+        ],
+        "settings": {
+          "show_product_row": true
+        }
+      },
+      "dbtfy-pricing-table": {
+        "type": "dbtfy-pricing-table",
+        "settings": {
+          "title": "Pricing table",
+          "subtitle": "",
+          "section_style": "section-blank",
+          "dbtfy_button_position": "middle"
+        }
+      },
+      "product-recommendations": {
+        "type": "product-recommendations",
+        "settings": {
+          "show_product_recommendations": true,
+          "title": "Recommended for you",
+          "subtitle": "",
+          "section_style": "section-border",
+          "rows": "2",
+          "desktop_grid": "4",
+          "mobile_grid": "2",
+          "slider_related_products": true,
+          "arrows": true,
+          "dots": true,
+          "autoplay": false,
+          "autoplayspeed": 5
+        }
+      },
+      "dbtfy-faq-section": {
+        "type": "dbtfy-faq-section",
+        "settings": {
+          "title": "FAQ",
+          "subtitle": "",
+          "section_style": "section-border",
+          "dbtfy_faq_searchbox": true,
+          "dbtfy_faq_search_placeholder": "Search questions...",
+          "dbtfy_faq_bannerbox": true,
+          "dbtfy_faq_banner_icon": "live_help",
+          "dbtfy_faq_banner_text": "Didn't find your answer?",
+          "dbtfy_faq_banner_subtitle": "Our customer service will be happy to help you.",
+          "dbtfy_faq_btn": "Get in Touch"
+        }
+      },
+      "related-products": {
+        "type": "related-products",
+        "settings": {
+          "show_related_products": true,
+          "related_collection": true,
+          "same_vendor": false,
+          "same_type": false,
+          "never_empty": true,
+          "title": "You may also like",
+          "subtitle": "",
+          "section_style": "section-border",
+          "rows": "1",
+          "desktop_grid": "4",
+          "mobile_grid": "2",
+          "slider_related_products": true,
+          "arrows": true,
+          "dots": true,
+          "autoplay": false,
+          "autoplayspeed": 5
+        }
+      },
+      "quotes": {
+        "type": "quotes",
+        "settings": {
+          "show_testimonials": false,
+          "title": "Testimonials",
+          "subtitle": "",
+          "section_style": "section-blank",
+          "quote_width": "60",
+          "arrows": true,
+          "dots": true,
+          "autoplay": true,
+          "autoplayspeed": 5
+        }
+      },
+      "dbtfy-size-chart": {
+        "type": "dbtfy-size-chart",
+        "blocks": {
+          "3cdc3cef-542e-4b15-bb7e-389e690a0a67": {
+            "type": "text",
+            "settings": {
+              "dbtfy_size_chart_popup_title": "Size guide",
+              "dbtfy_size_chart_abovetext": "<p>test1<\/p>",
+              "dbtfy_size_chart_html": "<table>\n<thead><tr>\n<td>Mens<\/td>\n<td>Small<\/td>\n<td>Medium<\/td>\n<td>Large<\/td>\n<td>X-Large<\/td>\n<td>XX-Large<\/td>\n<\/tr><\/thead>\n<tbody>\n<tr>\n<td>Neck<\/td>\n<td>14-14.5<\/td>\n<td>15-15.5<\/td>\n<td>16-16.5<\/td>\n<td>17-17.5<\/td>\n<td>18-18.5<\/td>\n<\/tr>\n<tr>\n<td>Chest<\/td>\n<td>35-37<\/td>\n<td>38-40<\/td>\n<td>41-43<\/td>\n<td>44-46<\/td>\n<td>47-49<\/td>\n<\/tr>\n<tr>\n<td>Sleeve<\/td>\n<td>32-33<\/td>\n<td>33-34<\/td>\n<td>34-35<\/td>\n<td>35-36<\/td>\n<td>36-36.5<\/td>\n<\/tr>\n<tr>\n<td>Waist<\/td>\n<td>29-31<\/td>\n<td>32-34<\/td>\n<td>35-37<\/td>\n<td>38-40<\/td>\n<td>41-43<\/td>\n<\/tr>\n<\/tbody>\n<\/table>",
+              "dbtfy_size_chart_undertext": "<p>test2<\/p>",
+              "dbtfy_size_chart_product": "test-product",
+              "dbtfy_size_chart_collection": "",
+              "dbtfy_size_chart_tag": "",
+              "dbtfy_size_chart_type": ""
+            }
+          }
+        },
+        "block_order": [
+          "3cdc3cef-542e-4b15-bb7e-389e690a0a67"
+        ],
+        "settings": {
+          "dbtfy_size_chart_icon": "straighten",
+          "dbtfy_size_chart_title": "Size chart - <font color=\"#990000\"> Pay attention while picking your size!<\/font>",
+          "dbtfy_size_chart_width": "large"
+        }
+      },
+      "1621502354dc712a94": {
+        "type": "hero",
+        "blocks": {
+          "01c7c860-84ab-4a89-9016-ef0f64ff0563": {
+            "type": "slide",
+            "settings": {
+              "overlay": false,
+              "image": "shopify:\/\/shop_images\/Nude-heroimage_v2-1.png",
+              "image_position": "center center",
+              "image_position_mobile": "center center",
+              "video": "",
+              "title": "THE POSTURE SHIRT™ WHITE",
+              "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua?<\/p>",
+              "text_position": "align-center",
+              "text_position_mobile": "align-center",
+              "text_alignment": "text-left",
+              "text_alignment_mobile": "text-left",
+              "enable_custom_fonts": false,
+              "slideshow_family": "poppins_n4",
+              "button_label": "",
+              "button_link": "shopify:\/\/collections\/all",
+              "button_style": "btn--primary",
+              "button_label_2": "Learn more",
+              "button_link_2": "shopify:\/\/collections\/all",
+              "button_style_2": ""
+            }
+          }
+        },
+        "block_order": [
+          "01c7c860-84ab-4a89-9016-ef0f64ff0563"
+        ],
+        "settings": {
+          "section_height": "xlarge",
+          "section_height_mobile": "xlarge",
+          "arrows": false,
+          "dots": false,
+          "autoplay": false,
+          "autoplayspeed": 8
+        }
+      },
+      "1621503255614ef73d": {
+        "type": "featured-collections",
+        "blocks": {
+          "1621503255614ef73d-0": {
+            "type": "collection",
+            "settings": {
+              "collection": "frontpage"
+            }
+          },
+          "1621503255614ef73d-1": {
+            "type": "collection",
+            "settings": {
+              "collection": ""
+            }
+          },
+          "1621503255614ef73d-2": {
+            "type": "collection",
+            "settings": {
+              "collection": "frontpage"
+            }
+          }
+        },
+        "block_order": [
+          "1621503255614ef73d-0",
+          "1621503255614ef73d-1",
+          "1621503255614ef73d-2"
+        ],
+        "settings": {
+          "full_width": false,
+          "title": "Collection list",
+          "subtitle": "",
+          "section_style": "section-blank",
+          "section_height": "medium",
+          "show_view_all": false,
+          "button_label": "View all",
+          "button_link": "shopify:\/\/collections",
+          "button_style": "",
+          "slider_featured_collections": true,
+          "arrows": true,
+          "dots": true
+        }
+      },
+      "16215055281a0b314f": {
+        "type": "featured-products",
+        "settings": {
+          "title": "Featured collection",
+          "subtitle": "",
+          "section_style": "section-default",
+          "home_featured_products": "frontpage",
+          "rows": "1",
+          "desktop_grid": "4",
+          "mobile_grid": "2",
+          "show_view_all": false,
+          "button_label": "View all",
+          "button_style": "btn-outline-primary",
+          "slider_related_products": true,
+          "arrows": true,
+          "dots": true,
+          "autoplay": false,
+          "autoplayspeed": 5
+        }
+      },
+      "1621508318d35716b6": {
+        "type": "custom-html",
+        "blocks": {
+          "1621508318d35716b6-0": {
+            "type": "html",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Logo-icon_1000x1000px.png",
+              "mission_title": "We specialize in posture correction and pain relief",
+              "mission_description": "<p>For 6 years we have worked to ensure europeans access to easy and effective postural correction and pain relief products. Our key philosophy is that we do not sell products that we would not use ourselves. Since 2015 we have had more than 50.000 satisfied customers in the UK and we are intent on having many more in the future.<\/p>",
+              "column_width": 12,
+              "column_width_mobile": 12,
+              "text_alignment": "text-center",
+              "btn_text": "Read more",
+              "btn_url": "shopify:\/\/collections\/frontpage"
+            }
+          }
+        },
+        "block_order": [
+          "1621508318d35716b6-0"
+        ],
+        "settings": {
+          "padding_section": true,
+          "section_style": "section-blank",
+          "wrapper_size": "-small"
+        }
+      },
+      "1621508591647ecc21": {
+        "type": "quotes",
+        "blocks": {
+          "1621508591647ecc21-0": {
+            "type": "quote",
+            "settings": {
+              "icon": "format_quote",
+              "quote": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
+              "author": "Author's name"
+            }
+          },
+          "1621508591647ecc21-1": {
+            "type": "quote",
+            "settings": {
+              "icon": "format_quote",
+              "quote": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
+              "author": "Author's name"
+            }
+          },
+          "1621508591647ecc21-2": {
+            "type": "quote",
+            "settings": {
+              "icon": "format_quote",
+              "quote": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
+              "author": "Author's name"
+            }
+          }
+        },
+        "block_order": [
+          "1621508591647ecc21-0",
+          "1621508591647ecc21-1",
+          "1621508591647ecc21-2"
+        ],
+        "settings": {
+          "show_testimonials": true,
+          "title": "TRUSTPILOT",
+          "subtitle": "",
+          "section_style": "section-blank",
+          "quote_width": "50",
+          "arrows": true,
+          "dots": true,
+          "autoplay": true,
+          "autoplayspeed": 5
+        }
+      },
+      "16215087075968291b": {
+        "type": "featured-row",
+        "settings": {
+          "section_style": "section-blank",
+          "text_size": "large",
+          "image_alignement": "left",
+          "text_alignment": "text-center",
+          "title": "Image with text",
+          "text": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+          "button_style": "btn--primary",
+          "button_label": ""
+        }
+      },
+      "162150877540059d01": {
+        "type": "featured-video",
+        "blocks": {
+          "162150877540059d01-0": {
+            "type": "video",
+            "settings": {
+              "video_url": "https:\/\/www.youtube.com\/watch?v=FELJYnKpb4w"
+            }
+          }
+        },
+        "block_order": [
+          "162150877540059d01-0"
+        ],
+        "settings": {
+          "full_width": true,
+          "title": "THE POSTURE SHIRT™",
+          "subtitle": "",
+          "section_style": "section-default"
+        }
+      },
+      "1621508906b9867b4d": {
+        "type": "featured-columns",
+        "blocks": {
+          "1621508906b5323bb4-0": {
+            "type": "text_block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Happy.png",
+              "icon": "",
+              "title": "POSTURE CLOTHING WITH 100% SATISFACTION GUARANTEE",
+              "text": "<p>Use this text to describe what makes your store stand out from others and why customers should buy from you.<\/p>",
+              "button_style": "btn--primary",
+              "button_label": "SEE COLLECTION"
+            }
+          },
+          "1621508906b5323bb4-1": {
+            "type": "text_block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Forebyggende_v2.png",
+              "icon": "",
+              "title": "THE ORIGINAL POSTURE CLOTHING FOR POSTURE CORRECTION",
+              "text": "<p>Use this text to describe what makes your store stand out from others and why customers should buy from you.<\/p>",
+              "button_style": "btn--primary",
+              "button_label": "SEE COLLECTION"
+            }
+          },
+          "1621508906b5323bb4-2": {
+            "type": "text_block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Neuroband_288_2.png",
+              "icon": "",
+              "title": "FROM KINESIOTAPE TO POSTURE CLOTHING",
+              "text": "<p>Use this text to describe what makes your store stand out from others and why customers should buy from you.<\/p>",
+              "button_style": "btn--primary",
+              "button_label": "SEE COLLECTION"
+            }
+          }
+        },
+        "block_order": [
+          "1621508906b5323bb4-0",
+          "1621508906b5323bb4-1",
+          "1621508906b5323bb4-2"
+        ],
+        "settings": {
+          "title": "",
+          "subtitle": "",
+          "section_style": "section-blank",
+          "text_align": "text-center"
+        }
+      },
+      "list-collections-template": {
+        "type": "list-collections-template",
+        "settings": {
+          "display_type": "all",
+          "sort": "alphabetical",
+          "section_height": "small",
+          "collection_per_page": 12
+        }
+      },
+      "collection-template": {
+        "type": "collection-template",
+        "settings": {
+          "collection_tags_enable": false,
+          "collection_tags_count": false,
+          "collection_tags_multiple": false,
+          "collection_sort_enable": false,
+          "tag_selector": "button",
+          "rows": "4",
+          "desktop_grid": "4",
+          "mobile_grid": "2"
+        }
+      },
+      "password-header": {
+        "type": "password-header",
+        "settings": {
+          "logo_svg": "",
+          "logo_width": 150
+        }
+      },
+      "password-content": {
+        "type": "password-content",
+        "settings": {
+          "title": "Coming soon",
+          "newsletter_enable": true,
+          "newsletter_form_heading": "<p>Enter your email below and get notified first when we launch!<\/p>",
+          "newsletter_placeholder": "Email address",
+          "newsletter_button_text": "Notify me",
+          "show_share_buttons": true
+        }
+      },
+      "password-footer": {
+        "type": "password-footer",
+        "settings": {}
+      },
+      "dbtfy-faq-page": {
+        "type": "dbtfy-faq-page",
+        "blocks": {
+          "71668b43-c0e4-408f-89fb-7f0740a5e3c1": {
+            "type": "category_block",
+            "settings": {
+              "dbtfy_faq_category": "Category 1",
+              "dbtfy_faq_icons": "support"
+            }
+          },
+          "6903435e-a5f2-4ca3-9d37-3373ecd43147": {
+            "type": "text_block",
+            "settings": {
+              "dbtfy_faq_page_open": false,
+              "dbtfy_faq_page_icon": "",
+              "title": "Question",
+              "text": "<p>This is your answer.<\/p>"
+            }
+          },
+          "ed553b76-b2b1-49e1-8b93-ff1d5048c0ae": {
+            "type": "text_block",
+            "settings": {
+              "dbtfy_faq_page_open": false,
+              "dbtfy_faq_page_icon": "",
+              "title": "Question",
+              "text": "<p>This is your answer.<\/p>"
+            }
+          },
+          "f2ead7ef-7dc3-4e5e-b3e1-a1972643d976": {
+            "type": "category_block",
+            "settings": {
+              "dbtfy_faq_category": "Category",
+              "dbtfy_faq_icons": "support"
+            }
+          }
+        },
+        "block_order": [
+          "71668b43-c0e4-408f-89fb-7f0740a5e3c1",
+          "6903435e-a5f2-4ca3-9d37-3373ecd43147",
+          "ed553b76-b2b1-49e1-8b93-ff1d5048c0ae",
+          "f2ead7ef-7dc3-4e5e-b3e1-a1972643d976"
+        ],
+        "settings": {
+          "dbtfy_faq_searchbox": true,
+          "dbtfy_faq_search_placeholder": "Search questions...",
+          "dbtfy_faq_bannerbox": true,
+          "dbtfy_faq_banner_icon": "live_help",
+          "dbtfy_faq_banner_text": "Didn't find your answer?",
+          "dbtfy_faq_banner_subtitle": "Our customer service will be happy to help you.",
+          "dbtfy_faq_btn": "Get in Touch"
+        }
+      },
+      "16232441474a7e73cc": {
+        "type": "home-uspicons",
+        "blocks": {
+          "16232441474a7e73cc-0": {
+            "type": "service",
+            "settings": {
+              "title": "Service heading",
+              "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quis.",
+              "icon": "shopify:\/\/shop_images\/fast-delivery.png"
+            }
+          },
+          "16232441474a7e73cc-1": {
+            "type": "service",
+            "settings": {
+              "title": "Service heading",
+              "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quis.",
+              "icon": "shopify:\/\/shop_images\/return-delivery.png"
+            }
+          },
+          "32702720-9107-416c-a33d-2045f63da00f": {
+            "type": "service",
+            "settings": {
+              "title": "Service heading",
+              "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quis.",
+              "icon": "shopify:\/\/shop_images\/phone-call.png"
+            }
+          },
+          "b4d1c6a2-921b-4d1b-9ef7-c4633471e69c": {
+            "type": "service",
+            "settings": {
+              "title": "Service heading",
+              "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quis.",
+              "icon": "shopify:\/\/shop_images\/check.png"
+            }
+          }
+        },
+        "block_order": [
+          "16232441474a7e73cc-0",
+          "16232441474a7e73cc-1",
+          "32702720-9107-416c-a33d-2045f63da00f",
+          "b4d1c6a2-921b-4d1b-9ef7-c4633471e69c"
+        ],
+        "settings": {
+          "title": ""
+        }
+      }
+    },
+    "content_for_index": [
+      "1621502354dc712a94",
+      "16232441474a7e73cc",
+      "1621503255614ef73d",
+      "16215055281a0b314f",
+      "1621508318d35716b6",
+      "1621508591647ecc21",
+      "16215087075968291b",
+      "162150877540059d01",
+      "1621508906b9867b4d"
+    ]
+  }
+}
