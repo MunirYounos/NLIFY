@@ -1257,7 +1257,8 @@ $class-type: unquote(".");
 // Accent
 @mixin accentFontStack {
   font-family: $accentFontStack;
-  font-weight: $accentFontWeight;
+  font-weight: 100;
+  font-size: .79rem;
   font-style: $accentFontStyle;
   text-transform: $accentTextTransform;
   letter-spacing: $accentLetterSpacing;
@@ -1341,6 +1342,7 @@ $class-type: unquote(".");
 @mixin buttonBase {
   @include formControl;
   @include accentFontStack;
+  text-transform:uppercase;
   @include prefix("appearance", "none");
   @include prefix("user-select", "none");
   cursor: pointer;
@@ -2337,7 +2339,9 @@ $class-type: unquote(".");
 *::after {
   @include box-sizing();
 }
-
+html{
+  font-size:16px;
+}
 body {
   margin: 0;
   background-color: $colorBody;
@@ -3318,6 +3322,7 @@ button {
 .dropdown-link {
   display: block;
   width: 100%;
+  font-size:.79rem;
   padding: $paddingDropdown;
   background-color: transparent;
   text-align: left;
@@ -8685,5 +8690,19 @@ body:not(.dbtfy-wish_list-destroy) {
 /*================ _custom_styles ================*/
 {{ settings.custom_style }}
 {%- endif -%}
-p.guarantee-icon { color: #b9b9b9}
-h5.guarantee-title { color:#b9b9b9}
+.section-bottom{
+  margin-left: -($gutter - 10);
+  margin-top:$gutter;
+  .seo-text{
+    @include screenUp($postSmall){
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: $gutter-sm;
+    }
+
+    .cols{
+      font-weight: 100;
+      font-size:.79rem;
+    }
+  }
+}
