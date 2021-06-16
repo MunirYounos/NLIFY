@@ -9,31 +9,34 @@
     "button_padding_y": 20,
     "page_wrapper": "1248",
     "zindex_drawer": "99",
-    "color_announcement_bg": "#f48300",
-    "color_nav_text": "#6d6d6d",
+    "color_announcement_bg": "#f48400",
+    "color_nav_border": "#f1f1f1",
+    "color_nav_text": "#454545",
     "color_default": "#f7f7f7",
-    "color_border": "#f7f7f7",
-    "color_headings": "#6d6d6d",
-    "color_body_text": "#676767",
+    "color_border": "#bababa",
+    "color_headings": "#444444",
+    "color_body_text": "#252525",
     "color_primary": "#83d0bd",
-    "color_secondary": "#444444",
+    "color_secondary": "#ffffff",
     "color_input": "#e5e5e5",
-    "color_drawer_bg": "#6d6d6d",
-    "color_drawer_default": "#808080",
-    "color_drawer_border": "#808080",
-    "color_drawer_primary": "#444444",
+    "color_drawer_bg": "#f7f7f7",
+    "color_drawer_default": "#f7f7f7",
+    "color_drawer_border": "#dddddd",
+    "color_drawer_text": "#676767",
+    "color_drawer_primary": "#83d0bd",
     "color_drawer_button_text": "#ffffff",
     "color_drawer_secondary": "#83d0bd",
-    "color_drawer_input": "#444444",
+    "color_drawer_input": "#eaeaea",
     "color_drawer_overlay": "#dfdfdf",
     "color_drawer_overlay_opacity": 50,
     "color_footer_bg": "#444444",
     "color_footer_default": "#f7f7f7",
-    "color_footer_border": "#f7f7f7",
+    "color_footer_border": "#353a39",
+    "color_footer_text": "#c1c1c1",
     "color_footer_primary": "#83d0bd",
     "color_footer_button_text": "#ffffff",
     "color_footer_secondary": "#83d0bd",
-    "color_footer_input": "#666666",
+    "color_footer_input": "#ffffff",
     "color_overlay": "rgba(0,0,0,0)",
     "opacity_overlay": 11,
     "favicon": "shopify:\/\/shop_images\/favicon-32x32.png",
@@ -51,6 +54,7 @@
     "dbtfy_addtocart_animation_type": "shakeX",
     "dbtfy_addtocart_animation_interval": 10,
     "dbtfy_cart_countdown_time_mins": 19,
+    "dbtfy_color_swatches_count": 10,
     "dbtfy_delivery_time_position": "under_add_to_cart_button",
     "dbtfy_delivery_time_prefix": "Order before 13:00 .. order sent today",
     "dbtfy_delivery_time_separator": "-",
@@ -101,8 +105,8 @@
       "header": {
         "type": "header",
         "settings": {
-          "main_menu_link_list": "main-menu",
-          "navigation_type": "center",
+          "main_menu_link_list": "collection-menu",
+          "navigation_type": "left",
           "logo_link": true,
           "default_logo": "shopify:\/\/shop_images\/Anodyne_483x150px.png",
           "inverted_logo": "shopify:\/\/shop_images\/Anodyne_white_483x150px.png",
@@ -302,6 +306,7 @@
             "type": "swatch",
             "settings": {
               "title": "white",
+              "title2": "",
               "dbtfy_swatches_color_value": "#ffffff"
             }
           },
@@ -309,13 +314,23 @@
             "type": "swatch",
             "settings": {
               "title": "black",
+              "title2": "",
               "dbtfy_swatches_color_value": "#000000"
+            }
+          },
+          "f173f091-d5c0-48d9-845a-d768043b536f": {
+            "type": "swatch",
+            "settings": {
+              "title": "nude",
+              "title2": "",
+              "dbtfy_swatches_color_value": "#ceb3a7"
             }
           }
         },
         "block_order": [
           "8dc0fec8-6822-4f8d-a0e7-f5742507d4c1",
-          "9cf0c0bd-79f7-4404-a842-feab681bd8f6"
+          "9cf0c0bd-79f7-4404-a842-feab681bd8f6",
+          "f173f091-d5c0-48d9-845a-d768043b536f"
         ],
         "settings": {}
       },
@@ -576,7 +591,7 @@
           "1621503255614ef73d-0": {
             "type": "collection",
             "settings": {
-              "collection": "frontpage"
+              "collection": "posture-shirt"
             }
           },
           "1621503255614ef73d-1": {
@@ -644,7 +659,7 @@
               "column_width": 12,
               "column_width_mobile": 12,
               "text_alignment": "text-center",
-              "btn_text": "Read more",
+              "btn_text": "Our mission and values",
               "btn_url": "shopify:\/\/collections\/frontpage"
             }
           }
@@ -664,25 +679,34 @@
           "1621508591647ecc21-0": {
             "type": "quote",
             "settings": {
+              "quote_image": "shopify:\/\/shop_images\/anodyne-quote.png",
               "icon": "format_quote",
               "quote": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
-              "author": "Author's name"
+              "author": "Author's name",
+              "stars_pic": "shopify:\/\/shop_images\/download.png",
+              "quotes_link": "https:\/\/somelink.com"
             }
           },
           "1621508591647ecc21-1": {
             "type": "quote",
             "settings": {
+              "quote_image": "shopify:\/\/shop_images\/anodyne-quote.png",
               "icon": "format_quote",
               "quote": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
-              "author": "Author's name"
+              "author": "Author's name",
+              "stars_pic": "shopify:\/\/shop_images\/download.png",
+              "quotes_link": "https:\/\/somelink.com"
             }
           },
           "1621508591647ecc21-2": {
             "type": "quote",
             "settings": {
+              "quote_image": "shopify:\/\/shop_images\/anodyne-quote.png",
               "icon": "format_quote",
               "quote": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
-              "author": "Author's name"
+              "author": "Author's name",
+              "stars_pic": "shopify:\/\/shop_images\/download.png",
+              "quotes_link": "https:\/\/somelink.com"
             }
           }
         },
@@ -693,7 +717,8 @@
         ],
         "settings": {
           "show_testimonials": true,
-          "title": "TRUSTPILOT",
+          "title": "",
+          "trustpilot_imagetitle": "shopify:\/\/shop_images\/tp.261cc013.png",
           "subtitle": "",
           "section_style": "section-blank",
           "quote_width": "50",
@@ -703,26 +728,15 @@
           "autoplayspeed": 5
         }
       },
-      "16215087075968291b": {
-        "type": "featured-row",
-        "settings": {
-          "section_style": "section-blank",
-          "text_size": "large",
-          "image_alignement": "left",
-          "text_alignment": "text-center",
-          "title": "Image with text",
-          "text": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-          "button_style": "btn--primary",
-          "button_label": ""
-        }
-      },
       "162150877540059d01": {
         "type": "featured-video",
         "blocks": {
           "162150877540059d01-0": {
             "type": "video",
             "settings": {
-              "video_url": "https:\/\/www.youtube.com\/watch?v=FELJYnKpb4w"
+              "video_cover_image": "shopify:\/\/shop_images\/Nude-heroimage_v2-1.png",
+              "video_url": "https:\/\/www.youtube.com\/watch?v=FELJYnKpb4w",
+              "animated_button": true
             }
           }
         },
@@ -730,7 +744,7 @@
           "162150877540059d01-0"
         ],
         "settings": {
-          "full_width": true,
+          "full_width": false,
           "title": "THE POSTURE SHIRT™",
           "subtitle": "",
           "section_style": "section-default"
@@ -742,7 +756,7 @@
           "1621508906b5323bb4-0": {
             "type": "text_block",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Happy.png",
+              "image": "shopify:\/\/shop_images\/Anodyne_483x150px.png",
               "icon": "",
               "title": "POSTURE CLOTHING WITH 100% SATISFACTION GUARANTEE",
               "text": "<p>Use this text to describe what makes your store stand out from others and why customers should buy from you.<\/p>",
@@ -753,7 +767,7 @@
           "1621508906b5323bb4-1": {
             "type": "text_block",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Forebyggende_v2.png",
+              "image": "shopify:\/\/shop_images\/Anodyne_483x150px.png",
               "icon": "",
               "title": "THE ORIGINAL POSTURE CLOTHING FOR POSTURE CORRECTION",
               "text": "<p>Use this text to describe what makes your store stand out from others and why customers should buy from you.<\/p>",
@@ -764,7 +778,7 @@
           "1621508906b5323bb4-2": {
             "type": "text_block",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Neuroband_288_2.png",
+              "image": "shopify:\/\/shop_images\/Anodyne_483x150px.png",
               "icon": "",
               "title": "FROM KINESIOTAPE TO POSTURE CLOTHING",
               "text": "<p>Use this text to describe what makes your store stand out from others and why customers should buy from you.<\/p>",
@@ -781,8 +795,8 @@
         "settings": {
           "title": "",
           "subtitle": "",
-          "section_style": "section-blank",
-          "text_align": "text-center"
+          "section_style": "section-default",
+          "text_align": ""
         }
       },
       "list-collections-template": {
@@ -790,17 +804,17 @@
         "settings": {
           "display_type": "all",
           "sort": "alphabetical",
-          "section_height": "small",
+          "section_height": "medium",
           "collection_per_page": 12
         }
       },
       "collection-template": {
         "type": "collection-template",
         "settings": {
-          "collection_tags_enable": false,
-          "collection_tags_count": false,
-          "collection_tags_multiple": false,
-          "collection_sort_enable": false,
+          "collection_tags_enable": true,
+          "collection_tags_count": true,
+          "collection_tags_multiple": true,
+          "collection_sort_enable": true,
           "tag_selector": "button",
           "rows": "4",
           "desktop_grid": "4",
@@ -935,7 +949,6 @@
       "16215055281a0b314f",
       "1621508318d35716b6",
       "1621508591647ecc21",
-      "16215087075968291b",
       "162150877540059d01",
       "1621508906b9867b4d"
     ]

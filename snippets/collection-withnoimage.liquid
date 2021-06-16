@@ -1,0 +1,10 @@
+{%- if settings.show_hero and collection.image -%}
+{%- render 'hero-header' -%}
+	<div class="wrapper">
+					{%- unless collection.description == blank -%}
+					<div class="section-bottom">
+						<p>{{ collection.description }}</p>
+					</div>
+					{%- endunless -%}
+	</div>
+{%- endif -%}

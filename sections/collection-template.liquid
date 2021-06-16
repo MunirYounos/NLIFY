@@ -1,6 +1,7 @@
 <div id="CollectionSection" data-section-id="{{ section.id }}" data-section-type="collection-template">
   <div class="box">
     <div class="wrapper">
+
       {%- capture collection_header -%}
           <div class="section-header">
             <div class="page-title-wrapper">
@@ -8,11 +9,14 @@
             </div>
       </div>
       {%- endcapture -%}
-          {%- if collection.handle == 'all' or collection.handle == 'frontpage' -%}
-          {%- unless settings.show_hero and collection.image -%}
-            {{ collection_header }}
-          {%- endunless -%}
-        {%- endif -%}
+
+      {%- if collection.handle == 'all' or collection.handle == 'frontpage' -%}
+        {{ collection_header }}
+      {%- else -%}
+        {%- unless settings.show_hero and collection.image -%}
+          {{ collection_header }}
+        {%- endunless -%}
+      {%- endif -%}
 
       {%- if section.settings.collection_tags_enable or section.settings.collection_sort_enable -%}
       <div class="collection-filters text-center small--text-left">
@@ -160,17 +164,20 @@
  
       {%- endpaginate -%}
       {%- capture collection_header -%}
-
           <div class="section-bottom">
             {%- unless collection.description == blank -%}
             <p class="collection-description text-lead">{{ collection.description }}</p>
             {%- endunless -%}
-      </div>
+         </div>
       {%- endcapture -%}
-      {%- if collection.handle == 'all' or collection.handle == 'frontpage' -%}
-      {{ collection_header }}
-    {%- endif -%}
 
+      {%- if collection.handle == 'all' or collection.handle == 'frontpage' -%}
+        {{ collection_header }}
+      {%- else -%}
+        {%- unless settings.show_hero and collection.image -%}
+          {{ collection_header }}
+        {%- endunless -%}
+      {%- endif -%}
     </div>
   </div>
 </div>
