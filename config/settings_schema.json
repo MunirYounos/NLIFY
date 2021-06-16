@@ -663,13 +663,89 @@
     "settings": [
       {
         "type": "header",
+        "content": "Anodyne Colors"
+      },
+      {
+        "type": "color",
+        "id": "anodyne_primary_color",
+        "label": "Anodyne primary color",
+        "default": "#83d0bd"
+      },
+      {
+        "type": "color",
+        "id": "anodyne_primary_dark_color",
+        "label": "Anodyne primary dark color",
+        "default": "#33938c"
+      },
+      {
+        "type": "color",
+        "id": "anodyne_primary_light_color",
+        "label": "Anodyne primary light color",
+        "default": "#aadad2"
+      },
+      {
+        "type": "color",
+        "id": "anodyne_primary_white_color",
+        "label": "Anodyne primary white color",
+        "default": "#f0fffc"
+      },
+      {
+        "type": "color",
+        "id": "anodyne_secondary_color",
+        "label": "Anodyne Secondary color",
+        "default": "#f48400"
+      },
+      {
+        "type": "color",
+        "id": "anodyne_light_gray",
+        "label": "Anodyne light gray color",
+        "default": "#868686"
+      },
+      {
+        "type": "color",
+        "id": "anodyne_dark_gray",
+        "label": "Anodyne dark gray color",
+        "default": "#444444"
+      },
+      {
+        "type": "color",
+        "id": "anodyne_footer_color",
+        "label": "Anodyne footer color",
+        "default": "#161c1c"
+      },
+      {
+        "type": "color",
+        "id": "anodyne_background_color",
+        "label": "Anodyne background color",
+        "default": "#f7f7f7"
+      },
+      {
+        "type": "color",
+        "id": "anodyne_offwhite_color",
+        "label": "Anodyne off white color",
+        "default": "#e5e5e5"
+      },
+      {
+        "type": "color",
+        "id": "anodyne_white_text_color",
+        "label": "Anodyne main white text color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "anodyne_black_text_color",
+        "label": "Anodyne main black text color",
+        "default": "#252525"
+      },
+      {
+        "type": "header",
         "content": "Announcement"
       },
       {
         "type": "color",
         "id": "color_announcement_bg",
         "label": "Background",
-        "default": "#260759"
+        "default": "#f48400"
       },
       {
         "type": "color",
@@ -736,19 +812,19 @@
       {
         "type": "color",
         "id": "color_primary",
-        "label": "Buttons",
+        "label": "Primary color",
         "default": "#5600E3"
       },
       {
         "type": "color",
         "id": "color_button_text",
-        "label": "Buttons label",
+        "label": "Buttons labels color",
         "default": "#FFFFFF"
       },
       {
         "type": "color",
         "id": "color_secondary",
-        "label": "Links and accents",
+        "label": "Color secondary",
         "default": "#2DFFB3"
       },
       {

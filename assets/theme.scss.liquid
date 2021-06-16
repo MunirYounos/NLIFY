@@ -206,15 +206,6 @@ _App_style
 ==============================================================================*/
 
 /*================ _Master_variables ================*/
-/*--------custom variables from anodyne-----------*/
-$primary-clr: #83d0bd;
-$secondary-clr: #868686;
-$anodyne-heading: #6d6d6d;
-$dark-gray: #444;
-$accent: #f48400;
-$white:#fff;
-$black:#000;
-/*--------custom variables from anodyne-----------*/
 // Base font size
 $baseFontSize: {{ settings.base_font_size }}px;
 $baseFontSize-sm: floor($baseFontSize * .8);
@@ -248,6 +239,21 @@ $borderStyle: solid;
 $borders: ($borderWidth) ($borderStyle) ($colorBorder);
 
 /*================ _All_variables ================*/
+/*--------custom variables from anodyne-----------*/
+$anodyne-primary-clr: {{ settings.anodyne_primary_color }};
+$anodyne-primary-dark-clr: {{ settings.anodyne_primary_dark_color }};
+$anodyne-primary-light-clr: {{ settings.anodyne_primary_light_color }};
+$anodyne-primary-white-clr: {{ settings.anodyne_primary_white_color }};
+$anodyne-secondary-clr: {{ settings.anodyne_secondary_color }};
+$anodyne-light-gray-clr: {{ settings.anodyne_light_gray }};
+$anodyne-dark-gray-clr: {{ settings.anodyne_dark_gray }};
+$anodyne-footer-clr: {{ settings.anodyne_footer_color }};
+$anodyne-background-clr: {{ settings.anodyne_background_color }};
+$anodyne-offwhite-clr: {{ settings.anodyne_offwhite_color}};
+$white: {{ settings.anodyne_white_text_color }};
+$black: {{ settings.anodyne_black_text_color }};
+
+/*--------custom variables from anodyne-----------*/
 // Colors
 $colorPrimary: {{ settings.color_primary }};
 $colorSecondary: {{ settings.color_secondary }};
@@ -394,7 +400,7 @@ $heroHeightMobileXlarge: calc(100vh - #{$heightHeaderMobile});
 // Collection Grid
 $collectionHeightXsmall: 100px;
 $collectionHeightSmall: 200px;
-$collectionHeightMedium: 300px;
+$collectionHeightMedium: 320px;
 $collectionHeightLarge: 400px;
 $collectionHeightXlarge: 500px;
 
@@ -1325,7 +1331,7 @@ $class-type: unquote(".");
   font-size: $baseFontSize;
   line-height: $baseLineHeight;
   display: inline-block;
-  border: 1px solid lighten($secondary-clr, 45%) !important;
+  border: 1px solid lighten($anodyne-light-gray-clr, 45%) !important;
   &:focus {
     outline: 0;
   }
@@ -1350,8 +1356,8 @@ $class-type: unquote(".");
 // Button color
 @mixin button($background, $color, $style: default) {
   @if $style == "default" {
-    background-color: $dark-gray;
-    border-color: $background;
+    background-color: $background;
+    border-color: $color;
     color: $color;
   }
 
@@ -1385,7 +1391,7 @@ $class-type: unquote(".");
 
 // Button small
 @mixin buttonSmall {
-  padding: $paddingButtonSmallY $paddingButtonSmallX;
+  padding: ($paddingButtonSmallX + 4) ($paddingButtonSmallX * 2);
 }
 
 // Button xsmall
@@ -1430,12 +1436,12 @@ $class-type: unquote(".");
 
 // Button unselected
 @mixin buttonUnselected {
-  @include button($colorInput, $colorBodyText);
+  @include button($anodyne-offwhite-clr, $anodyne-dark-gray-clr);
 }
 
 // Button selected
 @mixin buttonSelected {
-  @include button($colorPrimary, $colorButtonText);
+  @include button($anodyne-primary-clr, $anodyne-dark-gray-clr);
 }
 
 // Button loading
@@ -1539,7 +1545,7 @@ $class-type: unquote(".");
       ~label {
         &::before,
         &::after {
-          color: $colorPrimary;
+          color: $anodyne-primary-clr;
         }
       }
     }
@@ -1807,7 +1813,7 @@ $class-type: unquote(".");
 
   // Progress
   .progress {
-    background-color: $default;
+    background-color: lighten($anodyne-light-gray-clr, 20%);
   }
 
   .progress-bar {
@@ -1816,11 +1822,11 @@ $class-type: unquote(".");
 
   // Background
   .bg-default {
-    background-color: $default;
+    background-color: $anodyne-offwhite-clr
   }
 
   // Buttons
-  .btn--primary { @include button($primary, $buttonText) }
+  .btn--primary { @include button($background, $text) }
   .btn-outline-primary { @include button($primary, $buttonText, outline) }
 
   // Badge
@@ -1842,7 +1848,7 @@ $class-type: unquote(".");
   // Color swatches
   .swatch {
     label {
-      background-color: $default;
+      background-color: $anodyne-dark-gray-clr;
     }
 
     input:checked + .swatch-element {
@@ -1859,7 +1865,7 @@ $class-type: unquote(".");
 
   // Text
   .text-primary { color: $primary }
-  .text-secondary { color: $secondary }
+  .text-secondary { color: $anodyne-dark-gray-clr }
 
   // Form feedback
   .form-success {
@@ -1884,7 +1890,7 @@ $class-type: unquote(".");
       ~label {
         &::before,
         &::after {
-          color: $primary;
+          color: $anodyne-primary-clr;
         }
       }
     }
@@ -2065,7 +2071,7 @@ $class-type: unquote(".");
   font-size: $iconFontSize-md;
   opacity: 0;
   @include buttonBase;
-  @include button($colorBody, $colorBodyText);
+  @include button( $anodyne-light-gray-clr,$anodyne-offwhite-clr);
   @include buttonSquareSmall;
   @include removeContent;
 
@@ -2859,7 +2865,7 @@ button {
 
 // Colors
 .btn--primary {
-  @include button($colorPrimary, $colorButtonText);
+  @include button($anodyne-primary-clr, $white);
 }
 
 .btn-outline-primary {
@@ -2969,7 +2975,7 @@ button {
 {%- if settings.show_top_button -%}
 // Scroll to top button
 .btn-top {
-  @include button($colorBody, $colorBodyText);
+  @include button($anodyne-primary-clr, $white);
   position: fixed;
   z-index: ($zindexOverBody - 1);
   bottom: $gutter;
@@ -3181,7 +3187,7 @@ button {
 /*================ _Badges ================*/
 .badge {
   @include textSub;
-  background-color: $accent;
+  background-color: $anodyne-secondary-clr;
   color: $colorBody;
   border-radius: $borderRadius;
   padding: 8px 12px;
@@ -3321,12 +3327,12 @@ button {
   &:hover,
   &:focus,
   .dropdown-open > & {
-    background-color: $colorDefault;
+    background-color: $anodyne-background-clr;
     opacity: 1;
   }
 
   &.dropdown-link-active {
-    color: $colorSecondary;
+    color: $anodyne-primary-clr;
   }
 
   .dropdown-menu-grandchild & {
@@ -3350,9 +3356,7 @@ button {
 }
 
 /*================ _Cards ================*/
-.quotes-section {
-  background-color: $colorDefault;
-}
+
 .card {
    border: 1px solid darken($colorDefault, 10%);
   border-radius: $borderRadius;
@@ -3667,8 +3671,18 @@ table {
 
 /*================ _Medias ================*/
 .bgWhite{
+  cursor: pointer;
   background-color: $white;
-  border: 1px solid $secondary-clr;
+  border: 1px solid lighten($anodyne-light-gray-clr, 40%);
+  padding:$gutter !important;
+  transition: .3s ease-in all;
+  &:hover {
+    transform: translateY(-8px);
+    @include shadow($shadow);
+    .btn--primary{
+      background-color: $anodyne-dark-gray-clr;
+    }
+  }
 }
 .media-wrapper {
   position: relative;
@@ -3704,14 +3718,14 @@ table {
   .youtube-button {
     width: 100px;
     height: 100px;
-    background: $primary-clr;
+    background: $anodyne-primary-clr;
     z-index: 22;
     position: absolute;
     top: 50%;
     left: 50%;
     border-radius: 50%;
     transform: translate(-50%, -50%);
-    border: 12px solid lighten($primary-clr, 10%);
+    border: 12px solid lighten($anodyne-primary-clr, 10%);
     cursor: pointer;
     @include shadow($shadow);
     &::after{
@@ -3721,7 +3735,7 @@ table {
       left: -32px;
       width: 140px;
       height: 140px;
-      background-color: rgba($primary-clr, 0.4);
+      background-color: rgba($anodyne-primary-clr, 0.4);
       border-radius: 50%;
       z-index: 1;
       animation: pulseYoutube 2000ms ease-in infinite;
@@ -4385,7 +4399,7 @@ cite {
 }
 
 .overlay-content {
-  @include colorOverwrite($colorDrawer, $colorDrawerDefault, $colorDrawerBorder, $colorDrawerText, $colorDrawerPrimary, $colorDrawerSecondary, $colorDrawerButtonText, $colorDrawerInput);
+  @include colorOverwrite($colorDrawer, $colorDrawerDefault, $colorDrawerBorder, $colorDrawerText, $anodyne-primary-clr, $colorDrawerSecondary, $black, $colorDrawerInput);
 
   // Select
   select {
@@ -5097,7 +5111,7 @@ cite {
 
 .collection_grid-title {
   margin-bottom: 0;
-  background-color:$anodyne-heading;
+  background-color:$anodyne-dark-gray-clr;
   color: $white;
   padding: $gutter-sm $gutter;
 }
@@ -5130,7 +5144,7 @@ cite {
   transform: rotate(90deg);
   padding:floor($gutter-sm / 2) $gutter-sm;
   color:$white;
-  background-color: $primary-clr;
+  background-color: $anodyne-primary-clr;
 }
 /*============================================================================
   _Sections
@@ -5384,7 +5398,7 @@ cite {
   right: 5px;
   bottom: 5px;
   border: 2px solid $colorNav;
-  background-color: $colorSecondary;
+  background-color: $anodyne-secondary-clr;
   border-radius: $circle;
   @include transition($transitions);
 
@@ -5436,7 +5450,7 @@ cite {
     }
 
     .cart-link__bubble--visible {
-      background-color: $colorSecondary;
+      background-color: $anodyne-secondary-clr;
       border-color: $colorNav;
     }
   }
@@ -5691,6 +5705,9 @@ cite {
   .drawer.is-closing & {
     @include animated(fadeOutDown);
   }
+  .btn--primary{
+    @include button($anodyne-primary-clr, $white);
+  }
 }
 
 /*================ _Drawer_menu ================*/
@@ -5828,13 +5845,17 @@ cite {
 
 // Footer
 .site-footer {
-  @include colorOverwrite($colorFooter, $colorFooterDefault, $colorFooterBorder, $colorFooterText, $colorFooterPrimary, $colorFooterSecondary, $colorFooterButtonText, $colorFooterInput);
+  @include colorOverwrite($anodyne-footer-clr, $anodyne-primary-clr, $anodyne-primary-white-clr, $anodyne-background-clr, $anodyne-primary-clr, $anodyne-primary-clr, $white, $anodyne-light-gray-clr);
   position: relative;
   z-index: $zindexBase;
 
   // Select
   select {
     background-image: url("{{ 'icon-select-footer.svg' | asset_url }}");
+  }
+  .btn--footer{
+    background-color: $anodyne-primary-clr;
+    color:$white;
   }
 }
 
@@ -6037,7 +6058,7 @@ cite {
   @include makeWrapper($siteWidth);
 }
 .hero__btn{
-  background-color: $anodyne-heading;
+  background-color: $anodyne-dark-gray-clr;
   color:$white;
 }
 // Hero-content
@@ -6068,7 +6089,6 @@ cite {
 // Hero text
 .hero__text {
   @include leadFontStack;
-
   .hero-collection & {
     margin-bottom: 0;
   }
@@ -6548,6 +6568,7 @@ cite {
   // Selected
   input[type="radio"]:checked + label {
     @include buttonSelected;
+    background-color: $anodyne-primary-light-clr;
   }
 
   // Unavailable
@@ -6590,6 +6611,8 @@ cite {
 // Add to cart
 .btn--add-to-cart {
   width: 100%;
+  background-color: $anodyne-primary-clr;
+  color: $white;
 }
 
 // Description
@@ -6694,7 +6717,7 @@ body {
 // Text
 .text-ellipsis {@include ellipsis}
 .text-primary {color: $colorPrimary}
-.text-secondary {color: $colorSecondary}
+.text-secondary {color: $anodyne-dark-gray-clr}
 .text-small {font-size: $baseFontSize-sm}
 .text-large {font-size: $baseFontSize-lg}
 .text-link {@include linkStyle}
@@ -6702,7 +6725,7 @@ body {
 .text-accent {@include accentFontStack}
 .text-money {@include accentFontStack; font-size: $headerSize4;}
 .text-sub {@include textSub}
-.text-strike {text-decoration: line-through!important; text-decoration-color: $accent !important;}
+.text-strike {text-decoration: line-through!important; text-decoration-color: $anodyne-secondary-clr !important;}
 .text-capitalize {text-transform: capitalize}
 .text-muted {color: mix($colorBody, $colorBodyText, $opacity * 60)}
 .text-italic {font-style: italic}
@@ -6820,7 +6843,9 @@ body {
 [disabled],
 .disabled{
   cursor: default !important;
-  opacity: $opacity !important;
+  opacity: ($opacity - 0.50 ) !important;
+  background-color: $anodyne-light-gray-clr;
+  color: $black;
 }
 
 .draggable {
@@ -7127,6 +7152,8 @@ body:not(.dbtfy-collection_addtocart-destroy) {
   }
 
   .ca-button {
+    border: 1px solid $anodyne-offwhite-clr !important;
+    @include shadow(shadow);
     &.btn--loading {
       display: inline-block !important;
     }
@@ -8490,7 +8517,10 @@ body:not(.dbtfy-upsell_popup-destroy) {
 {%- if settings.dbtfy_wish_list -%}
 body:not(.dbtfy-wish_list-destroy) {
   .grid-product__wrapper {
+    @include transition($transitions);
     &:hover {
+      transform: translateY(-8px);
+      @include shadow($shadow);
       .wl-icon {
         opacity: 1;
       }
@@ -8580,7 +8610,7 @@ body:not(.dbtfy-wish_list-destroy) {
 		font-size: clamp($baseFontSize-sm, 4vw, $baseFontSize-lg);
 		margin-bottom: 1.5rem;
 		text-transform: uppercase;
-		color:$dark-gray;
+		color:$anodyne-dark-gray-clr;
 
 	}
 	.services-slider {
@@ -8593,9 +8623,9 @@ body:not(.dbtfy-wish_list-destroy) {
 	.services-item{
 		position: relative;
 		display: block;
-		border: 1px solid rgba($secondary-clr, 0.1);
+		border: 1px solid rgba($anodyne-light-gray-clr, 0.1);
 		text-decoration: none;
-		color: $secondary-clr;
+		color: $anodyne-light-gray-clr;
 		background-color: $white;
 		transition: .3s ease-in transform;
 		 .content {
@@ -8612,7 +8642,7 @@ body:not(.dbtfy-wish_list-destroy) {
 					font-weight: 700;
 					margin-bottom: .5rem;
 					text-transform: uppercase;
-					color:$dark-gray;
+					color:$anodyne-dark-gray-clr;
 				}
 				.info{
 					display: none;
@@ -8628,7 +8658,7 @@ body:not(.dbtfy-wish_list-destroy) {
 		}
 
 		&:hover{
-			box-shadow: 0 0 2px rgba($secondary-clr, 0.3);
+			box-shadow: 0 0 2px rgba($anodyne-light-gray-clr, 0.3);
 			transform: translateY(-8px);
           	opacity:1;
 			.content-imagebox {
@@ -8644,6 +8674,8 @@ body:not(.dbtfy-wish_list-destroy) {
  color: $white;
  padding-left:$gutter;
  padding-right:$gutter;
+ text-transform: uppercase;
+ background-color: $anodyne-dark-gray-clr;
 }
 
 {%- endif -%}

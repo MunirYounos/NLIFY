@@ -60,7 +60,7 @@
 
         <!-- Blocks -->
         {%- for block in section.blocks -%}
-        <div class="grid__item {{ column_width }} quotes-{{ block.id }}" {{ block.shopify_attributes }}>
+        <a href="{{ block.settings.quotes_link }}" target="_blank" rel="noopener noreferrer" class="grid__item now_link {{ column_width }} quotes-{{ block.id }}" {{ block.shopify_attributes }}>
           <div class="card text-center">
             <div class="card-body card-body-lg">
               {%- if block.settings.quote_image -%}
@@ -73,16 +73,21 @@
               </div>
               {%- endif -%}
               {%- if block.settings.quote != blank -%}
-              <div class="rte">{{ block.settings.quote }}</div>
+              <div class="rte">{{ block.settings.quote }} </div>
               {%- endif -%}
+              {%- if block.settings.stars_pic -%}
+                    <img class="start" src="{{ block.settings.stars_pic | img_url: '128x32'}}" width="128" />
+            {%- endif -%}
             </div>
+
             {%- if block.settings.author != blank -%}
             <div class="card-footer">
               <cite>{{ block.settings.author | escape }}</cite>
             </div>
             {%- endif -%}
           </div>
-        </div>
+
+        </a>
         {%- endfor -%}
       </div>
       {%- else -%}
@@ -230,6 +235,17 @@
 "id": "author",
 "label": "Author",
 "default":"Author's name"
+},
+{
+"type": "image_picker",
+"id": "stars_pic",
+"label": "Add stars png not biger than 200x50"
+},
+{
+"type": "text",
+"id": "quotes_link",
+"label": "Add an External link to quotes",
+"default": "https://somelink.com"
 }
 ]
 }

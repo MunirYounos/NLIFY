@@ -39,15 +39,16 @@
             width="850" height="480" frameborder="0" allowfullscreen></iframe>
           {%- else -%}
           {%- if block.settings.video_url.type == "youtube" -%}
-          <span class="youtube-button"><span class="material-icons play_arrow">
-            </span></span>
           <iframe id="youtube-video" class="media lazyload"
             data-src="//www.youtube.com/embed/{{ block.settings.video_url.id }}?rel=0&showinfo=0&vq=720" width="850"
             height="480" frameborder="0" allowfullscreen></iframe>
           {%- if block.settings.video_cover_image !=blank -%}
           <div class="youtube-cover-image"
-            style="background-image:url('{{block.settings.video_cover_image | img_url: '1920x1080'}}')"><span
-              class="youtube-button"></span></div>
+            style="background-image:url('{{block.settings.video_cover_image | img_url: '1920x1080'}}')">
+                {%- if block.settings.animated_button -%}
+                  <span class="youtube-button"></span>
+              {%- endif -%}
+            </div>
           {%- endif -%}
           {%- endif -%}
           {%- if block.settings.video_url.type == "vimeo" -%}
@@ -118,16 +119,23 @@
 "name": "Video",
 "settings": [
 {
-"type": "video_url",
-"id": "video_url",
-"label": "Video link",
-"accept": ["youtube", "vimeo"]
-},
-{
 "type": "image_picker",
 "id": "video_cover_image",
-"label": "Video cover image"
-}
+"label": "Video cover image",
+"info": "Add an image with 1920x1080px, not more than 100k."
+},
+{
+  "type": "video_url",
+  "id": "video_url",
+  "label": "Video link",
+  "accept": ["youtube", "vimeo"]
+  },
+  {
+    "type": "checkbox",
+    "id": "animated_button",
+    "label": "Add animated button on cover image",
+    "default": false
+  }
 ]
 }
 ],
