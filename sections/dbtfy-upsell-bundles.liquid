@@ -45,8 +45,8 @@
       data-section-type="bundle-recommendations"
       data-limit="{{ limit }}"
       data-position="{{ section.settings.dbtfy_upsell_bundles_position }}"
-      class="{{ section.settings.section_style }} ub-position-{{ section.settings.dbtfy_upsell_bundles_position }} {% if specific_bundle %}specific-upsell_bundles{% endif %}">
-
+      class="{{ section.settings.section_style }} ub-position-{{ section.settings.dbtfy_upsell_bundles_position }} {% if specific_bundle %}specific-upsell_bundles{% endif %}  bundle-section">
+ 
     {%- if recommendations.performed or specific_bundle -%}
       {%- if recommendations.products_count > 0 or specific_bundle -%}
         <div class="box">
@@ -129,7 +129,7 @@
 
 {% schema %}
   {
-    "name": "⚡ Upsell bundles",
+    "name": "Upsell bundles",
     "class": "dbtfy dbtfy-upsell_bundles",
     "settings": [
       {

@@ -2919,6 +2919,7 @@ button {
   border-radius: 0;
   display: block;
   width: 100%;
+  background-color: $anodyne-primary-light-clr;
 
   @include screen($small) {
     padding-left: $gutter-sm;
@@ -4163,7 +4164,7 @@ svg:not(:root) {
   }
 
   a {
-    color: $colorSecondary;
+    color: $anodyne-primary-dark-clr;
     word-break: break-word;
   }
 
@@ -7260,6 +7261,7 @@ body:not(.dbtfy-cookie_box-destroy) {
   }
 
   .cb-container {
+    border: 2px solid $anodyne-primary-light-clr;
     border-radius: $borderRadius;
     pointer-events: auto;
     padding: $gutter-sm;
@@ -7297,6 +7299,8 @@ body:not(.dbtfy-cookie_box-destroy) {
 
   .cb-btn {
     margin-right: $spacer-sm;
+    background-color: $anodyne-primary-clr;
+    color: $white;
   }
 }
 {%- endif -%}
@@ -8326,11 +8330,13 @@ body:not(.dbtfy-sticky_addtocart-destroy) {
       &:before {
         content: "add";
         position: absolute;
-        left: 0;
-        width: $gutter;
+        left: - ($gutter - 5);
+        width: $gutter-lg;
         height: 100%;
+        color: $anodyne-primary-clr;
         opacity: $opacity / 2;
-        font-size: $baseFontSize-lg;
+        font-size: ($baseFontSize * 3);
+        z-index: 10;
         @include iconFontStack;
         @include display-flexbox();
         @include align-items(center);
@@ -8444,9 +8450,9 @@ body:not(.dbtfy-sticky_addtocart-destroy) {
 
       & + .image-item-upsell_bundles {
         &:before {
-          left: 0;
-          font-size: $baseFontSize-sm;
-          width: $gutter-sm;
+          left: - ($gutter - 5);
+          font-size: ($baseFontSize * 3);
+          width: $gutter-lg;
         }
       }
     }
@@ -8709,4 +8715,13 @@ body:not(.dbtfy-wish_list-destroy) {
       font-size:.79rem;
     }
   }
+}
+.quotes-box, {
+  margin-top: -$gutter !important;
+  @include screenUp($postSmall){
+    margin-top: - ($gutter-lg + $gutter) !important;
+  }
+}
+.product-row-box{
+  margin: - ($gutter-lg - $gutter);
 }
