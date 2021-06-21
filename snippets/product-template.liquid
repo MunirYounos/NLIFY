@@ -597,8 +597,55 @@
 
         {%- if product_description_position == "separate_section" and has_description -%}
           <div id="productDescription" class="product-single__description rte spacer-bottom-none" itemprop="description">
-            {{ product.description }}
+            
+            <div class="tabs__selectors">
+                  <div class="tab tab-active">
+                      Description
+                  </div>
+                  <div class="tab">
+                      Registered Medical Device
+                  </div>
+                  <div class="tab">
+                      Use & Case
+                  </div>
+                  <div class="tab">
+                    Delivery & Returs
+                </div>
+                <div class="tab">
+                  User Manual
+                </div>
           </div>
+
+          <div class="tabs__content">
+            <div id="Description" class="content-body show-active">
+              {{ product.description }}
+            </div>
+            <div id="RegisteredMedical" class="content-body">
+                <h4>if we have product details</h4>
+
+                    Package Dimensions  -> 6.06 x 6.02 x 4.75 inches
+                    Voltage -> 120 V
+                    Frequency -> 60 Hz
+                    Wattage -> 5w
+                
+            </div>
+            <div id="UseAndCare" class="content-body">
+                <p>user and care ---- Your order will be shipped the same, or next, business day. During sale events and holidays, there may be a slightly longer duration</p>
+            </div>
+            <div id="DeliveryAndReturn" class="content-body">
+                <p>Deliver and return ----- Your order will be shipped the same, or next, business day. During sale events and holidays, there may be a slightly longer duration</p>
+            </div>
+            <div id="UserManual" class="content-body">
+                <p>user manual ----- Your order will be shipped the same, or next, business day. During sale events and holidays, there may be a slightly longer duration</p>
+            </div>
+
+        </div>
+
+
+
+
+          </div>
+
         {%- endif -%}
 
         {%- if product_tabs_position == "under_description" and product_description_position == "separate_section" -%}

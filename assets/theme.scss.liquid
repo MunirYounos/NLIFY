@@ -8725,3 +8725,38 @@ body:not(.dbtfy-wish_list-destroy) {
 .product-row-box{
   margin: - ($gutter-lg - $gutter);
 }
+
+.tabs__selectors{
+  display: flex;
+  border-bottom: 1px solid $anodyne-background-clr;
+  background-color: $white;
+
+  .tab {
+    padding: $gutter-sm;
+    font-weight:500;
+    text-transform: uppercase;
+    @include transition($transitions);
+    &:hover {
+      cursor: pointer;
+      background-color: $anodyne-primary-light-clr;
+    }
+  }
+  .tab-active {
+    background-color: $anodyne-offwhite-clr;
+    border-bottom: 1px solid $anodyne-primary-clr;
+  }
+}
+
+
+.tabs__content {
+  padding:$gutter-sm 0;
+  text-align: left;
+  .content-body {
+    display: none;
+  }
+  .show-active {
+    display: block;
+    @include animated(fadeIn, $transitionDurationFast);
+  }
+}
+
