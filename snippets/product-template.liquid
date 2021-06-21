@@ -166,7 +166,7 @@
               {%- if product.media.size > 1 -%}
               <div class="product-single__thumbnails grid grid-small {% if stacked %}medium--hide large--hide{% endif %}{% if carousel %} slick{% endif %}{% if product.images.size <= 5 %} slick-disabled{% endif %}" data-product-thumbnails>
                 {% for media in product.media %}
-                  <div class="grid__item one-fifth product-thumbnail-wrapper" data-product-thumbnail-wrapper>
+                  <div class="grid__item one-fifth product-thumbnail-wrapper" data-product-thumbnail-wrapper   data-thumbnail-color="{{media.alt}}" >
                     {%- capture thumbnail_alt -%}
                       {%- if media.media_type == 'video' or media.media_type == 'external_video' -%}
                         {{ 'products.product.video_thumbnail_alt' | t: imageAlt: media.alt | escape }}
@@ -186,7 +186,8 @@
                       <img class="product--image product-single__thumb media lazyload"
                       {%- render 'lazysizes', img: media, img_type: 'responsive' -%}
                       alt="{{ thumbnail_alt }}"
-                      data-media-id="{{ media.id }}">
+                     
+                      data-media-id="{{ media.id }}" >
                       {%- if media.media_type == 'video' or media.media_type == 'external_video' or media.media_type == 'model' -%}
                         <div class="product-single__thumbnail-badge">
                           {% render 'svg-definitions' with media.media_type %}

@@ -480,6 +480,7 @@ slate.Variants = (function () {
     this.originalSelectorId = options.originalSelectorId;
     this.enableHistoryState = options.enableHistoryState;
     this.currentVariant = this._getVariantFromOptions();
+    this._filterThumbnails(this.currentVariant);
 
     $(this.singleOptionSelector, this.$container).on(
       "change",
@@ -562,6 +563,7 @@ slate.Variants = (function () {
 
       this._updateMasterSelect(variant);
       this._updateMedia(variant);
+      this._filterThumbnails(variant);
       this._updatePrice(variant);
       this._updateSKU(variant);
       this.currentVariant = variant;
@@ -577,6 +579,20 @@ slate.Variants = (function () {
      * @param  {object} variant - Currently selected variant
      * @return {event}  variantMediaChange
      */
+    _filterThumbnails: function (variant) {
+      if (variant.featured_image != null && variant.featured_image.alt != null) {
+        // hide  all thumbnails first 
+        $('[data-thumbnail-color]').hide();
+        // show thumbnails for selected color
+        var selected_color = variant.featured_image.alt;
+        var thumbnail_selector = '[data-thumbnail-color = "' + selected_color + '"]';
+        $(thumbnail_selector).show();
+      } else {
+        // show all thumbnails for products without color
+        $('[data-thumbnail-color]').show();
+      }
+    },
+
     _updateMedia: function (variant) {
       var variantMedia = variant.featured_media || {};
       var currentVariantMedia = this.currentVariant.featured_media || {};
