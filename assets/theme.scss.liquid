@@ -2021,7 +2021,6 @@ $class-type: unquote(".");
   left: 0;
   top: 0;
   display: block;
-
   @include transform(translate3d(0, 0, 0));
 
   &::before,
@@ -8728,13 +8727,21 @@ body:not(.dbtfy-wish_list-destroy) {
 
 .tabs__selectors{
   display: flex;
-  border-bottom: 1px solid $anodyne-background-clr;
+  border-bottom: 0;
   background-color: $white;
-
-  .tab {
+  flex-wrap: wrap;
+  @include screenUp($postSmall){
+    display: flex;
+    border-bottom: 1px solid $anodyne-offwhite-clr;
+    background-color: $white;
+ 
+  }
+  .tab-item {
     padding: $gutter-sm;
     font-weight:500;
     text-transform: uppercase;
+    background-color: $anodyne-offwhite-clr;
+    border:1px solid lighten($anodyne-offwhite-clr,20%);
     @include transition($transitions);
     &:hover {
       cursor: pointer;
@@ -8742,12 +8749,11 @@ body:not(.dbtfy-wish_list-destroy) {
     }
   }
   .tab-active {
-    background-color: $anodyne-offwhite-clr;
+    background-color: $anodyne-primary-white-clr;
+    border:1px solid rgba($anodyne-offwhite-clr, 0.5);
     border-bottom: 1px solid $anodyne-primary-clr;
   }
 }
-
-
 .tabs__content {
   padding:$gutter-sm 0;
   text-align: left;
@@ -8756,7 +8762,32 @@ body:not(.dbtfy-wish_list-destroy) {
   }
   .show-active {
     display: block;
+    min-height:120px;
     @include animated(fadeIn, $transitionDurationFast);
   }
 }
 
+.product-cards{
+  padding: $gutter-sm;
+  .grid-card{
+    .card-contain{
+      padding: $gutter-sm;
+      background-color: $anodyne-offwhite-clr;
+      @include shadow($shadow);
+    }
+
+    .card-contain.card-row-center{
+      text-align: center;
+      .card__content{
+        padding: $gutter-sm 0;
+        .card__content--title{
+          color: $anodyne-dark-gray-clr;
+        }
+        .card__content--title p{
+          font-size:.65rem;
+          line-height:1.6;
+        }
+      }
+    }
+  }
+}

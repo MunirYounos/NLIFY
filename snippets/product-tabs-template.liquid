@@ -89,6 +89,19 @@
     {%- endif -%}
   {%- endif -%}
 {%- endif -%}
+<!-- custom tabs on tabs template  -->
+{%- if product.metafields.tabs.registeredMedicalDevice !=blank -%} 
+    {%- assign show_registeredMedicalDevice = true -%}
+{%- endif -%}
+{%- if product.metafields.tabs.useAndCare !=blank -%} 
+    {%- assign show_useAndCare = true -%}
+{%- endif -%}
+{%- if product.metafields.tabs.deliveryAndReturns !=blank -%} 
+    {%- assign show_deliveryAndReturns = true -%}
+{%- endif -%}
+{%- if product.metafields.tabs.userManual !=blank -%} 
+    {%- assign show_userManual = true -%}
+{%- endif -%}
 
 <meta itemprop="url" content="{{ shop.url }}{{ product.url }}">
 <meta itemprop="image" content="{{ product.featured_media | img_url: 'grande' }}">
@@ -117,7 +130,6 @@
                   {%- if media == featured_media -%}
                     {%- assign featured = true -%}
                   {%- endif -%}
-
                   {%- capture thumbnail_alt -%}
                     {%- if media.media_type == 'video' or media.media_type == 'external_video' -%}
                       {{ 'products.product.video_thumbnail_alt' | t: imageAlt: media.alt | escape }}
@@ -164,7 +176,7 @@
               {%- endif -%}
 
               {%- if product.media.size > 1 -%}
-              <div class="product-single__thumbnails grid grid-small {% if stacked %}medium--hide large--hide{% endif %}{% if carousel %} slick{% endif %}{% if product.images.size <= 5 %} slick-disabled{% endif %}" data-product-thumbnails>
+              <div class="product-single__thumbnails grid grid-small {% if stacked %}medium--hide large--hide{% endif %}{% if carousel %} slick{% endif %}{% if product.images.size <= 5 %} slick-disabled{% endif %}" data-product-thumbnails data-thumbnail-color="{{media.alt}}">
                 {% for media in product.media %}
                   <div class="grid__item one-fifth product-thumbnail-wrapper" data-product-thumbnail-wrapper   data-thumbnail-color="{{media.alt}}" >
                     {%- capture thumbnail_alt -%}
@@ -595,12 +607,62 @@
           {%- render "dbtfy-product-tabs" with product as product -%}
         {%- endif -%}
 
-        {%- if product_description_position == "separate_section" and has_description -%}
+     
           <div id="productDescription" class="product-single__description rte spacer-bottom-none" itemprop="description">
-              {{ product.description }}
+            
+                <div class="tabs__selectors">
+                      <div id="tab-1" class="tab-item tab-active">
+                          Description
+                      </div>
+                      {%-if show_registeredMedicalDevice -%}
+                      <div id="tab-2" class="tab-item">
+                          Registered Medical Device
+                      </div>
+                      {%-endif-%}
+                      {%-if show_useAndCare-%}
+                      <div id="tab-3" class="tab-item">
+                          Use & Care
+                      </div>
+                      {%-endif-%}
+                      {%-if show_deliveryAndReturns-%}
+                      <div id="tab-4" class="tab-item">
+                        Delivery & Returs
+                    </div>
+                    {%-endif-%}
+                    {%-if show_userManual-%}
+                    <div id="tab-5" class="tab-item">
+                      User Manual
+                    </div>
+                    {%-endif-%}
+              </div>
+                <div class="tabs__content">
+                  {%- if product_description_position == "separate_section" and has_description -%}
+                  <div id="tab-1-content" class="content-body show-active">
+                    {{ product.description }}
+                  </div>
+                  {%- endif -%}
+                  {%-if show_registeredMedicalDevice -%}
+                    <div id="tab-2-content" class="content-body">
+                      {{product.metafields.tabs.registeredMedicalDevice}}                
+                    </div>
+                  {%- endif -%}
+                  {%-if show_useAndCare -%}
+                  <div id="tab-3-content" class="content-body">
+                    {{product.metafields.tabs.useAndCare}}  
+                  </div>
+                  {%- endif -%}
+                  {%-if show_deliveryAndReturns-%}
+                  <div id="tab-4-content" class="content-body">
+                    {{product.metafields.tabs.deliveryAndReturns}}  
+                  </div>
+                  {%- endif -%}
+                  {%-if show_userManual -%}
+                  <div id="tab-5-content" class="content-body">
+                    {{product.metafields.tabs.userManual}}  
+                  </div>
+                  {%- endif -%}
+              </div>
           </div>
-
-        {%- endif -%}
 
         {%- if product_tabs_position == "under_description" and product_description_position == "separate_section" -%}
           {%- render "dbtfy-product-tabs" with product as product -%}

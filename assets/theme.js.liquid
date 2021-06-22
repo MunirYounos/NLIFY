@@ -582,14 +582,14 @@ slate.Variants = (function () {
     _filterThumbnails: function (variant) {
       if (variant.featured_image != null && variant.featured_image.alt != null) {
         // hide  all thumbnails first 
-        $('[data-thumbnail-color]').hide();
+        $('[data-thumbnail-color]').show();
         // show thumbnails for selected color
         var selected_color = variant.featured_image.alt;
         var thumbnail_selector = '[data-thumbnail-color = "' + selected_color + '"]';
         $(thumbnail_selector).show();
       } else {
         // show all thumbnails for products without color
-        $('[data-thumbnail-color]').show();
+        $('[data-thumbnail-color]').hide();
       }
     },
 
@@ -5246,34 +5246,34 @@ $(document).ready(function () {
 });
 
 
-function setActiveContent(el) {
-  // select all .content-body
-  var contentBodies = document.getElementsByClassName('content-body');
-  // remove .show-active
-  for (var contentBody of contentBodies) {
-    contentBody.classList.remove('show-active');
-  }
-  // add .show-active (back) to clicked 
-  document.getElementById(el.textContent.trim()).classList.add('show-active');
-  console.log('contents function');
+const tabItems = document.querySelectorAll('.tab-item');
+const tabContentItems = document.querySelectorAll('.content-body');
+
+
+function selectItem(e) {
+
+  removeBorder();
+  removeShow();
+  this.classList.add('tab-active');
+  const tabContentItem = document.querySelector(`#${this.id}-content`);
+  tabContentItem.classList.add('show-active');
 }
 
-function setActiveTab(el) {
-  var tabs = document.getElementsByClassName('tab');
-  for (var tab of tabs) {
-    tab.classList.remove('tab-active');
-  }
-  el.classList.add('tab-active');
-  console.log('tabss function');
+// Remove bottom borders from all tab items
+function removeBorder() {
+  tabItems.forEach(item => {
+    item.classList.remove('tab-active');
+  });
 }
 
-// select .tab class, and loop through
-var tabs = document.querySelectorAll('tab');
-for (let tab of tabs) {
-  // add click listener to each tab
-  tab.addEventListener('click', function (e) {
-    setActiveContent(e.currentTarget);
-    setActiveTab(e.currentTarget);
-    console.log('clicked');
-  })
+// Remove show class from all content items
+function removeShow() {
+  tabContentItems.forEach(item => {
+    item.classList.remove('show-active');
+  });
 }
+
+// Listen for tab item click
+tabItems.forEach(item => {
+  item.addEventListener('click', selectItem);
+});
