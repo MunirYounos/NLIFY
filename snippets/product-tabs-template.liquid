@@ -140,7 +140,7 @@
                     {%- endif -%}
                   {%- endcapture -%}
 
-                  <div class="grid__item product-single__media-flex-wrapper{% if stacked %} product-stacked_media_flex{% endif %}" data-slick-media-label="{{ thumbnail_alt }}" data-product-single-media-flex-wrapper>
+                  <div class="grid__item product-single__media-flex-wrapper{% if stacked %} product-stacked_media_flex{% endif %}" data-slick-media-label="{{ thumbnail_alt }}" data-product-single-media-flex-wrapper data-thumbnail-color="{{media.alt}}">
                     <div class="product-single__media-flex">
                       {%- render 'media' with media, enable_image_zoom: enable_image_zoom, stacked: stacked, featured: featured, width: width, height: height -%}
 
@@ -176,9 +176,10 @@
               {%- endif -%}
 
               {%- if product.media.size > 1 -%}
-              <div class="product-single__thumbnails grid grid-small {% if stacked %}medium--hide large--hide{% endif %}{% if carousel %} slick{% endif %}{% if product.images.size <= 5 %} slick-disabled{% endif %}" data-product-thumbnails data-thumbnail-color="{{media.alt}}">
+              <div class="product-single__thumbnails grid grid-small {% if stacked %}medium--hide large--hide{% endif %}{% if carousel %} slick{% endif %}{% if product.images.size <= 5 %} slick-disabled{% endif %}" data-product-thumbnails>
                 {% for media in product.media %}
-                  <div class="grid__item one-fifth product-thumbnail-wrapper" data-product-thumbnail-wrapper   data-thumbnail-color="{{media.alt}}" >
+              
+                  <div class="grid__item one-fifth product-thumbnail-wrapper"  data-thumbnail-color="{{media.alt}}">
                     {%- capture thumbnail_alt -%}
                       {%- if media.media_type == 'video' or media.media_type == 'external_video' -%}
                         {{ 'products.product.video_thumbnail_alt' | t: imageAlt: media.alt | escape }}

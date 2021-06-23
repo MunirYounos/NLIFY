@@ -582,14 +582,15 @@ slate.Variants = (function () {
     _filterThumbnails: function (variant) {
       if (variant.featured_image != null && variant.featured_image.alt != null) {
         // hide  all thumbnails first 
-        $('[data-thumbnail-color]').show();
+        $('[data-thumbnail-color]').hide();
         // show thumbnails for selected color
         var selected_color = variant.featured_image.alt;
         var thumbnail_selector = '[data-thumbnail-color = "' + selected_color + '"]';
         $(thumbnail_selector).show();
       } else {
         // show all thumbnails for products without color
-        $('[data-thumbnail-color]').hide();
+        $('[data-thumbnail-color]').show();
+
       }
     },
 
@@ -5245,13 +5246,10 @@ $(document).ready(function () {
   sections.register("logo-list-section", theme.LogoList);
 });
 
-
+//tabs section
 const tabItems = document.querySelectorAll('.tab-item');
 const tabContentItems = document.querySelectorAll('.content-body');
-
-
 function selectItem(e) {
-
   removeBorder();
   removeShow();
   this.classList.add('tab-active');
@@ -5259,20 +5257,17 @@ function selectItem(e) {
   tabContentItem.classList.add('show-active');
 }
 
-// Remove bottom borders from all tab items
 function removeBorder() {
   tabItems.forEach(item => {
     item.classList.remove('tab-active');
   });
 }
-
 // Remove show class from all content items
 function removeShow() {
   tabContentItems.forEach(item => {
     item.classList.remove('show-active');
   });
 }
-
 // Listen for tab item click
 tabItems.forEach(item => {
   item.addEventListener('click', selectItem);
