@@ -1,0 +1,114 @@
+
+{% if product %}
+<script>
+  var __productWizRio = {};
+  (function() {
+    function insertGalleryPlaceholder(e,t){try{var{breakpoint:o}=__productWizRio.config,n="string"==typeof o&&window.matchMedia(`(min-width:${o})`).matches,{vertical:d}=__productWizRio.config[n?"desktop":"mobile"],i=(()=>{var t=e=>{e=("model"===e.media_type?e.preview_image:e).aspect_ratio;return 1/("number"==typeof e?e:1)};const o=(e=>{const{productRio:t,product:o}=__productWizRio;let i=e;if("string"==typeof i&&(o.variants.find(e=>`${e.id}`===i)||(i=null)),"string"!=typeof i&&(n=o.variants.find(e=>e.available),i=n?`${n.id}`:`${o.variants[0].id}`),Array.isArray(t)){const r=t.find(e=>e.id===i);if(r&&Array.isArray(r.media)&&0<r.media.length)if(d){const a=[];if(r.media.forEach(t=>{var e=o.media.find(e=>`${e.id}`===t);e&&a.push(e)}),0<a.length)return a}else{var l=r.media[0],n=o.media.find(e=>`${e.id}`===l);if(n)return n}}return null})(new URL(document.location).searchParams.get("variant")||null);if(Array.isArray(o)){var i=o.map(e=>t(e));let e=1;return 0<i.length&&(i=Math.max(...i),Number.isFinite(i)&&(e=i)),`${(100*e).toFixed(3)}%`}return o?`${(100*t(o)).toFixed(3)}%`:null})();if("string"!=typeof i)return void console.log("Rio: Gallery placeholder gallery ratio could not be found. Bailing out.");o=(e=>{var{thumbnails:t}=__productWizRio.config[n?"desktop":"mobile"];if("object"==typeof t){var{orientation:o,container:i,thumbnailWidth:t}=t;if("left"===o||"right"===o){e=Number.parseFloat(e);if(Number.isFinite(e)){e=e/100;if("number"==typeof i){const l=100*i*e;return`${l.toFixed(3)}%`}if("number"==typeof t)return`${t*e}px`}}}return null})(i),o="string"==typeof o?`calc(${i} - ${o})`:i,i=(()=>{const{maxHeight:e}=__productWizRio.config[n?"desktop":"mobile"];return"string"==typeof e&&e.endsWith("px")&&!d?e:null})(),o="string"==typeof i?`min(${o}, ${i})`:o;const r=document.createElement("div");r.style.marginTop="-50px",r.style.pointerEvents="none",r.style.paddingBottom=`calc(${o} + 100px)`,console.log(`Rio: Gallery placeholder scale: ${r.style.paddingBottom}`),r.style.boxSizing="border-box",e.appendChild(r);var l=()=>{r.style.position="absolute",r.style.top=0,r.style.zIndex=-2147483647};document.addEventListener("DOMContentLoaded",()=>{try{0===r.clientHeight&&(console.log("Rio: Gallery placeholder height is 0"),l());var e=`${0===r.clientHeight?window.innerHeight:r.clientHeight}px`;r.style.paddingBottom=null,r.style.overflow="hidden",r.style.height=e,console.log(`Rio: Gallery placeholder height: ${r.style.height}`);const o=document.createElement("span");o.style.wordBreak="break-all",o.style.fontSize="20px",o.style.lineHeight=0,o.style.userSelect="none";let t="";for(let e=0;e<1e4;e+=1)t+=" ";o.innerText=t,r.appendChild(o)}catch(e){console.log("Rio: failed to insert gallery placeholder (2)"),console.log(e)}});const a=new MutationObserver(()=>{try{a.disconnect(),console.log("Rio: rio-media-gallery inflated"),l()}catch(e){console.log("Rio: failed to insert gallery placeholder (3)"),console.log(e)}});o={childList:!0,subtree:!0};a.observe(t,o),window.addEventListener("load",()=>{try{e.removeChild(r)}catch(e){console.log("Rio: failed to remove gallery placeholder"),console.log(e)}})}catch(e){console.log("Rio: failed to insert gallery placeholder"),console.log(e)}}
+    
+    {% if product %}
+      var product = {{product | json}};
+      var productMetafield = {{product.metafields.productwiz.rio | json}};
+      var shopMetafield = {{shop.metafields.productwiz.rio | json}};
+
+      
+      __productWizRio.enabled = false;
+      if (Array.isArray(product.variants) && product.variants.length > 0 && Array.isArray(product.media) && product.media.length > 0) {
+        if (!shopMetafield || !shopMetafield.disabled) {
+          if (productMetafield && productMetafield.enabled && !productMetafield.empty) {
+            __productWizRio.enabled = true;
+            __productWizRio.product = product;
+            __productWizRio.productRio = productMetafield.mapping;
+            __productWizRio.imageFilenames = productMetafield.imageFilenames;
+            __productWizRio.mediaSettings = productMetafield.mediaSettings;
+          }
+        }
+      }
+      
+    {% else %}
+      __productWizRio.enabled = false;
+    {% endif %}
+    
+    if (__productWizRio.enabled) {
+      
+function callback(mutations) {
+  mutations.forEach(function (mutation) {
+    Array.prototype.forEach.call(mutation.addedNodes, function (addedNode) {
+      if (typeof addedNode.className === 'string') {
+        if (!__productWizRio.config) {
+__productWizRio.config = {
+  "breakpoint": "770px",
+  "mobile": {
+    "navigation": false,
+    "pagination": false,
+    "swipe": true,
+    "dark": true,
+    "magnify": false,
+    "thumbnails": {
+      "orientation": "bottom",
+      "multiRow": false,
+      "thumbnailsPerRow": 5,
+      "navigation": true
+    },
+    "lightBox": true,
+    "lightBoxZoom": 2
+  },
+  "desktop": {
+    "navigation": false,
+    "pagination": false,
+    "swipe": true,
+    "dark": true,
+    "magnify": false,
+    "thumbnails": {
+      "orientation": "bottom",
+      "multiRow": false,
+      "thumbnailsPerRow": 5,
+      "navigation": true
+    },
+    "lightBox": true,
+    "lightBoxZoom": 2
+  }
+};
+}
+
+try {
+  var productGalleryClassNames = ['product-single__photos', 'product-single__media-group'];
+  var rioClassName = 'rio-media-gallery';
+  var isContainer = productGalleryClassNames.find(function (x) {
+    return addedNode.className.indexOf(x) > -1;
+  }) && addedNode.className.indexOf(rioClassName) < 0;
+
+  if (isContainer && !__productWizRio.finishedInjection) {
+    var newAddedNode = addedNode.cloneNode(false);
+    newAddedNode.className = newAddedNode.className.replace('product-stacked__photos', '');
+    newAddedNode.style.position = 'relative';
+    newAddedNode.style.paddingBottom = '1px';
+    var gallery = document.createElement('div');
+    gallery.className = 'rio-media-gallery';
+    newAddedNode.appendChild(gallery);
+    insertGalleryPlaceholder(newAddedNode, gallery);
+    addedNode.parentElement.replaceChild(newAddedNode, addedNode);
+    __productWizRio.finishedInjection = true;
+  }
+
+  if (addedNode.className.indexOf('product-single__thumbnails') > -1) {
+    addedNode.parentNode.removeChild(addedNode);
+  }
+} catch (err) {}
+      }
+    });
+  });
+}
+var observer = new MutationObserver(callback);
+var config = { childList: true, subtree: true };
+window.addEventListener('load', function () {
+  observer.disconnect();
+});
+observer.observe(document, config);
+
+
+    }
+  })();
+</script>
+<link rel="stylesheet" href="{{ 'productwiz-rio.css' | asset_url }}">
+<script async src="{{ 'productwiz-rio.js' | asset_url }}"></script>
+{% endif %}

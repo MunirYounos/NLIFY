@@ -2475,6 +2475,7 @@ p {
   text-rendering: optimizeLegibility;
   margin-top: 0;
   margin-bottom: $spacer;
+  font-weight: 100px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -2482,7 +2483,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: $headerMarginBottom;
   text-rendering: optimizeLegibility;
-  color: $colorHeadings;
+  color: $anodyne-dark-gray-clr;
   @include headerFontStack;
 
   a {
@@ -2493,11 +2494,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {font-size: $headerSize1}
-h2 {font-size: $headerSize2}
-h3 {font-size: $headerSize3}
-h4 {font-size: $headerSize4}
-h5 {font-size: $headerSize5}
-h6 {font-size: $headerSize6}
+h2 {font-size: $headerSize2; font-weight:100;}
+h3 {font-size: $headerSize3; font-weight:100;}
+h4 {font-size: $headerSize4; font-weight:100;}
+h5 {font-size: $headerSize5; font-weight:100;}
+h6 {font-size: $headerSize6; font-weight:100;}
 
 .h1 {@extend h1}
 .h2 {@extend h2}
@@ -4775,7 +4776,10 @@ cite {
     }
   }
 }
-
+.section-header__title{
+  font-weight: 700;
+  text-transform: uppercase;
+}
 .page-title,
 .shopify-policy__title h1 {
   @include pageTitle;
@@ -5218,6 +5222,7 @@ cite {
   .sticky-header & {
     @include sticky;
     z-index: $zindexHeader;
+
   }
 
   // visual fix for 1px spacing above header
@@ -5441,7 +5446,7 @@ cite {
       background-color: $colorNav;
       border-color: $colorNavBorder;
       width: 100%;
-
+      height: 70px;
       .site-nav__link, .site-header__logo-link {
         color: $colorNavText;
       }
@@ -6732,7 +6737,7 @@ body {
 .text-link {@include linkStyle}
 .text-lead {@include leadFontStack}
 .text-accent {@include accentFontStack}
-.text-money {@include accentFontStack; font-size: $headerSize4;}
+.text-money {@include accentFontStack; font-size: $headerSize3;}
 .text-sub {@include textSub}
 .text-strike {text-decoration: line-through!important; text-decoration-color: $anodyne-secondary-clr !important;}
 .text-capitalize {text-transform: capitalize}
@@ -8712,6 +8717,10 @@ body:not(.dbtfy-wish_list-destroy) {
     .cols{
       font-weight: 100;
       font-size:.79rem;
+      h4{
+        font-size: 700;
+        font-size: 1.2rem
+      }
     }
   }
 }
@@ -8757,18 +8766,29 @@ body:not(.dbtfy-wish_list-destroy) {
 .tabs__content {
   padding:$gutter-sm 0;
   text-align: left;
+  font-size: 0.85rem;
+  line-height:1.6;
+  color: lighten($anodyne-dark-gray-clr, 10%);
   .content-body {
     display: none;
+    p {
+      font-size: 0.85rem;
+    }
   }
   .show-active {
     display: block;
     min-height:120px;
+    max-width: 90%;
+    font-size: 0.85rem;
+    line-height:1.6;
     @include animated(fadeIn, $transitionDurationFast);
+    p {
+      font-size: 0.85rem;
+    }
   }
 }
 
 .product-cards{
-  padding: $gutter-sm;
   .grid-card{
     .card-contain{
       padding: $gutter-sm;
@@ -8781,13 +8801,120 @@ body:not(.dbtfy-wish_list-destroy) {
       .card__content{
         padding: $gutter-sm 0;
         .card__content--title{
+          font-size:1.2rem;
           color: $anodyne-dark-gray-clr;
         }
-        .card__content--title p{
-          font-size:.65rem;
+        .card__content--text{
+          font-size:.75rem;
+          line-height:1.6;
+        }
+      }
+    }
+    .card-contain.card-row-left{
+      text-align: left;
+      .card__content{
+        padding: $gutter-sm 0;
+        .card__content--title{
+          font-size:1.2rem;
+          color: $anodyne-dark-gray-clr;
+        }
+        .card__content--text{
+          font-size:.75rem;
           line-height:1.6;
         }
       }
     }
   }
+}
+.slick-quotes .card-body{
+  min-height: 276px;
+}
+
+.home-tabs__wrapper{
+  margin: 3rem 0;
+}
+.home-tabs__wrapper-btns {
+  padding: 0;
+  width: 100%;
+  .home-tabs__wrapper-btns-btn {
+    cursor: pointer;
+    display: inline-block;
+    padding: 1rem 2.6rem;
+    background: #bbb;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #444;
+  }
+  .home-tabs__wrapper-btns-btn.active {
+    color: white;
+    background: #7fcfbb;
+  }
+  .home-tabs__wrapper-btns-btn.active:nth-of-type(2) {
+    background: #7fcfbb;
+    margin: -4px;
+  }
+  .home-tabs__wrapper-btns-btn.active:nth-of-type(3) {
+    background: #7fcfbb;
+    margin: -2px;
+  }
+  .home-tabs__wrapper-btns-btn:nth-of-type(2) {
+    background: #ccc;
+    margin: -4px;
+  }
+  .home-tabs__wrapper-btns-btn:nth-of-type(3) {
+    background: #eee;
+    margin: -2px;
+  }
+}
+
+
+
+
+.home-tabs__wrapper-content-img {
+  display: none;
+}
+.home-tabs__wrapper-content-img.active {
+  display: flex !important;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.4rem;
+  background: #7fcfbb;
+}
+
+.home-tabs__wrapper-content-img.active:last-child {
+  padding: 0 0 0 0.4rem;
+}
+
+.home-tabs__wrapper-content-text {
+  padding: 2rem 4rem;
+}
+
+.home-tabs__wrapper-content-text h3 {
+  font-size: 1.2rem;
+  padding: 1rem 0;
+  text-transform: uppercase;
+  color: #fff;
+}
+.home-tabs__wrapper-content-text p {
+  font-size: 1rem;
+  font-weight: 100;
+  color: #f7f7f7;
+  line-height: 1.5;
+}
+.home-tabs__wrapper-content-text-btn {
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 1.2rem 2.4rem;
+  background-color: #444;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0px 1px 6px #868686;
+  opacity: 1;
+  transition: 0.3s ease-in box-shadow, 0.3s ease-in opacity;
+}
+.home-tabs__wrapper-content-text-btn:focus, .home-tabs__wrapper-content-text-btn:hover {
+  box-shadow: none;
+  opacity: 0.8;
 }

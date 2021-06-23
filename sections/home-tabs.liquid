@@ -1,0 +1,108 @@
+<div class="home-tabs">
+    <div class="home-tabs__wrapper">
+	<div class="wrapper">
+						{% assign main_title = section.settings.title %}
+						{%if main_title !=blank %}
+						<h2 class="home-tabs__title">{{main_title}}</h2>
+						{% endif%}
+				
+				<div class="home-tabs__wrapper-btns">
+					{%- for block in section.blocks -%}
+						{% if forloop.index == 1 %}
+								<span id="btn-{{ forloop.index }}"  class="home-tabs__wrapper-btns-btn active ">{{ block.settings.tab_title}}</span>
+						{% else %}
+							<span id="btn-{{ forloop.index }}"  class="home-tabs__wrapper-btns-btn ">{{ block.settings.tab_title}}</span>
+							{% endif %}
+					{%- endfor -%}
+				</div>
+				<div class="home-tabs__wrapper-content">
+					{%- for block in section.blocks -%}
+					{% if forloop.index == 1 %}
+							<div id="btn-{{ forloop.index }}-content"  class="home-tabs__wrapper-content-img active ">
+						{% else %}
+							<div id="btn-{{ forloop.index }}-content"  class="home-tabs__wrapper-content-img ">
+						{% endif %}
+						<img src="{{block.settings.tab_image | img_url: '640x427'}}" alt="{{ block.settings.tab_title}}">
+						<div class="home-tabs__wrapper-content-text">
+							<h3>{{block.settings.tab_inner-title }}</h3>
+							<p>{{block.settings.description}}</p>
+							<a href="{{block.settings.tab_LinkUrl}}" class="home-tabs__wrapper-content-text-btn">{{block.settings.button_text}} </a>
+						</div>
+					</div>
+		
+					{%- endfor -%}
+				</div>
+			</div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Hometabs",
+  "class": "home-tabs__section",
+  "max_blocks": 4,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "pain Reducing Recommendations"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "tab",
+      "name": "Home tabs",
+      "settings": [
+        {
+          "id": "tab_title",
+          "type": "text",
+          "label": "Add tab button heading"
+        },
+        {
+          "type": "image_picker",
+          "id": "tab_image",
+          "label": "icon jpg/png",
+          "info": "Dimensions 640X427px"
+        },
+				{
+          "id": "tab_inner-title",
+          "type": "text",
+          "label": "Title",
+          "default": "Working on Desk could be a problem"
+        },
+				{
+          "type": "textarea",
+          "id": "description",
+          "label": "HTML / Description",
+          "default": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quis."
+        },
+				{
+          "id": "button_text",
+          "type": "text",
+          "label": "Add button text",
+          "default": "Button text"
+        },
+        {
+          "type": "url",
+          "id": "tab_LinkUrl",
+          "label": "Add a link to tabs"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hometabs",
+      "category": "Text",
+      "blocks": [
+        {
+          "type": "tab"
+        },
+        {
+          "type": "tab"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

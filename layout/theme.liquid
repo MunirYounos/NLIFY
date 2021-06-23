@@ -238,7 +238,9 @@
     {{ content_for_header }}
    
 {% include 'pagefly-header' %}
- </head> 
+ 
+  {% render 'productwiz-rio', product: product, shop: shop %}
+</head> 
 
   <body id="{{ page_title | handle }}"
         class="{% if settings.sticky_header %}sticky-header{% endif %}
