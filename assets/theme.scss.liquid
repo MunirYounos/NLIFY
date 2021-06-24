@@ -306,7 +306,7 @@ $borderRadius-sm: 3px;
 $shadowColor: color-control($colorBody);
 $shadowOpacity: 0.07;
 $shadow: 0px 0px 40px rgba($shadowColor, $shadowOpacity);
-$shadow-sm: 0px 0px 40px rgba($shadowColor, $shadowOpacity);
+$shadow-sm: 0px 0px 4px rgba($shadowColor, $shadowOpacity);
 $shadowTop: 0px 0px 40px rgba($shadowColor, $shadowOpacity);
 $shadowBottom: 0px 0px 40px rgba($shadowColor, $shadowOpacity);
 $shadowLeft: 0px 0px 40px rgba($shadowColor, $shadowOpacity);
@@ -358,7 +358,7 @@ $animationDuration: $transitionDuration;
 $animationOffset: $spacer;
 
 // Scale
-$scale: 1.3;
+$scale: 1.0321;
 
 // Text link colors
 $colorLink: $colorSecondary;
@@ -999,6 +999,8 @@ $postSmall: $small + $viewportIncrement;
 $medium: 1025px;
 $postMedium: $medium + $viewportIncrement;
 
+$smallTwo: 968px;
+$smallPlus: $smallTwo + $viewportIncrement;
 // Large
 $large: $postMedium;
 
@@ -4167,7 +4169,6 @@ svg:not(:root) {
     color: $anodyne-primary-dark-clr;
     word-break: break-word;
   }
-
   .table-wrap {
     margin-bottom: $spacer;
   }
@@ -4777,7 +4778,7 @@ cite {
   }
 }
 .section-header__title{
-  font-weight: 700;
+  font-weight: 100;
   text-transform: uppercase;
 }
 .page-title,
@@ -5123,6 +5124,8 @@ cite {
 }
 
 .collection_grid-title {
+  text-transform: uppercase;
+  font-weight:500;
   margin-bottom: 0;
   background-color:$anodyne-dark-gray-clr;
   color: $white;
@@ -6498,8 +6501,9 @@ cite {
 
 // Title
 .product-single__title {
+  font-size: 2rem;
   @include screen($small) {
-    font-size: $headerSize3;
+    font-size: 1.6rem;
   }
 }
 
@@ -6737,7 +6741,7 @@ body {
 .text-link {@include linkStyle}
 .text-lead {@include leadFontStack}
 .text-accent {@include accentFontStack}
-.text-money {@include accentFontStack; font-size: $headerSize3;}
+.text-money {@include accentFontStack; font-size: 1.4rem;}
 .text-sub {@include textSub}
 .text-strike {text-decoration: line-through!important; text-decoration-color: $anodyne-secondary-clr !important;}
 .text-capitalize {text-transform: capitalize}
@@ -8771,6 +8775,9 @@ body:not(.dbtfy-wish_list-destroy) {
   color: lighten($anodyne-dark-gray-clr, 10%);
   .content-body {
     display: none;
+    h2{
+      font-size: 1.2rem;
+    }
     p {
       font-size: 0.85rem;
     }
@@ -8789,11 +8796,19 @@ body:not(.dbtfy-wish_list-destroy) {
 }
 
 .product-cards{
+
   .grid-card{
     .card-contain{
-      padding: $gutter-sm;
-      background-color: $anodyne-offwhite-clr;
-      @include shadow($shadow);
+      padding: $gutter;
+      background-color: lighten($anodyne-offwhite-clr, 4%);
+      border-radius: $gutter-sm;
+      width: 100%;
+      margin:($gutter - 8) 0;
+      @include shadow($shadow-sm);
+      @include screenUp($postSmall){
+        padding: $gutter-sm;
+        margin: 0;
+      }
     }
 
     .card-contain.card-row-center{
@@ -8806,7 +8821,8 @@ body:not(.dbtfy-wish_list-destroy) {
         }
         .card__content--text{
           font-size:.75rem;
-          line-height:1.6;
+          line-height:1.8;
+          color: darken($anodyne-light-gray-clr, 5%);
         }
       }
     }
@@ -8830,7 +8846,6 @@ body:not(.dbtfy-wish_list-destroy) {
   min-height: 276px;
 }
 .home-tabs{
-  background-color: $anodyne-background-clr;
   padding: ($gutter * 1.5) 0  ($gutter * 2) 0;
   margin: $gutter 0;
   .home-tabs__wrapper{
@@ -8844,14 +8859,40 @@ body:not(.dbtfy-wish_list-destroy) {
       .home-tabs__wrapper-btns-btn {
         cursor: pointer;
         display: inline-block;
-        padding: $gutter-sm $gutter;
+        width: 100%;
         background: darken($anodyne-offwhite-clr, 5%);
         text-transform: uppercase;
-        font-weight: 100;
+        font-size: .85rem;
+        font-weight: 500;
+        padding:$gutter-sm 0 $gutter-sm ($gutter-sm - 8);
+        margin:0;
         color: $anodyne-dark-gray-clr;
+        &:nth-of-type(1){
+          margin-bottom: 4px;
+        }
+        &:nth-of-type(2){
+          margin-bottom: 4px;
+        }
+        &:nth-of-type(3){
+          margin-bottom: 4px;
+        }
+        @include screenUp($smallPlus){
+          padding: $gutter-sm $gutter;
+          width: auto;
+          &:nth-of-type(1){
+            margin-bottom: 0;
+          }
+          &:nth-of-type(2){
+            margin-bottom: 0;
+          }
+          &:nth-of-type(3){
+            margin-bottom: 0;
+          }
+          
+        }
         &.active {
           color: $white;
-          background: $anodyne-primary-clr;
+          background: $anodyne-dark-gray-clr;
         }
       }
     }
@@ -8859,18 +8900,27 @@ body:not(.dbtfy-wish_list-destroy) {
           .home-tabs__wrapper-content-img {
             display: none;
             &.active {
-              display: flex !important;
+              display: flex;
               justify-content: flex-start;
-              align-items: center;
+              align-items: flex-start;
+              flex-direction: column;
               padding: 0.4rem;
-              background: $anodyne-primary-clr;
+              background: $anodyne-dark-gray-clr;
+              @include screenUp($smallPlus){
+                flex-direction: row;
+                align-items: center;
+              }
               &:last-child{
                 padding:0.4rem;
               }
           }
         }
         .home-tabs__wrapper-content-text {
-          padding: $gutter-sm $gutter;
+          padding: $gutter-sm $gutter $gutter 0;
+          @include screenUp($smallPlus){
+            padding: $gutter-sm $gutter;
+          }
+ 
           h3 {
             font-size: 1.2rem;
             padding: 1rem 0;
@@ -8888,7 +8938,7 @@ body:not(.dbtfy-wish_list-destroy) {
             display: inline-block;
             margin-top: 1rem;
             padding: $gutter-sm $gutter;
-            background-color: $anodyne-dark-gray-clr;
+            background-color: $anodyne-primary-clr;
             color: $white;
             text-transform: uppercase;
             text-decoration: none;
@@ -8905,11 +8955,44 @@ body:not(.dbtfy-wish_list-destroy) {
   }
 }
 
+#section-guarantee{
+  .guarantee-item{
+    background-color: $anodyne-background-clr;
+    padding: $gutter-sm;
+    .guarantee-title{
+      text-transform: uppercase;
+      font-size:1rem;
+    }
+    .guarantee-text {
+      font-size:.85rem;
+    }
+  }
+}
 
 
+.bgWhite  {
+  .media-wrapper {
+    padding-top: 100px !important;
+    text-align: center;
 
+  }
+  img{
+    width: 100px;
+    left:50%;
+    transform: translateX(-50%);
+  }
+  .h3{
+    font-size: ($baseFontSize + 2px);
+    text-transform: uppercase;
+    font-weight: 500;
+  }
 
-
+  .rte p{ 
+    color: $anodyne-light-gray-clr;
+    font-size: .79rem;
+    line-height: 1.6;
+  }
+}
 
 
 

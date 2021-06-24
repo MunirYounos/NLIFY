@@ -26,7 +26,9 @@
 						<div class="home-tabs__wrapper-content-text">
 							<h3>{{block.settings.tab_inner-title }}</h3>
 							<p>{{block.settings.description}}</p>
-							<a href="{{block.settings.tab_LinkUrl}}" class="home-tabs__wrapper-content-text-btn">{{block.settings.button_text}} </a>
+              {% if block.settings.button_text  !=blank %}
+							  <a href="{{block.settings.tab_LinkUrl}}" class="home-tabs__wrapper-content-text-btn">{{block.settings.button_text}} </a>
+              {% endif %}
 						</div>
 					</div>
 		

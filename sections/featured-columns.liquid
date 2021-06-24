@@ -40,7 +40,7 @@
                 {{ 'image' | placeholder_svg_tag: 'placeholder-svg spacer-bottom' }}
               {%- endif -%}
 
-              <h3 class="h4">{{ block.settings.title }}</h3>
+              <h2 class="h3">{{ block.settings.title }}</h2>
               <div class="rte">{{ block.settings.text }}</div>
               {%- unless block.settings.button_label == blank -%}
                 <p><a href="{{ block.settings.button_link }}" class="btn btn--small {{ block.settings.button_style }}">

@@ -216,7 +216,6 @@
     {{ "jquery-2.2.3.min.js" | asset_url | script_tag }}
 
     <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
-
     <script src="{{ 'lazysizes.min.js' | asset_url }}" async="async"></script>
 
     {%- if content_for_header contains "debutify" -%}
@@ -327,5 +326,6 @@
     {%- if request.page_type == "product" -%}
       {%- section "dbtfy-size-chart" -%}
     {%- endif -%}
+    <script src="{{ 'nlify-counter.js' | asset_url }}" ></script>
   </body>
 </html>
