@@ -8829,92 +8829,90 @@ body:not(.dbtfy-wish_list-destroy) {
 .slick-quotes .card-body{
   min-height: 276px;
 }
-
-.home-tabs__wrapper{
-  margin: 3rem 0;
-}
-.home-tabs__wrapper-btns {
-  padding: 0;
-  width: 100%;
-  .home-tabs__wrapper-btns-btn {
-    cursor: pointer;
-    display: inline-block;
-    padding: 1rem 2.6rem;
-    background: #bbb;
-    text-transform: uppercase;
-    font-weight: 900;
-    color: #444;
+.home-tabs{
+  background-color: $anodyne-background-clr;
+  padding: ($gutter * 1.5) 0  ($gutter * 2) 0;
+  margin: $gutter 0;
+  .home-tabs__wrapper{
+    .section-header__title{
+      text-align: center;
+      margin-bottom: $gutter;
+    }
+    .home-tabs__wrapper-btns {
+      padding: 0;
+      width: 100%;
+      .home-tabs__wrapper-btns-btn {
+        cursor: pointer;
+        display: inline-block;
+        padding: $gutter-sm $gutter;
+        background: darken($anodyne-offwhite-clr, 5%);
+        text-transform: uppercase;
+        font-weight: 100;
+        color: $anodyne-dark-gray-clr;
+        &.active {
+          color: $white;
+          background: $anodyne-primary-clr;
+        }
+      }
+    }
+      .home-tabs__wrapper-content{
+          .home-tabs__wrapper-content-img {
+            display: none;
+            &.active {
+              display: flex !important;
+              justify-content: flex-start;
+              align-items: center;
+              padding: 0.4rem;
+              background: $anodyne-primary-clr;
+              &:last-child{
+                padding:0.4rem;
+              }
+          }
+        }
+        .home-tabs__wrapper-content-text {
+          padding: $gutter-sm $gutter;
+          h3 {
+            font-size: 1.2rem;
+            padding: 1rem 0;
+            text-transform: uppercase;
+            color: #fff;
+          }
+          p {
+            font-size: .85rem;
+            font-weight: 100;
+            color: $white;
+            line-height: 1.5;
+          }
+          .home-tabs__wrapper-content-text-btn {
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 1rem;
+            padding: $gutter-sm $gutter;
+            background-color: $anodyne-dark-gray-clr;
+            color: $white;
+            text-transform: uppercase;
+            text-decoration: none;
+            @include shadow($shadow);
+            opacity: 1;
+            @include transition($transitions);
+          }
+          .home-tabs__wrapper-content-text-btn:focus, .home-tabs__wrapper-content-text-btn:hover {
+            box-shadow: none;
+            opacity: 0.8;
+          }
+        }
+      }
   }
-  .home-tabs__wrapper-btns-btn.active {
-    color: white;
-    background: #7fcfbb;
-  }
-  .home-tabs__wrapper-btns-btn.active:nth-of-type(2) {
-    background: #7fcfbb;
-    margin: -4px;
-  }
-  .home-tabs__wrapper-btns-btn.active:nth-of-type(3) {
-    background: #7fcfbb;
-    margin: -2px;
-  }
-  .home-tabs__wrapper-btns-btn:nth-of-type(2) {
-    background: #ccc;
-    margin: -4px;
-  }
-  .home-tabs__wrapper-btns-btn:nth-of-type(3) {
-    background: #eee;
-    margin: -2px;
-  }
 }
 
 
 
 
-.home-tabs__wrapper-content-img {
-  display: none;
-}
-.home-tabs__wrapper-content-img.active {
-  display: flex !important;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 0.4rem;
-  background: #7fcfbb;
-}
 
-.home-tabs__wrapper-content-img.active:last-child {
-  padding: 0 0 0 0.4rem;
-}
 
-.home-tabs__wrapper-content-text {
-  padding: 2rem 4rem;
-}
 
-.home-tabs__wrapper-content-text h3 {
-  font-size: 1.2rem;
-  padding: 1rem 0;
-  text-transform: uppercase;
-  color: #fff;
-}
-.home-tabs__wrapper-content-text p {
-  font-size: 1rem;
-  font-weight: 100;
-  color: #f7f7f7;
-  line-height: 1.5;
-}
-.home-tabs__wrapper-content-text-btn {
-  cursor: pointer;
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 1.2rem 2.4rem;
-  background-color: #444;
-  color: white;
-  text-transform: uppercase;
-  text-decoration: none;
-  box-shadow: 0px 1px 6px #868686;
-  opacity: 1;
-  transition: 0.3s ease-in box-shadow, 0.3s ease-in opacity;
-}
-.home-tabs__wrapper-content-text-btn:focus, .home-tabs__wrapper-content-text-btn:hover {
-  box-shadow: none;
-  opacity: 0.8;
-}
+
+
+
+
+

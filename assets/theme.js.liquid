@@ -5257,26 +5257,26 @@ tabItems.forEach(item => {
 });
 
 // relief tabs
-const tabBtns = document.querySelectorAll('.home-tabs__wrapper-btns-btn');
-const tabItems = document.querySelectorAll('.home-tabs__wrapper-content-img');
+const homeTabBtns = document.querySelectorAll('.home-tabs__wrapper-btns-btn');
+const homeTabItems = document.querySelectorAll('.home-tabs__wrapper-content-img');
 
-function selectTabContents(e) {
-  removeActiveTabClass();
-  removeActiveTabItemClass();
+function selectHomeTabContents(e) {
+  removeActiveHomeTabClass();
+  removeActiveHomeTabItemClass();
   this.classList.add('active');
-  const tabContentItems = document.querySelector(`#${this.id}-content`);
-  tabContentItems.classList.add('active');
+  const homeTabContentItems = document.querySelector(`#${this.id}-content`);
+  homeTabContentItems.classList.add('active');
 }
 
-tabBtns.forEach(tab => tab.addEventListener('click', selectTabContents));
+homeTabBtns.forEach(tabbtn => tabbtn.addEventListener('click', selectHomeTabContents));
 
-const removeActiveTabClass = () => {
-  tabBtns.forEach(tab => {
-    tab.classList.remove('active')
+const removeActiveHomeTabClass = () => {
+  homeTabBtns.forEach(tabbtn => {
+    tabbtn.classList.remove('active')
   })
 }
-const removeActiveTabItemClass = () => {
-  tabItems.forEach(tabItem => {
-    tabItem.classList.remove('active')
+const removeActiveHomeTabItemClass = () => {
+  homeTabItems.forEach(homeTabItem => {
+    homeTabItem.classList.remove('active')
   })
 }
