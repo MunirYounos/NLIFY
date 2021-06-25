@@ -5501,7 +5501,7 @@ cite {
   }
 
   .cart-link__bubble--visible {
-    background-color: $colorSecondary !important;
+    background-color: $anodyne-secondary-clr !important;
     border-color: $colorNav !important;
   }
 }
@@ -8994,6 +8994,42 @@ body:not(.dbtfy-wish_list-destroy) {
   }
 }
 
+.nlify-counter{
+  margin: $gutter-sm 0;
+  padding: $gutter-sm;
+  border: 1px solid darken($anodyne-background-clr, 6%);
+  .timer__wrapper{
+    .timer__text{
+      font-size:1rem;
+    }
+    .timer__counter {
+      .time-hour,.time-min, .time-sec{
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        strong{
+          font-size: ($headerSize2 - 4);
+          color:$anodyne-dark-gray-clr;
+          font-weight:100;
+          letter-spacing:3px;
+          line-height:1.2;
+        }
+        .time__badge{
+          color: $anodyne-primary-clr;
+          font-size:.55rem;
+          text-transform:uppercase;
+          font-weight:100;
+        }
+      }
+      code {
+        font-size:$headerSize2;
+        line-height:.5;
+        color:$anodyne-dark-gray-clr;
+      }
+    }
+  }
+}
 
 
 
