@@ -1914,16 +1914,12 @@ $class-type: unquote(".");
 
   // Tables
   table {
+    cursor: pointer;
     border-color: $border;
-
     tbody {
       tr {
-        &:nth-of-type(odd) {
-          background-color: rgba($default, $opacity);
-        }
-
-        &:hover {
-          background-color: $default;
+        &:nth-of-type(even) {
+          background-color: $anodyne-background-clr;
         }
       }
     }
@@ -1931,7 +1927,9 @@ $class-type: unquote(".");
     th, td {
       border-color: $border !important;
     }
-
+    td:nth-of-type(odd){
+      background-color: lighten($anodyne-primary-light-clr, 10%);
+    }
     th {
       background-color: $text;
       color: $background;
@@ -4396,7 +4394,7 @@ cite {
 }
 
 .overlay-backdrop {
-  background-color: rgba($colorDrawerOverlay, $colorDrawerOverlayOpacity);
+  background-color: rgba($black, $colorDrawerOverlayOpacity);
   position: fixed;
   left: 0;
   right: 0;
