@@ -1918,7 +1918,7 @@ $class-type: unquote(".");
     border-color: $border;
     tbody {
       tr {
-        &:nth-of-type(even) {
+        &:nth-of-type(odd) {
           background-color: $anodyne-background-clr;
         }
       }
@@ -1927,7 +1927,7 @@ $class-type: unquote(".");
     th, td {
       border-color: $border !important;
     }
-    td:nth-of-type(odd){
+    tr:nth-of-type(even){
       background-color: lighten($anodyne-primary-light-clr, 10%);
     }
     th {
@@ -3583,7 +3583,8 @@ table {
   table-layout: auto;
   overflow: hidden;
   text-align: center;
-
+  font-size:0.75rem;
+  word-break: break-all;
   .section-default & {
     background-color: $colorBody;
   }
@@ -3639,7 +3640,7 @@ table {
 
   // Cells
   th, td {
-    padding: $gutter-sm;
+    padding: $gutter-xs;
     border-right: $borders;
     border-bottom: $borders;
 
@@ -3654,12 +3655,12 @@ table {
 
   // Td
   td {
-    padding: $gutter-sm;
+    padding: $gutter-xs;
   }
 
   // Th
   th{
-    padding: $gutter-xs ($gutter-sm);
+    padding: $gutter-xs ($gutter-xs - 2);
     background-color: $colorHeadings;
     color: $colorBody;
     @include accentFontStack;
@@ -8756,7 +8757,7 @@ body:not(.dbtfy-wish_list-destroy) {
   margin: - ($gutter-lg - $gutter);
 }
 .tabs{
-  padding:0 $gutter-sm 0 8px;
+  padding:0 0 0 8px;
   @include screenUp($postSmall){
     padding: 0;
   }
