@@ -3469,6 +3469,10 @@ button {
 
   & > :last-child {
     margin-bottom: 0;
+    display:block;
+    text-align: center;
+    width: 100%;
+    padding: 0 25%;
   }
 }
 
@@ -4635,6 +4639,7 @@ cite {
 
     @include screen($small) {
       margin-bottom: -$gutter-sm;
+      padding-left: $gutter-sm;
     }
 
     &.grid-small {

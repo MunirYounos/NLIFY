@@ -40,13 +40,13 @@ function calculateDeliveryTimeEveryDay(someId, currentDate, setTime) {
 				sec = addZero(remain % 60);
 			someId.innerHTML = `<div class="timer__wrapper">
 														<div class="timer__text">
-																Get your order shipped today - order within: 
+																Je order wordt vandaag verzonden – Bestel voor: 
 														</div>
 														<div class="timer__counter">  
 														<span class="time-go">
-														<span class="time-hour"> <strong>${hours} </strong><span class="time__badge">hours</span></span> <code>:</code> 
-														<span class="time-min"> <strong>${min}</strong><span class="time__badge">minuttes</span></span> <code>:</code> 
-														<span class="time-sec"> <strong>${sec}</strong><span class="time__badge"> seconds</span></span> 
+														<span class="time-hour"> <strong>${hours} </strong><span class="time__badge">uren</span></span> <code>:</code> 
+														<span class="time-min"> <strong>${min}</strong><span class="time__badge">minuten</span></span> <code>:</code> 
+														<span class="time-sec"> <strong>${sec}</strong><span class="time__badge">seconden</span></span> 
 												</span></div></div>`;
 			setTimeout(tick, 1000);
 		} else if (now < endDateOfToday) {
@@ -59,13 +59,13 @@ function calculateDeliveryTimeEveryDay(someId, currentDate, setTime) {
 				sec = addZero(remain % 60);
 			someId.innerHTML = `<div class="timer__wrapper">
 													<div class="timer__text">
-														We are sending your parcel tomorrow - order within: 
+														Je order wordt morgen verzonden - Bestel voor: 
 													</div>
 													<div class="timer__counter">
 													<span class="time-up"  >
-														<span class="time-hour"> <strong>${hours} </strong><span class="time__badge">hours</span></span> <code>:</code>  
-														<span class="time-min"> <strong>${min}</strong><span class="time__badge">minuttes</span></span> <code>:</code> 
-														<span class="time-sec"> <strong>${sec}</strong><span class="time__badge"> seconds</span></span> 
+														<span class="time-hour"> <strong>${hours} </strong><span class="time__badge">uren</span></span> <code>:</code>  
+														<span class="time-min"> <strong>${min}</strong><span class="time__badge">minuten</span></span> <code>:</code> 
+														<span class="time-sec"> <strong>${sec}</strong><span class="time__badge">seconden</span></span> 
 													</span></div></div>`;
 			setTimeout(tick, 1000);
 		}
@@ -88,21 +88,21 @@ function calculateDeliveryTimeFriday(someId, currentDate, setTime) {
 				sec = addZero(remain % 60);
 			someId.innerHTML = `<div class="timer__wrapper">
 							<div class="timer__text">
-									Get your order shipped today - order within: 
+									Je order wordt vandaag verzonden – Bestel voor: 
 							</div>
 							<div class="timer__counter">  
 							<span class="time-go">
-							<span class="time-hour"> <strong>${hours} </strong><span class="time__badge">hours</span></span> <code>:</code> 
-							<span class="time-min"> <strong>${min}</strong><span class="time__badge">minuttes</span></span> <code>:</code> 
-							<span class="time-sec"> <strong>${sec}</strong><span class="time__badge"> seconds</span></span> 
+							<span class="time-hour"> <strong>${hours} </strong><span class="time__badge">uren</span></span> <code>:</code> 
+							<span class="time-min"> <strong>${min}</strong><span class="time__badge">minuten</span></span> <code>:</code> 
+							<span class="time-sec"> <strong>${sec}</strong><span class="time__badge">seconden</span></span> 
 							</span></div></div>`;
 			setTimeout(tick, 1000);
 		} else if (now > startDateOfToday) {
-			someId.innerHTML = `<div class="timer__wrapper"><div class="timer__text">Free delivery on orders over 59 &euro;. Free return and exchange</div></div>`;
+			someId.innerHTML = `<div class="timer__wrapper"><div class="timer__text">Gratis bezorging bij een bestelling boven 59 &euro;. Gratis retourneren en ruilen</div></div>`;
 		}
 	}
 	tick();
 }
 function calculateDeliveryTimeSaturday(someId) {
-	someId.innerHTML = `<div class="timer__wrapper"><div class="timer__text">Free delivery on orders over 59 &euro;. Free return and exchange</div></div>`;
+	someId.innerHTML = `<div class="timer__wrapper"><div class="timer__text">Gratis bezorging bij een bestelling boven 59 &euro;. Gratis retourneren en ruilen</div></div>`;
 }

@@ -226,10 +226,10 @@
         <div class="cart__total-price-info">
           <div class="grid grid-small flex-nowrap cart__subtotal-wrapper" >
             <div class="grid__item flex-fill overflow-hidden">
-              <p class="cart__subtotal text-money text-large spacer-bottom-none text-ellipsis">{{ 'cart.general.subtotal' | t }}</p>
+              <p class="cart__subtotal text-money text-large spacer-bottom-none text-ellipsis"><span id='revy-cart-subtotal-label'>{{ 'cart.general.subtotal' | t }}</span></p>
             </div>
             <div class="grid__item flex-auto text-right">
-              <p class="cart__subtotal text-money text-large spacer-bottom-none" data-cart-total><span class="money">{{ cart.total_price | money }}</span></p>
+              <p class="cart__subtotal text-money text-large spacer-bottom-none" data-cart-total><span class="money"><span id='revy-cart-subtotal-price'><span id='revy-cart-subtotal-price'>{{ cart.total_price | money }}</span></span></span></p>
             </div>
           </div>
 
@@ -297,7 +297,7 @@
           {%- endif -%}
 
           {%- if settings.cart_cost_checkout -%}
-            – <span class="cart-cost" data-cart-total-value><span class="money">{{ cart.total_price | money }}</span></span>
+            – <span class="cart-cost" data-cart-total-value><span class="money"><span id='revy-cart-subtotal-price'><span id='revy-cart-subtotal-price'>{{ cart.total_price | money }}</span></span></span></span>
           {%- endif -%}
         </span>
       </button>

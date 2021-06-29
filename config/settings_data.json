@@ -1,8 +1,11 @@
 {
   "current": {
-    "sticky_announcement_bar": true,
+    "sticky_header": true,
+    "sticky_announcement_bar": false,
     "hero_header": false,
-    "collection_grid_animation": false,
+    "height_header": 100,
+    "height_header_mobile": 70,
+    "collection_grid_animation": true,
     "section_height": "xsmall",
     "border_radius": 1,
     "button_padding_x": 30,
@@ -40,22 +43,41 @@
     "color_overlay": "rgba(0,0,0,0)",
     "opacity_overlay": 11,
     "favicon": "shopify:\/\/shop_images\/favicon-32x32.png",
-    "header_font_size": 28,
+    "share_reddit": false,
+    "social_facebook_link": "https:\/\/www.facebook.com\/anodyne.nl\/",
+    "social_instagram_link": "https:\/\/www.instagram.com\/anodyne.nl\/",
+    "header_family": "poppins_n4",
+    "header_font_size": 24,
     "header_font_size_big": 50,
-    "header_transform": "uppercase",
-    "base_font_size": 14,
+    "header_transform": "initial",
+    "base_font_size": 16,
     "dbtfy_cart_countdown": false,
+    "dbtfy_collection_addtocart": false,
     "dbtfy_custom_currencies": false,
+    "dbtfy_delivery_time": false,
     "dbtfy_instagram_feed": false,
+    "dbtfy_inventory_quantity": false,
     "dbtfy_live_view": false,
+    "dbtfy_quantity_breaks": false,
     "dbtfy_sales_countdown": false,
     "dbtfy_sales_pop": false,
+    "dbtfy_shop_protect": false,
     "dbtfy_social_discount": true,
-    "dbtfy_upsell_popup": false,
+    "dbtfy_upsell_popup": true,
     "dbtfy_addtocart_animation_type": "shakeX",
     "dbtfy_addtocart_animation_interval": 10,
     "dbtfy_cart_countdown_time_mins": 19,
+    "dbtfy_cart_discount_label": "Kortingscode",
+    "dbtfy_cart_discount_placeholder": "Vul hier je kortingscode in",
+    "dbtfy_cart_discount_apply_button_label": "Gebruik kortingscode",
+    "dbtfy_cart_goal_before_text": "Nog",
+    "dbtfy_cart_goal_amount": 59,
+    "dbtfy_cart_goal_after_text": "te gaan tot GRATIS verzending!",
+    "dbtfy_cart_goal_reached_text": "Je hebt recht op GRATIS verzending!",
+    "dbtfy_cart_discount_savings_label": "Totale besparing",
     "dbtfy_color_swatches_count": 10,
+    "dbtfy_cookie_box_text": "<p><strong>Hou je van cookies?<\/strong> 🍪 We gebruiken cookies om ervoor te zorgen dat je de beste ervaring krijgt op onze website.<\/p>",
+    "dbtfy_cookie_box_button_label": "Accepteer cookies",
     "dbtfy_delivery_time_position": "under_add_to_cart_button",
     "dbtfy_delivery_time_prefix": "Order before 13:00 .. order sent today",
     "dbtfy_delivery_time_separator": "-",
@@ -63,11 +85,42 @@
     "dbtfy_delivery_time_date": false,
     "dbtfy_delivery_time_from": 7,
     "dbtfy_delivery_time_to": 14,
+    "dbtfy_inventory_quantity_prefix": "Nog",
+    "dbtfy_inventory_quantity_suffix": "op voorraad",
     "dbtfy_inventory_quantity_show_random": false,
+    "dbtfy_inventory_quantity_max": 10,
     "dbtfy_live_view_suffix": "are looking at this product",
     "dbtfy_live_view_min": 62,
     "dbtfy_live_view_max": 100,
+    "dbtfy_floating_bar_text": "10% korting!",
+    "dbtfy_newsletter_popup_title": "Schrijf je in op onze nieuwsbrief!",
+    "dbtfy_newsletter_popup_text": "<p>Ontvang 10% korting op je eerste aankoop door je in te schrijven voor onze nieuwsbrief.<\/p>",
+    "dbtfy_newsletter_popup_close": "Nee, dank je",
+    "dbtfy_newsletter_popup_title_success": "Dankjewel!",
+    "dbtfy_newsletter_popup_text_success": "<p>Kopieer de kortingscode hieronder en plak hem in je mandje om je korting te krijgen!<\/p>",
+    "dbtfy_newsletter_popup_reward_button": "Kortingscode gebruiken",
+    "dbtfy_newsletter_popup_discount_name": "R6QG31",
+    "dbtfy_newsletter_popup_discount_amount": "10",
     "dbtfy_product_image_crop_position": "top center",
+    "dbtfy_recently_viewed_title": "Recent bekeken",
+    "dbtfy_smart_search_collections": "Collecties",
+    "dbtfy_smart_search_articles": "Artikelen",
+    "dbtfy_smart_search_pages": "Pagina's",
+    "dbtfy_smart_search_all": "Laat alle resultaten zien",
+    "dbtfy_social_discount_link": "Deel en krijg 10% korting!",
+    "dbtfy_social_discount_popup_title": "Deel en krijg 10% korting!",
+    "dbtfy_social_discount_popup_text": "Deel dit met je vrienden en krijg 10% korting!",
+    "dbtfy_social_discount_reward_title": "Bedankt voor het delen!",
+    "dbtfy_social_discount_reward_text": "<p>Kopieer de kortingscode hieronder en plak hem in je mandje om je korting te krijgen!<\/p>",
+    "dbtfy_social_discount_reward_button": "Gebruik kortingscode",
+    "dbtfy_social_discount_reward_code": "20GWS15",
+    "dbtfy_social_discount_reward_amount": "10",
+    "dbtfy_trust_badge_text": "Gegarandeerd veilig & betrouwbaar afrekenen",
+    "dbtfy_wish_list_page": "verlanglijst",
+    "dbtfy_wish_list_icon_placement": "bottom-left",
+    "dbtfy_wish_list_add_text": "Voeg toe aan verlanglijstje",
+    "dbtfy_wish_list_remove_text": "Verwijder van verlanglijst",
+    "dbtfy_wish_list_empty_text": "Je verlanglijstje is op dit moment leeg.",
     "sections": {
       "drawer-menu": {
         "type": "drawer-menu",
@@ -77,8 +130,8 @@
           "phone": true,
           "show_social_medias": true,
           "title": "Menu",
-          "drawer_top_link_list": "main-menu",
-          "drawer_bottom_link_list": "footer"
+          "drawer_top_link_list": "collection-menu",
+          "drawer_bottom_link_list": "pages-menu"
         }
       },
       "announcement": {
@@ -87,7 +140,7 @@
           "announcement-0": {
             "type": "message",
             "settings": {
-              "announcement_text": "<p>Free shipping worldwide | 30-Day free returns<\/p>"
+              "announcement_text": "<p>Gratis verzending bij aankoop van meer dan €59<\/p>"
             }
           }
         },
@@ -99,8 +152,8 @@
           "show_social": true,
           "email": true,
           "phone": true,
-          "left_message": "<p>Follow us!<\/p>",
-          "right_message": "<p>Get in touch with us<\/p>",
+          "left_message": "<p>Volg ons!<\/p>",
+          "right_message": "<p>Contact<\/p>",
           "announcement_autoplayspeed": 5
         }
       },
@@ -116,8 +169,8 @@
           "default_logo_svg": "",
           "inverted_logo_svg": "",
           "mobile_logo_svg": "",
-          "logo_width": 200,
-          "logo_mobile_width": 100
+          "logo_width": 152,
+          "logo_mobile_width": 130
         }
       },
       "dbtfy-instagram-feed": {
@@ -141,20 +194,22 @@
           "guarantee-0": {
             "type": "text",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Happy.png",
-              "guarantee_icon": "loyalty",
-              "title": "Our Guarantee",
-              "text": "<p>Share your guarantees with your customers.<\/p>",
+              "image": "shopify:\/\/shop_images\/fast-delivery.png",
+              "guarantee_icon": "",
+              "title": "Gratis retourneren en ruilen",
+              "text": "",
               "button_style": "btn-outline-primary",
-              "button_label": ""
+              "button_label": "",
+              "button_link": "shopify:\/\/pages\/faq"
             }
           },
           "guarantee-1": {
             "type": "text",
             "settings": {
-              "guarantee_icon": "loyalty",
-              "title": "Our Guarantee",
-              "text": "<p>Share your guarantees with your customers.<\/p>",
+              "image": "shopify:\/\/shop_images\/check.png",
+              "guarantee_icon": "",
+              "title": "Gratis verzending bij aankoop van meer dan €59",
+              "text": "",
               "button_style": "btn-outline-primary",
               "button_label": ""
             }
@@ -162,9 +217,10 @@
           "guarantee-2": {
             "type": "text",
             "settings": {
-              "guarantee_icon": "loyalty",
-              "title": "Our Guarantee",
-              "text": "<p>Share your guarantees with your customers.<\/p>",
+              "image": "shopify:\/\/shop_images\/return-delivery.png",
+              "guarantee_icon": "",
+              "title": "60 dagen volledig retourrecht",
+              "text": "",
               "button_style": "btn-outline-primary",
               "button_label": ""
             }
@@ -172,11 +228,13 @@
           "b0820161-063b-4b1a-9f03-5afb4890dd28": {
             "type": "text",
             "settings": {
-              "guarantee_icon": "loyalty",
-              "title": "Our Guarantee",
-              "text": "<p>Share your guarantees with your customers.<\/p>",
+              "image": "shopify:\/\/shop_images\/phone-call.png",
+              "guarantee_icon": "",
+              "title": "Neem contact met ons op",
+              "text": "",
               "button_style": "btn-outline-primary",
-              "button_label": ""
+              "button_label": "",
+              "button_link": "shopify:\/\/pages\/contact"
             }
           }
         },
@@ -189,78 +247,72 @@
         "settings": {
           "show_guarantee": true,
           "guarantee_size": "xl",
-          "section_style": "section-blank"
+          "section_style": "section-default"
         }
       },
       "footer": {
         "type": "footer",
         "blocks": {
-          "footer-0": {
-            "type": "text",
-            "settings": {
-              "column_width": 2,
-              "svg": "",
-              "logo_width": 150,
-              "title": "About Us",
-              "subtitle": "",
-              "text": "<p>Share store details, promotions, or brand content with your customers.<\/p>",
-              "email": true,
-              "phone": true
-            }
-          },
           "footer-1": {
             "type": "link_list",
             "settings": {
               "column_width": 1,
-              "title": "Quick Links",
+              "title": "Categorieën",
               "subtitle": "",
-              "footer_link_list": "footer"
+              "footer_link_list": "collection-menu"
             }
           },
-          "footer-2": {
-            "type": "newsletter",
+          "762e8c8c-2741-430f-a74d-5ebf344808b7": {
+            "type": "link_list",
             "settings": {
-              "column_width": 2,
-              "title": "Subscribe to our newsletter",
-              "subtitle": "A short sentence describing what someone will receive by subscribing"
+              "column_width": 1,
+              "title": "Anodyne",
+              "subtitle": "",
+              "footer_link_list": "pages-menu"
+            }
+          },
+          "footer-0": {
+            "type": "text",
+            "settings": {
+              "column_width": 1,
+              "svg": "",
+              "logo_width": 104,
+              "title": "Contact",
+              "subtitle": "",
+              "text": "<p>Anodyne.nl<\/p><p>Ma. - do: 10:00 - 16:00<br\/>Vrijdag: 10:00 - 15:00<br\/><\/p>",
+              "email": true,
+              "phone": true
+            }
+          },
+          "d3339dc9-34a5-414c-97ce-b11a78724c5a": {
+            "type": "html",
+            "settings": {
+              "column_width": 1,
+              "title": "Socials",
+              "subtitle": "",
+              "facebook_link": "https:\/\/www.facebook.com\/anodyne.nl\/",
+              "youtube_link": "https:\/\/www.youtube.com\/channel\/UCFLDlWEPVUrvsuNjVt6sXJg",
+              "insta_link": "https:\/\/www.instagram.com\/anodyne.nl\/"
             }
           }
         },
         "block_order": [
-          "footer-0",
           "footer-1",
-          "footer-2"
+          "762e8c8c-2741-430f-a74d-5ebf344808b7",
+          "footer-0",
+          "d3339dc9-34a5-414c-97ce-b11a78724c5a"
         ],
         "settings": {
-          "show_social_media": true,
+          "show_social_media": false,
           "social_title": "Follow-us on social media!",
           "show_payment_icons": true,
-          "show_shopify_footer": true,
-          "show_debutify_footer": true,
-          "custom_credential": ""
+          "show_shopify_footer": false,
+          "show_debutify_footer": false,
+          "custom_credential": "<p>P.O. Pedersens Vej 9, 8200 Aarhus N, Denemarken - BTW nummer: NL824334474B01<\/p>"
         }
       },
       "dbtfy-upsell-popup": {
         "type": "dbtfy-upsell-popup",
-        "blocks": {
-          "ead6eaa3-3da2-430c-91f3-c7efd70d0a6d": {
-            "type": "upsell",
-            "settings": {
-              "dbtfy_upsell_popup_title": "Special Offer!",
-              "dbtfy_upsell_popup_text": "<p>Add this product to your cart and get 20% OFF your entire order.<\/p>",
-              "dbtfy_upsell_popup_product_trigger": "test-product",
-              "dbtfy_upsell_popup_product_offer": "test-product",
-              "dbtfy_upsell_popup_icons": "card_giftcard",
-              "button_label": "Claim offer!",
-              "dbtfy_upsell_popup_discount_name": "20% DISCOUNT",
-              "dbtfy_upsell_popup_discount_amount": "20",
-              "dbtfy_upsell_popup_discount_type": "%"
-            }
-          }
-        },
-        "block_order": [
-          "ead6eaa3-3da2-430c-91f3-c7efd70d0a6d"
-        ],
         "settings": {
           "dbtfy_upsell_popup_width": "",
           "dbtfy_upsell_popup_description": "See product details",
@@ -307,7 +359,7 @@
           "8dc0fec8-6822-4f8d-a0e7-f5742507d4c1": {
             "type": "swatch",
             "settings": {
-              "title": "white",
+              "title": "wit",
               "title2": "",
               "dbtfy_swatches_color_value": "#ffffff"
             }
@@ -315,7 +367,7 @@
           "9cf0c0bd-79f7-4404-a842-feab681bd8f6": {
             "type": "swatch",
             "settings": {
-              "title": "black",
+              "title": "zwart",
               "title2": "",
               "dbtfy_swatches_color_value": "#000000"
             }
@@ -327,12 +379,21 @@
               "title2": "",
               "dbtfy_swatches_color_value": "#ceb3a7"
             }
+          },
+          "f4a0703b-4938-45d9-86b4-b0e0a024da98": {
+            "type": "swatch",
+            "settings": {
+              "title": "petrol blue",
+              "title2": "",
+              "dbtfy_swatches_color_value": "#134b78"
+            }
           }
         },
         "block_order": [
           "8dc0fec8-6822-4f8d-a0e7-f5742507d4c1",
           "9cf0c0bd-79f7-4404-a842-feab681bd8f6",
-          "f173f091-d5c0-48d9-845a-d768043b536f"
+          "f173f091-d5c0-48d9-845a-d768043b536f",
+          "f4a0703b-4938-45d9-86b4-b0e0a024da98"
         ],
         "settings": {}
       },
@@ -362,28 +423,73 @@
       "dbtfy-upsell-bundles": {
         "type": "dbtfy-upsell-bundles",
         "blocks": {
-          "fee1dbee-a8e4-47bc-92c9-5d8341d45896": {
+          "d7f00cd1-9879-4b13-8f28-a597d7b1734f": {
             "type": "bundle",
             "settings": {
-              "dbtfy_upsell_bundles_product_trigger": "test-product",
-              "dbtfy_upsell_bundles_product_offer_1": "test-product",
+              "dbtfy_upsell_bundles_product_trigger": "houding-corrector",
+              "dbtfy_upsell_bundles_product_offer_1": "womens-posture-shirt",
+              "dbtfy_upsell_bundles_product_offer_2": ""
+            }
+          },
+          "a548e6f2-a47e-4809-bf8f-9a7b62f2866d": {
+            "type": "bundle",
+            "settings": {
+              "dbtfy_upsell_bundles_product_trigger": "mens-posture-shirt",
+              "dbtfy_upsell_bundles_product_offer_1": "houding-corrector",
+              "dbtfy_upsell_bundles_product_offer_2": ""
+            }
+          },
+          "1ab968e6-6cfe-4c89-ba5d-1aef55d502c5": {
+            "type": "bundle",
+            "settings": {
+              "dbtfy_upsell_bundles_product_trigger": "mens-posture-shirt-zipper",
+              "dbtfy_upsell_bundles_product_offer_1": "houding-corrector",
+              "dbtfy_upsell_bundles_product_offer_2": ""
+            }
+          },
+          "5c5a0ecc-8cdb-432b-bc34-c219209bf1c0": {
+            "type": "bundle",
+            "settings": {
+              "dbtfy_upsell_bundles_product_trigger": "womens-posture-shirt",
+              "dbtfy_upsell_bundles_product_offer_1": "houding-corrector",
+              "dbtfy_upsell_bundles_product_offer_2": ""
+            }
+          },
+          "a8eb9162-db5d-42f2-93ed-848d379ad4ce": {
+            "type": "bundle",
+            "settings": {
+              "dbtfy_upsell_bundles_product_trigger": "womens-posture-shirt-zipper",
+              "dbtfy_upsell_bundles_product_offer_1": "houding-corrector",
+              "dbtfy_upsell_bundles_product_offer_2": ""
+            }
+          },
+          "dc33027d-04ed-47dc-a0d2-6adb6c1abf6c": {
+            "type": "bundle",
+            "settings": {
+              "dbtfy_upsell_bundles_product_trigger": "massage-gun-mini",
+              "dbtfy_upsell_bundles_product_offer_1": "houding-corrector",
               "dbtfy_upsell_bundles_product_offer_2": ""
             }
           }
         },
         "block_order": [
-          "fee1dbee-a8e4-47bc-92c9-5d8341d45896"
+          "d7f00cd1-9879-4b13-8f28-a597d7b1734f",
+          "a548e6f2-a47e-4809-bf8f-9a7b62f2866d",
+          "1ab968e6-6cfe-4c89-ba5d-1aef55d502c5",
+          "5c5a0ecc-8cdb-432b-bc34-c219209bf1c0",
+          "a8eb9162-db5d-42f2-93ed-848d379ad4ce",
+          "dc33027d-04ed-47dc-a0d2-6adb6c1abf6c"
         ],
         "settings": {
-          "dbtfy_upsell_bundles_title": "Frequently bought together",
+          "dbtfy_upsell_bundles_title": "Vaak samen gekocht",
           "dbtfy_upsell_bundles_subtitle": "",
-          "dbtfy_upsell_bundles_total": "Total price:",
-          "dbtfy_upsell_bundles_cart": "Add selected items",
+          "dbtfy_upsell_bundles_total": "Totale prijs:",
+          "dbtfy_upsell_bundles_cart": "Voeg geselecteerde producten toe",
           "dbtfy_upsell_bundles_icons": "library_add_check",
-          "dbtfy_upsell_bundles_current": "This item:",
+          "dbtfy_upsell_bundles_current": "Dit product:",
           "section_style": "section-blank",
           "dbtfy_upsell_bundles_reviews": false,
-          "dbtfy_upsell_bundles_limit": "2",
+          "dbtfy_upsell_bundles_limit": "1",
           "dbtfy_upsell_bundles_position": "product"
         }
       },
@@ -458,7 +564,7 @@
         "type": "product-recommendations",
         "settings": {
           "show_product_recommendations": true,
-          "title": "Recommended for you",
+          "title": "Aanbevolen voor jou",
           "subtitle": "",
           "section_style": "section-default",
           "rows": "1",
@@ -489,11 +595,11 @@
       "related-products": {
         "type": "related-products",
         "settings": {
-          "show_related_products": true,
-          "related_collection": true,
+          "show_related_products": false,
+          "related_collection": false,
           "same_vendor": false,
           "same_type": false,
-          "never_empty": true,
+          "never_empty": false,
           "title": "You may also like",
           "subtitle": "",
           "section_style": "section-blank",
@@ -524,14 +630,53 @@
       "dbtfy-size-chart": {
         "type": "dbtfy-size-chart",
         "blocks": {
-          "3cdc3cef-542e-4b15-bb7e-389e690a0a67": {
+          "84402067-0a7e-4633-be1a-a70459bcda82": {
             "type": "text",
             "settings": {
-              "dbtfy_size_chart_popup_title": "Size guide",
-              "dbtfy_size_chart_abovetext": "<p>test1<\/p>",
-              "dbtfy_size_chart_html": "<table>\n<thead><tr>\n<td>Mens<\/td>\n<td>Small<\/td>\n<td>Medium<\/td>\n<td>Large<\/td>\n<td>X-Large<\/td>\n<td>XX-Large<\/td>\n<\/tr><\/thead>\n<tbody>\n<tr>\n<td>Neck<\/td>\n<td>14-14.5<\/td>\n<td>15-15.5<\/td>\n<td>16-16.5<\/td>\n<td>17-17.5<\/td>\n<td>18-18.5<\/td>\n<\/tr>\n<tr>\n<td>Chest<\/td>\n<td>35-37<\/td>\n<td>38-40<\/td>\n<td>41-43<\/td>\n<td>44-46<\/td>\n<td>47-49<\/td>\n<\/tr>\n<tr>\n<td>Sleeve<\/td>\n<td>32-33<\/td>\n<td>33-34<\/td>\n<td>34-35<\/td>\n<td>35-36<\/td>\n<td>36-36.5<\/td>\n<\/tr>\n<tr>\n<td>Waist<\/td>\n<td>29-31<\/td>\n<td>32-34<\/td>\n<td>35-37<\/td>\n<td>38-40<\/td>\n<td>41-43<\/td>\n<\/tr>\n<\/tbody>\n<\/table>",
-              "dbtfy_size_chart_undertext": "<p>test2<\/p>",
-              "dbtfy_size_chart_product": "test-product",
+              "dbtfy_size_chart_popup_title": "Maattabel - Men's Posture Shirt",
+              "dbtfy_size_chart_abovetext": "<p>Het product moet strak tegen de schouders zitten. We raden aan om de kleinste maat te nemen, als je in onze maattabel tussen twee maten in zit. Meestal moet je één tot twee maten kleiner dan gewoonlijk bestellen.<\/p><p><\/p><p><strong>* Kantel je toestel voor het beste overzicht<\/strong><\/p>",
+              "dbtfy_size_chart_html": "<table>\n\t<thead>\n\t<tr>\n\t\t<th>Mannen<\/th>\n\t\t<th>Gewicht <br>(KG)<br>\n<\/th>\n\t\t<th>Lengte <br>(CM)<br>\n<\/th>\n\t<\/tr>\n\t<\/thead>\n\t<tbody>\n\t<tr>\n\t\t<td>XS<\/td>\n\t\t<td>49-57<\/td>\n\t\t<td>160-180<\/td>\n\t<\/tr>\n\t<tr>\n\t\t<td>S<\/td>\n\t\t<td>58-72<\/td>\n\t\t<td>160-180<\/td>\n\t<\/tr>\n\t<tr>\n\t\t<td>M<\/td>\n\t\t<td>73-84<\/td>\n\t\t<td>165-190<\/td>\n\t<\/tr>\n\t<tr>\n\t\t<td>L<\/td>\n\t\t<td>85-96<\/td>\n\t\t<td>165-190<\/td>\n\t<\/tr>\n\t<tr>\n\t\t<td>XL<\/td>\n\t\t<td>97-110<\/td>\n\t\t<td>165-195<\/td>\n\t<\/tr>\n\t<tr>\n\t\t<td>2XL<\/td>\n\t\t<td>111-125<\/td>\n\t\t<td>165-195+<\/td>\n\t<\/tr>\n\t<\/tbody>\n<tbody>\n<\/tbody>\n<\/table>",
+              "dbtfy_size_chart_undertext": "<p>Mocht je twijfelen over de maat, neem dan gerust contact met ons op via info@anodyne.nl of +31 (0) 20-26 22 008<\/p>",
+              "dbtfy_size_chart_product": "mens-posture-shirt",
+              "dbtfy_size_chart_collection": "",
+              "dbtfy_size_chart_tag": "",
+              "dbtfy_size_chart_type": ""
+            }
+          },
+          "053fd755-317f-4414-a473-23265829f8fd": {
+            "type": "text",
+            "settings": {
+              "dbtfy_size_chart_popup_title": "Maattabel - Men's Posture Shirt Zipper",
+              "dbtfy_size_chart_abovetext": "<p>Het product moet strak tegen de schouders zitten. We raden aan om de kleinste maat te nemen, als je in onze maattabel tussen twee maten in zit. Meestal moet je één tot twee maten kleiner dan gewoonlijk bestellen.<\/p><p><\/p><p><strong>* Kantel je toestel voor het beste overzicht<\/strong><\/p>",
+              "dbtfy_size_chart_html": "<table>\n\t<thead>\n\t<tr>\n\t\t<th>Mannen<\/th>\n\t\t<th>Gewicht <br>(KG)<br>\n<\/th>\n\t\t<th>Lengte <br>(CM)<br>\n<\/th>\n\t<\/tr>\n\t<\/thead>\n\t<tbody>\n\t<tr>\n\t\t<td>XS<\/td>\n\t\t<td>49-57<\/td>\n\t\t<td>160-180<\/td>\n\t<\/tr>\n\t<tr>\n\t\t<td>S<\/td>\n\t\t<td>58-72<\/td>\n\t\t<td>160-180<\/td>\n\t<\/tr>\n\t<tr>\n\t\t<td>M<\/td>\n\t\t<td>73-84<\/td>\n\t\t<td>165-190<\/td>\n\t<\/tr>\n\t<tr>\n\t\t<td>L<\/td>\n\t\t<td>85-96<\/td>\n\t\t<td>165-190<\/td>\n\t<\/tr>\n\t<tr>\n\t\t<td>XL<\/td>\n\t\t<td>97-110<\/td>\n\t\t<td>165-195<\/td>\n\t<\/tr>\n\t<tr>\n\t\t<td>2XL<\/td>\n\t\t<td>111-125<\/td>\n\t\t<td>165-195+<\/td>\n\t<\/tr>\n\t<\/tbody>\n<tbody>\n<\/tbody>\n<\/table>",
+              "dbtfy_size_chart_undertext": "<p>Mocht je twijfelen over de maat, neem dan gerust contact met ons op via info@anodyne.nl of +31 (0) 20-26 22 008<\/p>",
+              "dbtfy_size_chart_product": "mens-posture-shirt-zipper",
+              "dbtfy_size_chart_collection": "",
+              "dbtfy_size_chart_tag": "",
+              "dbtfy_size_chart_type": ""
+            }
+          },
+          "5643d919-8a92-4dab-89c5-ee43e27c3dac": {
+            "type": "text",
+            "settings": {
+              "dbtfy_size_chart_popup_title": "Maattabel - Women's Posture Shirt",
+              "dbtfy_size_chart_abovetext": "<p>Het product moet strak tegen de schouders zitten. We raden aan om de kleinste maat te nemen, als je in onze maattabel tussen twee maten in zit. Meestal moet je één tot twee maten kleiner dan gewoonlijk bestellen.<\/p><p><\/p><p><strong>* Kantel je toestel voor het beste overzicht<\/strong><\/p>",
+              "dbtfy_size_chart_html": "<table>\n\t<thead>\n\t<tr>\n\t\t<th>Vrouwen<\/th>\n\t\t<th>Gewicht <br>(KG)<br>\n<\/th>\n\t\t<th>Borstomvang<br>(CM)<br>\n<\/th>\n\t\t<th>Lengte <br>(CM)<br>\n<\/th>\n\t<\/tr>\n\t<\/thead>\n\t<tbody>\n\t<tr>\n\t\t<td>XS<\/td>\n\t\t<td>49-57<\/td>\n\t\t<td>76-86<\/td>\n\t\t<td>160-180<\/td>\n\t<\/tr>\n\t<tr>\n\t\t<td>S<\/td>\n\t\t<td>58-72<\/td>\n\t\t<td>86-91<\/td>\n\t\t<td>160-180<\/td>\n\t<\/tr>\n\t<tr>\n\t\t<td>M<\/td>\n\t\t<td>73-84<\/td>\n\t\t<td>91-98<\/td>\n\t\t<td>165-190<\/td>\n\t<\/tr>\n\t<tr>\n\t\t<td>L<\/td>\n\t\t<td>85-96<\/td>\n\t\t<td>98-106<\/td>\n\t\t<td>165-190<\/td>\n\t<\/tr>\n\t<tr>\n\t\t<td>XL<\/td>\n\t\t<td>97-110<\/td>\n\t\t<td>106-114<\/td>\n\t\t<td>165-195<\/td>\n\t<\/tr>\n\t<tr>\n\t\t<td>2XL<\/td>\n\t\t<td>111-125<\/td>\n\t\t<td>115-122<\/td>\n\t\t<td>165-195+<\/td>\n\t<\/tr>\n\t<\/tbody>\n<tbody>\n<\/tbody>\n<\/table>",
+              "dbtfy_size_chart_undertext": "<p>Mocht je twijfelen over de maat, neem dan gerust contact met ons op via info@anodyne.nl of +31 (0) 20-26 22 008<\/p>",
+              "dbtfy_size_chart_product": "womens-posture-shirt",
+              "dbtfy_size_chart_collection": "",
+              "dbtfy_size_chart_tag": "",
+              "dbtfy_size_chart_type": ""
+            }
+          },
+          "2dfdc6fd-78f7-49a6-a14b-f9151fd1a4be": {
+            "type": "text",
+            "settings": {
+              "dbtfy_size_chart_popup_title": "Maattabel - Women's Posture Shirt Zipper",
+              "dbtfy_size_chart_abovetext": "<p>Het product moet strak tegen de schouders zitten. We raden aan om de kleinste maat te nemen, als je in onze maattabel tussen twee maten in zit. Meestal moet je één tot twee maten kleiner dan gewoonlijk bestellen.<\/p><p><\/p><p><strong>* Kantel je toestel voor het beste overzicht<\/strong><\/p>",
+              "dbtfy_size_chart_html": "<table>\n\t<thead>\n\t<tr>\n\t\t<th>Vrouwen<\/th>\n\t\t<th>Gewicht <br>(KG)<br>\n<\/th>\n\t\t<th>Borstomvang<br>(CM)<br>\n<\/th>\n\t\t<th>Lengte <br>CM)<br>\n<\/th>\n\t<\/tr>\n\t<\/thead>\n\t<tbody>\n\t<tr>\n\t\t<td>XS<\/td>\n\t\t<td>49-57<\/td>\n\t\t<td>76-86<\/td>\n\t\t<td>160-180<\/td>\n\t<\/tr>\n\t<tr>\n\t\t<td>S<\/td>\n\t\t<td>58-72<\/td>\n\t\t<td>86-91<\/td>\n\t\t<td>160-180<\/td>\n\t<\/tr>\n\t<tr>\n\t\t<td>M<\/td>\n\t\t<td>73-84<\/td>\n\t\t<td>91-98<\/td>\n\t\t<td>165-190<\/td>\n\t<\/tr>\n\t<tr>\n\t\t<td>L<\/td>\n\t\t<td>85-96<\/td>\n\t\t<td>98-106<\/td>\n\t\t<td>165-190<\/td>\n\t<\/tr>\n\t<tr>\n\t\t<td>XL<\/td>\n\t\t<td>97-110<\/td>\n\t\t<td>106-114<\/td>\n\t\t<td>165-195<\/td>\n\t<\/tr>\n\t<tr>\n\t\t<td>2XL<\/td>\n\t\t<td>111-125<\/td>\n\t\t<td>115-122<\/td>\n\t\t<td>165-195+<\/td>\n\t<\/tr>\n\t<\/tbody>\n<tbody>\n<\/tbody>\n<\/table>",
+              "dbtfy_size_chart_undertext": "<p>Mocht je twijfelen over de maat, neem dan gerust contact met ons op via info@anodyne.nl of +31 (0) 20-26 22 008<\/p>",
+              "dbtfy_size_chart_product": "womens-posture-shirt-zipper",
               "dbtfy_size_chart_collection": "",
               "dbtfy_size_chart_tag": "",
               "dbtfy_size_chart_type": ""
@@ -539,12 +684,15 @@
           }
         },
         "block_order": [
-          "3cdc3cef-542e-4b15-bb7e-389e690a0a67"
+          "84402067-0a7e-4633-be1a-a70459bcda82",
+          "053fd755-317f-4414-a473-23265829f8fd",
+          "5643d919-8a92-4dab-89c5-ee43e27c3dac",
+          "2dfdc6fd-78f7-49a6-a14b-f9151fd1a4be"
         ],
         "settings": {
           "dbtfy_size_chart_icon": "straighten",
-          "dbtfy_size_chart_title": "Size chart - <font color=\"#990000\"> Pay attention while picking your size!<\/font>",
-          "dbtfy_size_chart_width": "large"
+          "dbtfy_size_chart_title": "<span style=\"text-decoration: underline; font-weight:700\"> Maattabel <\/span> - <font color=\"#990000\"> Controleer de maattabel, maat is meestal anders dan u gewend bent.<\/font>",
+          "dbtfy_size_chart_width": "xlarge"
         }
       },
       "1621502354dc712a94": {
@@ -555,21 +703,22 @@
             "settings": {
               "overlay": false,
               "image": "shopify:\/\/shop_images\/Nude-heroimage_v2-1.png",
+              "image_mobile": "shopify:\/\/shop_images\/hero-mobil.jpg",
               "image_position": "center center",
               "image_position_mobile": "center center",
               "video": "",
-              "title": "THE POSTURE SHIRT™ WHITE",
-              "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua?<\/p>",
+              "title": "THE POSTURE SHIRT™",
+              "text": "",
               "text_position": "align-center",
               "text_position_mobile": "align-center",
               "text_alignment": "text-left",
               "text_alignment_mobile": "text-left",
               "enable_custom_fonts": false,
               "slideshow_family": "poppins_n4",
-              "button_label": "",
-              "button_link": "shopify:\/\/collections\/all",
+              "button_label": "Lees meer",
+              "button_link": "shopify:\/\/collections",
               "button_style": "btn--primary",
-              "button_label_2": "Learn more",
+              "button_label_2": "",
               "button_link_2": "shopify:\/\/collections\/all",
               "button_style_2": ""
             }
@@ -593,19 +742,22 @@
           "1621503255614ef73d-0": {
             "type": "collection",
             "settings": {
-              "collection": "posture-shirt"
+              "collection": "posture-shirt",
+              "btn__shopnow": "shop now"
             }
           },
           "1621503255614ef73d-1": {
             "type": "collection",
             "settings": {
-              "collection": "rugsteun"
+              "collection": "rugsteun",
+              "btn__shopnow": "shop now"
             }
           },
           "1621503255614ef73d-2": {
             "type": "collection",
             "settings": {
-              "collection": "vrouwen"
+              "collection": "vrouwen",
+              "btn__shopnow": "shop now"
             }
           }
         },
@@ -616,7 +768,7 @@
         ],
         "settings": {
           "full_width": false,
-          "title": "Collection list",
+          "title": "",
           "subtitle": "",
           "section_style": "section-blank",
           "section_height": "medium",
@@ -632,10 +784,10 @@
       "16215055281a0b314f": {
         "type": "featured-products",
         "settings": {
-          "title": "Featured collection",
+          "title": "Speciale aanbiedingen",
           "subtitle": "",
           "section_style": "section-default",
-          "home_featured_products": "frontpage",
+          "home_featured_products": "posture-shirt",
           "rows": "1",
           "desktop_grid": "4",
           "mobile_grid": "2",
@@ -656,13 +808,12 @@
             "type": "html",
             "settings": {
               "image": "shopify:\/\/shop_images\/Logo-icon_1000x1000px.png",
-              "mission_title": "We specialize in posture correction and pain relief",
-              "mission_description": "<p>For 6 years we have worked to ensure europeans access to easy and effective postural correction and pain relief products. Our key philosophy is that we do not sell products that we would not use ourselves. Since 2015 we have had more than 50.000 satisfied customers in the UK and we are intent on having many more in the future.<\/p>",
+              "mission_title": "Wij zijn gespecialiseerd in houdingcorrectie en verlichting van pijn",
+              "mission_description": "<p>Al 6 jaar streven wij ernaar toegang te verschaffen tot gemakkelijke en effectieve producten voor houdingscorrectie en pijnverlichting. Onze belangrijkste filosofie is dat we geen producten verkopen die we zelf niet zouden gebruiken. Sinds 2015 hebben we meer dan 50.000 tevreden klanten in Europa en we zijn van plan om er in de toekomst nog veel meer te hebben.<\/p>",
               "column_width": 12,
               "column_width_mobile": 12,
               "text_alignment": "text-center",
-              "btn_text": "Our mission and values",
-              "btn_url": "shopify:\/\/collections\/frontpage"
+              "btn_text": ""
             }
           }
         },
@@ -706,7 +857,7 @@
               "quote_image": "shopify:\/\/shop_images\/anodyne-quote.png",
               "icon": "format_quote",
               "quote": "<p>Dit materiaal is echt goed. Ik ben na 3 operaties nog steeds in revalidatie en als je deze t-shirts aan hebt is dat meer dan goed.<\/p>",
-              "author": "Nancy",
+              "author": "Johan B.",
               "stars_pic": "shopify:\/\/shop_images\/download.png",
               "quotes_link": "https:\/\/nl.trustpilot.com\/review\/anodyne.nl"
             }
@@ -737,7 +888,7 @@
             "type": "video",
             "settings": {
               "video_cover_image": "shopify:\/\/shop_images\/Nude-heroimage_v2-1.png",
-              "video_url": "https:\/\/www.youtube.com\/watch?v=FELJYnKpb4w",
+              "video_url": "https:\/\/www.youtube.com\/watch?v=kTm6zhgq9Mc",
               "animated_button": true
             }
           }
@@ -758,34 +909,34 @@
           "1621508906b5323bb4-0": {
             "type": "text_block",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Anodyne_483x150px.png",
+              "image": "shopify:\/\/shop_images\/Anodyne-logo-icon_288.png",
               "icon": "",
-              "title": "POSTURE CLOTHING WITH 100% SATISFACTION GUARANTEE",
-              "text": "<p>Use this text to describe what makes your store stand out from others and why customers should buy from you.<\/p>",
+              "title": "De originele houdingcorrigerende kleding",
+              "text": "<p>De originele houdingcorrigerende kleding van Anodyne® kan alleen hier worden gekocht: op <a href=\"http:\/\/www.anodyne.nl\/\" title=\"http:\/\/www.anodyne.nl\/\">www.anodyne.nl<\/a> of bij een van onze goedgekeurde resellers. Houd er rekening mee dat er veel namaakproducten in omloop zijn. Slechts één van deze soorten houdingcorrigerende kleding is zowel geregistreerd als medisch hulpmiddel als FDA-geregistreerd, namelijk de producten van Anodyne®. Let dus goed op wanneer je online iets bestelt.<\/p>",
               "button_style": "btn--primary",
-              "button_label": "SEE COLLECTION"
+              "button_label": ""
             }
           },
           "1621508906b5323bb4-1": {
             "type": "text_block",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Anodyne_483x150px.png",
+              "image": "shopify:\/\/shop_images\/tilfreds.png",
               "icon": "",
-              "title": "THE ORIGINAL POSTURE CLOTHING FOR POSTURE CORRECTION",
-              "text": "<p>Use this text to describe what makes your store stand out from others and why customers should buy from you.<\/p>",
+              "title": "Houdingcorrigerende kleding met 100% tevredenheidsgarantie",
+              "text": "<p>Bij Anodyne® bieden we altijd gratis verzending bij aankoop van meer dan 59 €, 100% tevredenheidsgarantie, 60 dagen retourrecht en gratis ruilen of retourneren. Dit betekent dat je je product 60 dagen vrijblijvend kunt testen en kijken of het aan je verwachtingen voldoet. We voegen een gratis retourlabel toe aan alle verzendingen, zodat je het pakket eenvoudig terug kunt sturen om je artikelen te ruilen of retourneren. Het is de bedoeling dat je 100% tevreden bent – net als onze meer dan 150.000 klanten, die de afgelopen 5 jaar een origineel Anodyne®-product hebben gekocht. Minder dan 1 op de 20 klanten retourneert daadwerkelijk hun product.<\/p>",
               "button_style": "btn--primary",
-              "button_label": "SEE COLLECTION"
+              "button_label": ""
             }
           },
           "1621508906b5323bb4-2": {
             "type": "text_block",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Anodyne_483x150px.png",
+              "image": "shopify:\/\/shop_images\/kinoIcon.png",
               "icon": "",
-              "title": "FROM KINESIOTAPE TO POSTURE CLOTHING",
-              "text": "<p>Use this text to describe what makes your store stand out from others and why customers should buy from you.<\/p>",
+              "title": "Van kinesiotape tot houdingcorrigerende kleding",
+              "text": "<p>Houdingcorrigerende kleding activeert de rugspieren, schouders en schouderbladen, zonder je spieren of gewrichten vast te zetten. De technologie achter de houdingcorrigerende kleding is geïnspireerd door kinesiotape - een behandelingsmethode die vaak door Deense fysiotherapeuten en chiropractors wordt gebruikt om pijn en spanning in de nek, schouders en rug te behandelen. Kinesiotaping wordt ook vaak gebruikt door professionele sporters om specifieke spiergroepen te stimuleren en de houding te verbeteren.<\/p>",
               "button_style": "btn--primary",
-              "button_label": "SEE COLLECTION"
+              "button_label": ""
             }
           }
         },
@@ -1175,32 +1326,32 @@
           "16232441474a7e73cc-0": {
             "type": "service",
             "settings": {
-              "title": "Service heading",
-              "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quis.",
+              "title": "Gratis verzending bij aankoop van meer dan €59",
+              "description": "Levering in 2-4 werkdagen",
               "icon": "shopify:\/\/shop_images\/fast-delivery.png"
             }
           },
           "16232441474a7e73cc-1": {
             "type": "service",
             "settings": {
-              "title": "Service heading",
-              "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quis.",
+              "title": "Gratis retourneren en ruilen",
+              "description": "Wij zorgen voor een retourlabel",
               "icon": "shopify:\/\/shop_images\/return-delivery.png"
             }
           },
           "32702720-9107-416c-a33d-2045f63da00f": {
             "type": "service",
             "settings": {
-              "title": "Service heading",
-              "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quis.",
-              "icon": "shopify:\/\/shop_images\/phone-call.png"
+              "title": "100% Tevredenheidsgarantie",
+              "description": "100% tevreden of je volledige aankoopbedrag terug",
+              "icon": "shopify:\/\/shop_images\/smilyIcon.png"
             }
           },
           "b4d1c6a2-921b-4d1b-9ef7-c4633471e69c": {
             "type": "service",
             "settings": {
-              "title": "Service heading",
-              "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quis.",
+              "title": "60 dagen volledig retourrecht",
+              "description": "Genoeg tijd om een beslissing te maken",
               "icon": "shopify:\/\/shop_images\/check.png"
             }
           }
@@ -1223,7 +1374,7 @@
           "show_product_type": true,
           "show_product_sku": false,
           "product_title_large": true,
-          "show_product_tags": true,
+          "show_product_tags": false,
           "show_product_collections": false,
           "enable_image_zoom": true,
           "enable_video_looping": true,
@@ -1244,23 +1395,9 @@
           "5ad77569-9fea-4ba7-9a40-0c102f7b5ae6": {
             "type": "row",
             "settings": {
-              "card__icon": "shopify:\/\/shop_images\/anodyne-quote.png",
-              "title": "cards with text",
-              "text": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-              "card__alignement": "left",
-              "text_alignment": "",
-              "type_row": "",
-              "tag_row": "",
-              "product_row": "",
-              "collection_row": ""
-            }
-          },
-          "f3c32aae-0883-49fb-9c45-082ec47197ee": {
-            "type": "row",
-            "settings": {
-              "card__icon": "shopify:\/\/shop_images\/return-delivery.png",
-              "title": "cards with text",
-              "text": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+              "card__icon": "shopify:\/\/shop_images\/ai-contact.png",
+              "title": "Klantenservice",
+              "text": "<p>Neem contact met ons op via telefoon <a href=\"tel:+31 (0) 20-26 22 008\"><strong>+31 (0) 20-26 22 008<\/strong><\/a> of <a href=\"mailto:info@anodyne.nl\" title=\"mailto:info@anodyne.nl\"><strong>info@anodyne.nl<\/strong><\/a> als je vragen hebt over maten, prijzen of iets anders.<\/p>",
               "card__alignement": "center",
               "text_alignment": "",
               "type_row": "",
@@ -1269,12 +1406,12 @@
               "collection_row": ""
             }
           },
-          "bb88d308-ae2d-47eb-9c87-af8166686545": {
+          "9bd54909-5d18-4bf9-b0f0-ba9fa0e427af": {
             "type": "row",
             "settings": {
-              "card__icon": "shopify:\/\/shop_images\/check.png",
-              "title": "cards with text",
-              "text": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+              "card__icon": "shopify:\/\/shop_images\/fast-delivery.png",
+              "title": "Gratis verzending bij aankoop van meer dan €59",
+              "text": "<p>Levering in 2-4 werkdagen<\/p>",
               "card__alignement": "center",
               "text_alignment": "text-center",
               "type_row": "",
@@ -1283,13 +1420,27 @@
               "collection_row": ""
             }
           },
-          "a290cffe-1eef-4172-acf2-0d1327a7142f": {
+          "29e06d44-f317-4846-82d6-df133956c0a0": {
             "type": "row",
             "settings": {
-              "card__icon": "shopify:\/\/shop_images\/phone-call.png",
-              "title": "cards with text",
-              "text": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-              "card__alignement": "left",
+              "card__icon": "shopify:\/\/shop_images\/return-delivery.png",
+              "title": "Gratis retourneren en ruilen",
+              "text": "<p>Wij zorgen voor een retourlabel<\/p>",
+              "card__alignement": "center",
+              "text_alignment": "text-center",
+              "type_row": "",
+              "tag_row": "",
+              "product_row": "",
+              "collection_row": ""
+            }
+          },
+          "35be0bb1-c0ed-4eb2-8979-a181c18413df": {
+            "type": "row",
+            "settings": {
+              "card__icon": "shopify:\/\/shop_images\/smilyIcon.png",
+              "title": "100% Tevredenheidsgarantie",
+              "text": "<p>60 dagen volledig retourrecht<\/p>",
+              "card__alignement": "center",
               "text_alignment": "text-center",
               "type_row": "",
               "tag_row": "",
@@ -1300,12 +1451,67 @@
         },
         "block_order": [
           "5ad77569-9fea-4ba7-9a40-0c102f7b5ae6",
-          "f3c32aae-0883-49fb-9c45-082ec47197ee",
-          "bb88d308-ae2d-47eb-9c87-af8166686545",
-          "a290cffe-1eef-4172-acf2-0d1327a7142f"
+          "9bd54909-5d18-4bf9-b0f0-ba9fa0e427af",
+          "29e06d44-f317-4846-82d6-df133956c0a0",
+          "35be0bb1-c0ed-4eb2-8979-a181c18413df"
         ],
         "settings": {
           "show_product_card": true
+        }
+      },
+      "16244533106f4cc43e": {
+        "type": "home-tabs",
+        "blocks": {
+          "16244533106f4cc43e-0": {
+            "type": "tab",
+            "settings": {
+              "tab_title": "Houdingcorrigerende kleding",
+              "tab_image": "shopify:\/\/shop_images\/female2.760ab7c4.jpg",
+              "tab_inner-title": "Waarom de houdingcorrigerende kleding van Anodyne?",
+              "description": "Met de houdingcorrigerende kleding van Anodyne® kun je eenvoudig en moeiteloos een betere houding krijgen, waardoor pijn en spanning in de nek en schouders worden verminderd. De houdingcorrigerende kleding van Anodyne® helpt je om je continu bewust te zijn van je houding. Of je nu stilzittend of actief werk doet, reist of sport. Anodyne® is een Europese producent en distributeur van houdingcorrigerende kleding met technologie ontwikkeld door de Amerikaanse AlignMed – de enige producent ter wereld van houdingcorrigerende kleding die geregistreerd staat bij de Amerikaanse FDA. De houdingcorrigerende kleding van Anodyne® is de enige in Europa die zowel FDA-goedgekeurd is als voorzien is van een CE-markering voor medische hulpmiddelen (Klasse I). De CE-markering is dus je garantie dat onze producten voldoen aan de eisen die aan medische hulpmiddelen worden gesteld.",
+              "button_text": ""
+            }
+          },
+          "16244533106f4cc43e-1": {
+            "type": "tab",
+            "settings": {
+              "tab_title": "NeuroBand™-technologie",
+              "tab_image": "shopify:\/\/shop_images\/female1.e3900106.jpg",
+              "tab_inner-title": "Gepatenteerde NeuroBand™-technologie in de houdingcorrigerende kleding van Anodyne",
+              "description": "De houdingcorrigerende kleding van Anodyne® is gemaakt van een unieke mix van spandex, nylon en polyester, die zorgt voor een slijtvast en ademend product, dat zijn rekbaarheid behoudt en lekker zit. Het ontwerp maakt gebruik van de gepatenteerde NeuroBand™-technologie, die geïnspireerd is door kinesiotape en gebaseerd op wetenschappelijk onderzoek in de menselijke fysiologie. De kleding is ontworpen om de aanspannende en ontspannende eigenschappen van de spieren te weerspiegelen en daardoor een rechte houding te bevorderen.",
+              "button_text": "Shop",
+              "tab_LinkUrl": "shopify:\/\/collections\/posture-shirt"
+            }
+          },
+          "c6f9c036-b821-4092-a309-40a374db826f": {
+            "type": "tab",
+            "settings": {
+              "tab_title": "Behoeften",
+              "tab_image": "shopify:\/\/shop_images\/male1.c8b64023.jpg",
+              "tab_inner-title": "Houdingcorrigerende kleding aan de hand van je behoeften",
+              "description": "De houdingcorrigerende kleding van Anodyne® kan door iedereen worden gedragen. We verkopen houdingcorrigerende T-shirts, bh’s en vesten, die allemaal ontworpen zijn om de spieren en bloedsomloop te activeren, waardoor het lichaam eraan wordt herinnerd om een rechte houding aan te nemen. Je kunt de houdingcorrigerende truien en bh's van Anodyne® op elk moment dragen – tijdens het sporten, winkelen, wandelen, schoonmaken of bij andere activiteiten. Om zoveel mogelijk aan je houdingcorrigerende kleding te hebben, raden we je aan om de bijgevoegde gebruiksaanwijzing goed door te lezen.",
+              "button_text": ""
+            }
+          },
+          "e376b4a2-6744-45fa-9adb-95f14533c3af": {
+            "type": "tab",
+            "settings": {
+              "tab_title": "Blessures",
+              "tab_image": "shopify:\/\/shop_images\/female1.e3900106.jpg",
+              "tab_inner-title": "Ook voor jou, als je blessures hebt",
+              "description": "Als je te maken hebt met een blessure of als je bijvoorbeeld een hernia, scoliose,artritis of iets dergelijks hebt, kun je onze houdingcorrigerende kleding prima gebruiken. Als het letsel nieuw is, raden we je aan dit eerst te bespreken met bijvoorbeeld je arts, fysiotherapeut of chiropractor. In sommige gevallen kan het houdingcorrigerende vest (MyLign of SpinalQ Pro) het beste zijn, omdat dat het meeste steun biedt. Het is belangrijk dat je de juiste maat houdingcorrigerende kleding bestelt, anders bereik je niet het optimale effect. Het beste is om naar de matentabel op onze productpagina's te kijken en bij twijfel contact op te nemen met onze klantenservice. Zij beantwoorden graag je vragen over onze producten en helpen je om de juiste maat te vinden.",
+              "button_text": ""
+            }
+          }
+        },
+        "block_order": [
+          "16244533106f4cc43e-0",
+          "16244533106f4cc43e-1",
+          "c6f9c036-b821-4092-a309-40a374db826f",
+          "e376b4a2-6744-45fa-9adb-95f14533c3af"
+        ],
+        "settings": {
+          "title": "Houdingcorrigerende kleding van Anodyne®"
         }
       }
     },
@@ -1317,7 +1523,8 @@
       "1621508318d35716b6",
       "1621508591647ecc21",
       "162150877540059d01",
-      "1621508906b9867b4d"
+      "1621508906b9867b4d",
+      "16244533106f4cc43e"
     ]
   }
 }
