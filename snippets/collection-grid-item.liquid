@@ -100,9 +100,9 @@
       {%- endif -%}
     </div>
     {%- endif -%}
-
   </a>
-
+    {%- if block.settings.btn__shopnow !=blank -%}
   <div class="btn__shopnow"><a class="shopnow" href="{{ collection_link }}">{{block.settings.btn__shopnow}}</a>
   </div>
+  {%- endif -%}
 </div>
