@@ -6754,6 +6754,8 @@ body {
 .text-lead {@include leadFontStack}
 .text-accent {@include accentFontStack}
 .text-money {@include accentFontStack; font-size: 1.4rem;}
+.dbtfy-sticky-price-box.text-money{font-size:0.85rem !important;}
+.total-sticky-compare-price.text-money{font-size:0.85rem !important;}
 .text-sub {@include textSub}
 .text-strike {text-decoration: line-through!important; text-decoration-color: $anodyne-secondary-clr !important;}
 .text-capitalize {text-transform: capitalize}
@@ -8681,7 +8683,7 @@ body:not(.dbtfy-wish_list-destroy) {
 					margin-bottom: .5rem;
 					text-transform: uppercase;
 					color:$anodyne-dark-gray-clr;
-          word-break: break-all;
+          word-break: keep-all;
 				}
 				.info{
 					display: none;

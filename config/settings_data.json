@@ -121,6 +121,10 @@
     "dbtfy_wish_list_add_text": "Voeg toe aan verlanglijstje",
     "dbtfy_wish_list_remove_text": "Verwijder van verlanglijst",
     "dbtfy_wish_list_empty_text": "Je verlanglijstje is op dit moment leeg.",
+    "checkout_logo_image": "shopify:\/\/shop_images\/Anodyne_483x150px.png",
+    "checkout_sidebar_background_color": "#ebf9f6",
+    "checkout_accent_color": "#83d0bd",
+    "checkout_button_color": "#83d0bd",
     "sections": {
       "drawer-menu": {
         "type": "drawer-menu",
@@ -140,7 +144,7 @@
           "announcement-0": {
             "type": "message",
             "settings": {
-              "announcement_text": "<p>Gratis verzending bij aankoop van meer dan €59<\/p>"
+              "announcement_text": "<p>Gratis verzending vanaf €59<\/p>"
             }
           }
         },
@@ -705,8 +709,8 @@
             "type": "slide",
             "settings": {
               "overlay": false,
-              "image": "shopify:\/\/shop_images\/Nude-heroimage_v2-1.png",
-              "image_mobile": "shopify:\/\/shop_images\/hero-mobil.jpg",
+              "image": "shopify:\/\/shop_images\/AnodyneNL_frontpage_d3fd1dad-a399-437a-9a0b-c35141578120.jpg",
+              "image_mobile": "shopify:\/\/shop_images\/AnodyneNL_frontpage_mobile_f852c7fd-a3d1-451a-9588-80b350fd7d76.jpg",
               "image_position": "center center",
               "image_position_mobile": "center center",
               "video": "",
@@ -790,8 +794,8 @@
           "title": "Speciale aanbiedingen",
           "subtitle": "",
           "section_style": "section-default",
-          "home_featured_products": "posture-shirt",
-          "rows": "1",
+          "home_featured_products": "alle-producten",
+          "rows": "2",
           "desktop_grid": "4",
           "mobile_grid": "2",
           "show_view_all": false,
@@ -1018,10 +1022,10 @@
       "collection-template": {
         "type": "collection-template",
         "settings": {
-          "collection_tags_enable": true,
-          "collection_tags_count": true,
-          "collection_tags_multiple": true,
-          "collection_sort_enable": true,
+          "collection_tags_enable": false,
+          "collection_tags_count": false,
+          "collection_tags_multiple": false,
+          "collection_sort_enable": false,
           "tag_selector": "button",
           "rows": "4",
           "desktop_grid": "4",
