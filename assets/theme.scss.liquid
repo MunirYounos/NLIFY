@@ -3470,9 +3470,12 @@ button {
   & > :last-child {
     margin-bottom: 0;
     display:block;
+    
+  }
+  & > .quote__stars{
     text-align: center;
     width: 100%;
-    padding: 0 25%;
+    padding: 0 30%;
   }
 }
 
@@ -8875,9 +8878,20 @@ body:not(.dbtfy-wish_list-destroy) {
     }
   }
 }
-.slick-quotes .card-body{
-  min-height: 276px;
+.slick-quotes {
+  .now_link{
+    &:hover{
+      @include transition($transitions);
+      .card {
+        background-color: lighten($anodyne-primary-clr, 30%);
+      }
+    }
+  }
+  .card-body{
+    min-height: 276px;
+  }
 }
+
 .home-tabs{
   padding: ($gutter * 1.5) 0  ($gutter * 2) 0;
   margin: $gutter 0;
@@ -9129,6 +9143,7 @@ body:not(.dbtfy-wish_list-destroy) {
       z-index: 12;
       @include screen($small){
         left: 0;
+        bottom:26%;
       }
     }
   }

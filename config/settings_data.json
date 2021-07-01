@@ -211,7 +211,8 @@
               "title": "Gratis verzending bij aankoop van meer dan €59",
               "text": "",
               "button_style": "btn-outline-primary",
-              "button_label": ""
+              "button_label": "",
+              "button_link": ""
             }
           },
           "guarantee-2": {
@@ -222,7 +223,8 @@
               "title": "60 dagen volledig retourrecht",
               "text": "",
               "button_style": "btn-outline-primary",
-              "button_label": ""
+              "button_label": "",
+              "button_link": ""
             }
           },
           "b0820161-063b-4b1a-9f03-5afb4890dd28": {
@@ -276,6 +278,7 @@
             "settings": {
               "column_width": 1,
               "svg": "",
+              "img_url": "",
               "logo_width": 104,
               "title": "Contact",
               "subtitle": "",
@@ -743,21 +746,21 @@
             "type": "collection",
             "settings": {
               "collection": "posture-shirt",
-              "btn__shopnow": "shop now"
+              "btn__shopnow": "Bekijk nu"
             }
           },
           "1621503255614ef73d-1": {
             "type": "collection",
             "settings": {
               "collection": "rugsteun",
-              "btn__shopnow": "shop now"
+              "btn__shopnow": "Bekijk nu"
             }
           },
           "1621503255614ef73d-2": {
             "type": "collection",
             "settings": {
-              "collection": "vrouwen",
-              "btn__shopnow": "shop now"
+              "collection": "andere-producten",
+              "btn__shopnow": "Bekijk nu"
             }
           }
         },
@@ -793,6 +796,7 @@
           "mobile_grid": "2",
           "show_view_all": false,
           "button_label": "View all",
+          "button_link": "",
           "button_style": "btn-outline-primary",
           "slider_related_products": true,
           "arrows": true,
@@ -809,11 +813,12 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/Logo-icon_1000x1000px.png",
               "mission_title": "Wij zijn gespecialiseerd in houdingcorrectie en verlichting van pijn",
-              "mission_description": "<p>Al 6 jaar streven wij ernaar toegang te verschaffen tot gemakkelijke en effectieve producten voor houdingscorrectie en pijnverlichting. Onze belangrijkste filosofie is dat we geen producten verkopen die we zelf niet zouden gebruiken. Sinds 2015 hebben we meer dan 50.000 tevreden klanten in Europa en we zijn van plan om er in de toekomst nog veel meer te hebben.<\/p>",
+              "mission_description": "<p>Al 7 jaar streven wij ernaar toegang te verschaffen tot gemakkelijke en effectieve producten voor houdingscorrectie en pijnverlichting. Onze belangrijkste filosofie is dat we geen producten verkopen die we zelf niet zouden gebruiken. Sinds 2015 hebben we meer dan 300.000 tevreden klanten in Europa en we zijn van plan om er in de toekomst nog veel meer te hebben.<\/p>",
               "column_width": 12,
               "column_width_mobile": 12,
               "text_alignment": "text-center",
-              "btn_text": ""
+              "btn_text": "",
+              "btn_url": ""
             }
           }
         },
@@ -914,7 +919,8 @@
               "title": "De originele houdingcorrigerende kleding",
               "text": "<p>De originele houdingcorrigerende kleding van Anodyne® kan alleen hier worden gekocht: op <a href=\"http:\/\/www.anodyne.nl\/\" title=\"http:\/\/www.anodyne.nl\/\">www.anodyne.nl<\/a> of bij een van onze goedgekeurde resellers. Houd er rekening mee dat er veel namaakproducten in omloop zijn. Slechts één van deze soorten houdingcorrigerende kleding is zowel geregistreerd als medisch hulpmiddel als FDA-geregistreerd, namelijk de producten van Anodyne®. Let dus goed op wanneer je online iets bestelt.<\/p>",
               "button_style": "btn--primary",
-              "button_label": ""
+              "button_label": "",
+              "button_link": ""
             }
           },
           "1621508906b5323bb4-1": {
@@ -925,7 +931,8 @@
               "title": "Houdingcorrigerende kleding met 100% tevredenheidsgarantie",
               "text": "<p>Bij Anodyne® bieden we altijd gratis verzending bij aankoop van meer dan 59 €, 100% tevredenheidsgarantie, 60 dagen retourrecht en gratis ruilen of retourneren. Dit betekent dat je je product 60 dagen vrijblijvend kunt testen en kijken of het aan je verwachtingen voldoet. We voegen een gratis retourlabel toe aan alle verzendingen, zodat je het pakket eenvoudig terug kunt sturen om je artikelen te ruilen of retourneren. Het is de bedoeling dat je 100% tevreden bent – net als onze meer dan 150.000 klanten, die de afgelopen 5 jaar een origineel Anodyne®-product hebben gekocht. Minder dan 1 op de 20 klanten retourneert daadwerkelijk hun product.<\/p>",
               "button_style": "btn--primary",
-              "button_label": ""
+              "button_label": "",
+              "button_link": ""
             }
           },
           "1621508906b5323bb4-2": {
@@ -936,7 +943,8 @@
               "title": "Van kinesiotape tot houdingcorrigerende kleding",
               "text": "<p>Houdingcorrigerende kleding activeert de rugspieren, schouders en schouderbladen, zonder je spieren of gewrichten vast te zetten. De technologie achter de houdingcorrigerende kleding is geïnspireerd door kinesiotape - een behandelingsmethode die vaak door Deense fysiotherapeuten en chiropractors wordt gebruikt om pijn en spanning in de nek, schouders en rug te behandelen. Kinesiotaping wordt ook vaak gebruikt door professionele sporters om specifieke spiergroepen te stimuleren en de houding te verbeteren.<\/p>",
               "button_style": "btn--primary",
-              "button_label": ""
+              "button_label": "",
+              "button_link": ""
             }
           }
         },
@@ -954,8 +962,54 @@
       },
       "list-collections-template": {
         "type": "list-collections-template",
+        "blocks": {
+          "5ed5e1ec-fb27-4778-a621-1a1f1881f86b": {
+            "type": "collection",
+            "settings": {
+              "collection": "posture-shirt"
+            }
+          },
+          "c5127af7-1908-49d5-b1c5-d15eaeb0701d": {
+            "type": "collection",
+            "settings": {
+              "collection": "vrouwen"
+            }
+          },
+          "24dafa6d-8bef-41b8-bc00-1ed57db4e06d": {
+            "type": "collection",
+            "settings": {
+              "collection": "mannen"
+            }
+          },
+          "b6242fb1-5d90-4afd-9d2d-9365ff626459": {
+            "type": "collection",
+            "settings": {
+              "collection": "rugsteun"
+            }
+          },
+          "7e4d4540-9afa-4036-a4a9-705ec978e8cc": {
+            "type": "collection",
+            "settings": {
+              "collection": "andere-producten"
+            }
+          },
+          "a90ee241-d7de-4257-8140-02456e410d49": {
+            "type": "collection",
+            "settings": {
+              "collection": "alle-producten"
+            }
+          }
+        },
+        "block_order": [
+          "5ed5e1ec-fb27-4778-a621-1a1f1881f86b",
+          "c5127af7-1908-49d5-b1c5-d15eaeb0701d",
+          "24dafa6d-8bef-41b8-bc00-1ed57db4e06d",
+          "b6242fb1-5d90-4afd-9d2d-9365ff626459",
+          "7e4d4540-9afa-4036-a4a9-705ec978e8cc",
+          "a90ee241-d7de-4257-8140-02456e410d49"
+        ],
         "settings": {
-          "display_type": "all",
+          "display_type": "selected",
           "sort": "alphabetical",
           "section_height": "medium",
           "collection_per_page": 12
@@ -1123,7 +1177,7 @@
               "dbtfy_faq_page_open": false,
               "dbtfy_faq_page_icon": "",
               "title": "Ik heb mijn pakje (nog) niet ontvangen. Wat nu?",
-              "text": "<p>Het is afhankelijk van de door u gekozen verzendmethode hoe lang uw pakje onderweg is:<\/p><p>De gratis standaard bezorging via PostNL wordt zonder Track&Trace verstuurd en wordt normaal gesproken binnen 5 werkdagen geleverd.<\/p><p>De bezorging via DPD bevatten wél een Track&Trace die u per mail ontvangt, zodat u het pakje zelf kunt volgen. Via DPD duurt de levering tussen de 2 en 4 werkdagen.<\/p><p>Het kan zijn dat DPD u een e-mail heeft gestuurd met het bericht dat uw pakje al af te halen is, maar dat het in de ongewenste post terecht is gekomen. Wij raden u dan ook eerst aan om hier te kijken. Heeft u niets ontvangen? Dan kunt u hier zien of DPD op dit moment bepaalde vertragingen heeft<br\/>Indien u vragen heeft over de levering van uw bestelling, wacht dan niet en neem contact op met onze klantenservice.<br\/><\/p>"
+              "text": "<p>De bezorging via DHL bevat een Track&Trace die u per mail ontvangt, zodat u het pakje zelf kunt volgen. Via DHL duurt de levering tussen de 2 en 4 werkdagen.<\/p><p>Het kan zijn dat DHL u een e-mail heeft gestuurd met het bericht dat uw pakje al af te halen is, maar dat het in de ongewenste post terecht is gekomen. Wij raden u dan ook eerst aan om hier te kijken. Heeft u niets ontvangen? Dan kunt u hier zien of DPD op dit moment bepaalde vertragingen heeft<br\/>Indien u vragen heeft over de levering van uw bestelling, wacht dan niet en neem contact op met onze klantenservice.<br\/><\/p>"
             }
           },
           "555e3aa2-72d0-4f02-ad8d-0eb026a0a0cd": {
@@ -1132,7 +1186,7 @@
               "dbtfy_faq_page_open": false,
               "dbtfy_faq_page_icon": "",
               "title": "Hoe lang duurt de levering?",
-              "text": "<p>Dit is afhankelijk van de door u gekozen levermethode. U kunt kiezen voor een standaard bezorging die door PostNL in uw brievenbus wordt geleverd zonder dat een handtekening nodig is, of voor een aflevering via DPD; dit kan zowel naar uw thuisadres als naar een afhaalpunt worden geleverd - bij beide mogelijkheden is een handtekening bij aflevering vereist.<\/p><p>De gratis standaard bezorging via PostNL wordt zonder Track&Trace verstuurd en wordt normaal gesproken binnen 5 werkdagen geleverd.<\/p><p>De bezorging via DPD bevatten wél een Track&Trace die u per mail ontvangt, zodat u het pakje zelf kunt volgen. Via DPD duurt de levering tussen de 2 en 4 werkdagen.<\/p><p>Anodyne doet er alles aan om binnen de beloofde levertijd te bezorgen. Uiteraard houden wij u per e-mail op de hoogte over de voortgang van uw bestelling. Ook nemen wij, indien mogelijk, contact met u op indien er zich bijzonderheden voordoen die de levertijd van je bestelling beïnvloeden. Hierin zijn wij afhankelijk van informatie die wij van onze vervoerders ontvangen.<\/p><p>Helaas duurt het op piekmomenten zoals tijdens een sale of rond feestdagen en in andere uitzonderlijke gevallen wel eens wat langer. Mocht dit het geval zijn, dan kunt u van ons verwachten dat we er alles aan doen om uw bestelling zo snel mogelijk bij u thuis te krijgen. Indien u vragen of opmerkingen heeft, neem dan gerust contact op met de Anodyne klantenservice.<br\/><\/p>"
+              "text": "<p>De bezorging via DHL bevat een Track&Trace die u per mail ontvangt, zodat u het pakje zelf kunt volgen. Via DHL duurt de levering tussen de 2 en 4 werkdagen.<\/p><p>Anodyne doet er alles aan om binnen de beloofde levertijd te bezorgen. Uiteraard houden wij u per e-mail op de hoogte over de voortgang van uw bestelling. Ook nemen wij, indien mogelijk, contact met u op indien er zich bijzonderheden voordoen die de levertijd van je bestelling beïnvloeden. Hierin zijn wij afhankelijk van informatie die wij van onze vervoerders ontvangen.<\/p><p>Helaas duurt het op piekmomenten zoals tijdens een sale of rond feestdagen en in andere uitzonderlijke gevallen wel eens wat langer. Mocht dit het geval zijn, dan kunt u van ons verwachten dat we er alles aan doen om uw bestelling zo snel mogelijk bij u thuis te krijgen. Indien u vragen of opmerkingen heeft, neem dan gerust contact op met de Anodyne klantenservice.<br\/><\/p>"
             }
           },
           "e60da36d-5705-473c-9298-d9325835b88a": {
@@ -1236,7 +1290,7 @@
               "dbtfy_faq_page_open": false,
               "dbtfy_faq_page_icon": "",
               "title": "Hoe kan ik mijn bestelling omruilen of retourneren?",
-              "text": "<p>In het door jou ontvangen pakketje zit altijd een retourformulier met retourlabel. Vul het retourformulier in (wil je jouw item omruilen - zo ja, voor wat? of liever retourneren?) en maak het pakketje klaar. Waar je je pakje kunt inleveren is afhankelijk van de door jouw gekozen verzendmethode:<\/p><p>Indien je bij het bestellen hebt gekozen voor thuislevering of een afhaalpunt via DPD: Gebruik de label en lever de doos in bij een DPD punt naar keuze: www.dpd.be\/nl. Heb je voor een standaardlevering in je brievenbus gekozen, dan kun je de retourlabel gebruiken en je pakje in de brievenbus deponeren.<\/p>"
+              "text": "<p>In het door jou ontvangen pakketje zit altijd een retourformulier met retourlabel. Vul het retourformulier in (wil je jouw item omruilen - zo ja, voor wat? of liever retourneren?) en maak het pakketje klaar. <\/p><p>Indien je bij het bestellen hebt gekozen voor thuislevering of een afhaalpunt via DHL: Gebruik de label en lever de doos in bij een DHL punt naar keuze: <a href=\"https:\/\/www.dhlparcel.nl\/nl\/consument\/dhl-servicepoints\" target=\"_blank\" title=\"https:\/\/www.dhlparcel.nl\/nl\/consument\/dhl-servicepoints\">https:\/\/www.dhlparcel.nl\/nl\/consument\/dhl-servicepoints<\/a>. <\/p>"
             }
           },
           "8cce1c08-8a84-4c65-b50d-bd149a620302": {
@@ -1311,13 +1365,14 @@
           "44dddb86-9e58-416a-bd30-2eac8c64742f"
         ],
         "settings": {
-          "dbtfy_faq_searchbox": true,
+          "dbtfy_faq_searchbox": false,
           "dbtfy_faq_search_placeholder": "Search questions...",
           "dbtfy_faq_bannerbox": true,
           "dbtfy_faq_banner_icon": "live_help",
-          "dbtfy_faq_banner_text": "Didn't find your answer?",
-          "dbtfy_faq_banner_subtitle": "Our customer service will be happy to help you.",
-          "dbtfy_faq_btn": "Get in Touch"
+          "dbtfy_faq_banner_text": "Je vraag niet kunnen vinden?",
+          "dbtfy_faq_banner_subtitle": "Onze klantenservice helpt je graag verder!",
+          "dbtfy_faq_btn": "Neem contact op",
+          "dbtfy_faq_link": "shopify:\/\/pages\/contact"
         }
       },
       "16232441474a7e73cc": {
@@ -1328,7 +1383,8 @@
             "settings": {
               "title": "Gratis verzending bij aankoop van meer dan €59",
               "description": "Levering in 2-4 werkdagen",
-              "icon": "shopify:\/\/shop_images\/fast-delivery.png"
+              "icon": "shopify:\/\/shop_images\/fast-delivery.png",
+              "uspLinkUrl": ""
             }
           },
           "16232441474a7e73cc-1": {
@@ -1336,7 +1392,8 @@
             "settings": {
               "title": "Gratis retourneren en ruilen",
               "description": "Wij zorgen voor een retourlabel",
-              "icon": "shopify:\/\/shop_images\/return-delivery.png"
+              "icon": "shopify:\/\/shop_images\/return-delivery.png",
+              "uspLinkUrl": ""
             }
           },
           "32702720-9107-416c-a33d-2045f63da00f": {
@@ -1344,7 +1401,8 @@
             "settings": {
               "title": "100% Tevredenheidsgarantie",
               "description": "100% tevreden of je volledige aankoopbedrag terug",
-              "icon": "shopify:\/\/shop_images\/smilyIcon.png"
+              "icon": "shopify:\/\/shop_images\/smilyIcon.png",
+              "uspLinkUrl": ""
             }
           },
           "b4d1c6a2-921b-4d1b-9ef7-c4633471e69c": {
@@ -1352,7 +1410,8 @@
             "settings": {
               "title": "60 dagen volledig retourrecht",
               "description": "Genoeg tijd om een beslissing te maken",
-              "icon": "shopify:\/\/shop_images\/check.png"
+              "icon": "shopify:\/\/shop_images\/check.png",
+              "uspLinkUrl": ""
             }
           }
         },
@@ -1466,10 +1525,11 @@
             "type": "tab",
             "settings": {
               "tab_title": "Houdingcorrigerende kleding",
-              "tab_image": "shopify:\/\/shop_images\/female2.760ab7c4.jpg",
+              "tab_image": "shopify:\/\/shop_images\/Tabs_-_Desk-min.jpg",
               "tab_inner-title": "Waarom de houdingcorrigerende kleding van Anodyne?",
               "description": "Met de houdingcorrigerende kleding van Anodyne® kun je eenvoudig en moeiteloos een betere houding krijgen, waardoor pijn en spanning in de nek en schouders worden verminderd. De houdingcorrigerende kleding van Anodyne® helpt je om je continu bewust te zijn van je houding. Of je nu stilzittend of actief werk doet, reist of sport. Anodyne® is een Europese producent en distributeur van houdingcorrigerende kleding met technologie ontwikkeld door de Amerikaanse AlignMed – de enige producent ter wereld van houdingcorrigerende kleding die geregistreerd staat bij de Amerikaanse FDA. De houdingcorrigerende kleding van Anodyne® is de enige in Europa die zowel FDA-goedgekeurd is als voorzien is van een CE-markering voor medische hulpmiddelen (Klasse I). De CE-markering is dus je garantie dat onze producten voldoen aan de eisen die aan medische hulpmiddelen worden gesteld.",
-              "button_text": ""
+              "button_text": "",
+              "tab_LinkUrl": ""
             }
           },
           "16244533106f4cc43e-1": {
@@ -1487,20 +1547,22 @@
             "type": "tab",
             "settings": {
               "tab_title": "Behoeften",
-              "tab_image": "shopify:\/\/shop_images\/male1.c8b64023.jpg",
+              "tab_image": "shopify:\/\/shop_images\/Tabs_-_Image1-min.jpg",
               "tab_inner-title": "Houdingcorrigerende kleding aan de hand van je behoeften",
               "description": "De houdingcorrigerende kleding van Anodyne® kan door iedereen worden gedragen. We verkopen houdingcorrigerende T-shirts, bh’s en vesten, die allemaal ontworpen zijn om de spieren en bloedsomloop te activeren, waardoor het lichaam eraan wordt herinnerd om een rechte houding aan te nemen. Je kunt de houdingcorrigerende truien en bh's van Anodyne® op elk moment dragen – tijdens het sporten, winkelen, wandelen, schoonmaken of bij andere activiteiten. Om zoveel mogelijk aan je houdingcorrigerende kleding te hebben, raden we je aan om de bijgevoegde gebruiksaanwijzing goed door te lezen.",
-              "button_text": ""
+              "button_text": "",
+              "tab_LinkUrl": ""
             }
           },
           "e376b4a2-6744-45fa-9adb-95f14533c3af": {
             "type": "tab",
             "settings": {
               "tab_title": "Blessures",
-              "tab_image": "shopify:\/\/shop_images\/female1.e3900106.jpg",
+              "tab_image": "shopify:\/\/shop_images\/Tabs_-_Injuries-min.jpg",
               "tab_inner-title": "Ook voor jou, als je blessures hebt",
               "description": "Als je te maken hebt met een blessure of als je bijvoorbeeld een hernia, scoliose,artritis of iets dergelijks hebt, kun je onze houdingcorrigerende kleding prima gebruiken. Als het letsel nieuw is, raden we je aan dit eerst te bespreken met bijvoorbeeld je arts, fysiotherapeut of chiropractor. In sommige gevallen kan het houdingcorrigerende vest (MyLign of SpinalQ Pro) het beste zijn, omdat dat het meeste steun biedt. Het is belangrijk dat je de juiste maat houdingcorrigerende kleding bestelt, anders bereik je niet het optimale effect. Het beste is om naar de matentabel op onze productpagina's te kijken en bij twijfel contact op te nemen met onze klantenservice. Zij beantwoorden graag je vragen over onze producten en helpen je om de juiste maat te vinden.",
-              "button_text": ""
+              "button_text": "",
+              "tab_LinkUrl": ""
             }
           }
         },
