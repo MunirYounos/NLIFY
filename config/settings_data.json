@@ -144,7 +144,7 @@
           "announcement-0": {
             "type": "message",
             "settings": {
-              "announcement_text": "<p>Gratis verzending vanaf €59<\/p>"
+              "announcement_text": "<p>60 dagen volledig retourrecht<\/p>"
             }
           }
         },
@@ -1386,7 +1386,7 @@
             "type": "service",
             "settings": {
               "title": "Gratis verzending bij aankoop van meer dan €59",
-              "description": "Levering in 2-4 werkdagen",
+              "description": "Levering in 1-3 werkdagen",
               "icon": "shopify:\/\/shop_images\/fast-delivery.png",
               "uspLinkUrl": ""
             }
