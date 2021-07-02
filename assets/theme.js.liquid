@@ -4549,9 +4549,8 @@ theme.HeaderSection = (function () {
 
       function addScrollingClass() {
         var scroll = $(window).scrollTop();
-        var scrollTrigger = 80;
-
-        if (scroll > scrollTrigger) {
+        var scrollTrigger = 10;
+        if (scroll >= scrollTrigger) {
           $("body").addClass("is-scrolling");
         } else {
           $("body").removeClass("is-scrolling");

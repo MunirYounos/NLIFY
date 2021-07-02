@@ -105,6 +105,12 @@
 {%- if product.metafields.tabs.deliveryAndReturns !=blank -%}
 {%- assign show_deliveryAndReturns = true -%}
 {%- endif -%}
+{%- if product.metafields.sizeChart.sizeTable !=blank -%}
+{%- assign show_sizeGuide = true -%}
+{%- endif -%}
+{%- if product.metafields.description.productTopDescription !=blank -%}
+{%- assign show_productTopDescription = true -%}
+{%- endif -%}
 
 <meta itemprop="url" content="{{ shop.url }}{{ product.url }}">
 <meta itemprop="image" content="{{ product.featured_media | img_url: 'grande' }}">
@@ -371,6 +377,12 @@
 
               {%- capture "form_id" -%}AddToCartForm--{{ section.id }}{%- endcapture -%}
 
+                {%-if show_productTopDescription == true -%}
+                <div class="product__top_description">
+                  {{product.metafields.description.productTopDescription}}
+                </div>
+                {%- endif -%}
+              
               {%- render "dbtfy-color-swatches" with product as product -%}
 
               {%- form 'product', product, class: form_classes, id: form_id, data-product-form: '' -%}
@@ -498,7 +510,11 @@
                 {%- endif -%}
               </div>
               {%- endif -%}
-              <div id="nlify__bundle"></div>
+              {%- if show_sizeGuide == true -%}
+                <div class="custom_size_chart">
+                  {{product.metafields.sizeChart.sizeTable}}
+                </div>
+              {%- endif -%}
               <!--huck for bundle add to carts-->
               <div class="product-single__add-to-cart">
                 <button type="submit" name="add" id="AddToCart--{{ section.id }}"
@@ -637,7 +653,7 @@
         <div id="productDescription" class="product-single__description tabs rte spacer-bottom-none"
           itemprop="description">
 
-          <div class="tabs__selectors">
+          <div id="read-more"  class="tabs__selectors">
             <div id="tab-1" class="tab-item tab-active">
               Beschrijving
             </div>

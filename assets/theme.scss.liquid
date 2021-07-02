@@ -1298,7 +1298,7 @@ $class-type: unquote(".");
 // Sub
 @mixin textSub {
   text-transform: uppercase;
-  font-size: $baseFontSize-sm;
+  font-size: 0.65rem;
   font-weight: 700;
 }
 
@@ -1935,7 +1935,7 @@ $class-type: unquote(".");
       color: $background;
     }
   }
-
+ 
   // Media
   .media-wrapper {
     background-color: $default;
@@ -3194,7 +3194,7 @@ button {
   background-color: $anodyne-secondary-clr;
   color: $colorBody;
   border-radius: $borderRadius;
-  padding: 8px 12px;
+  padding: 8px 6px;
   white-space: nowrap;
   vertical-align: baseline;
   line-height: 1;
@@ -3585,8 +3585,7 @@ button {
 table {
   width: 100%;
   border-spacing: 0;
-  border: $borders;
-  border-radius: $borderRadius;
+  border: darken($anodyne-background-clr, 10%);
   table-layout: auto;
   overflow: hidden;
   text-align: center;
@@ -3605,7 +3604,7 @@ table {
     tr {
       &:last-child {
         th, td {
-          border-bottom: $borders;
+          border-bottom: $anodyne-background-clr;
         }
       }
     }
@@ -3615,7 +3614,7 @@ table {
     tr {
       &:first-child {
         th,td {
-          border-top: $borders;
+          border-top: $anodyne-background-clr;
         }
       }
     }
@@ -3627,7 +3626,7 @@ table {
       @include transition($transitions);
 
       &:nth-of-type(odd) {
-        background-color: rgba($colorDefault, $opacity);
+        background-color: rgba($anodyne-background-clr, 0.2);
       }
 
       &:hover {
@@ -3647,7 +3646,7 @@ table {
 
   // Cells
   th, td {
-    padding: $gutter-xs;
+    padding: ($gutter-xs - 4);
     border-right: $borders;
     border-bottom: $borders;
 
@@ -3660,20 +3659,16 @@ table {
     }
   }
 
-  // Td
-  td {
-    padding: $gutter-xs;
-  }
 
   // Th
   th{
-    padding: $gutter-xs ($gutter-xs - 2);
-    background-color: $colorHeadings;
-    color: $colorBody;
+    padding: $gutter-xs ($gutter-xs - 5);
+    background-color: darken($anodyne-background-clr, 5%);
+    color: $anodyne-dark-gray-clr;
     @include accentFontStack;
 
     @include screen($small) {
-      font-size: $baseFontSize-sm;
+      font-size: 0.75;
     }
   }
 }
@@ -6651,7 +6646,25 @@ cite {
     padding-top: 0;
   }
 }
+.product__top_description {
+  p {
+    font-size:0.85rem;
+    letter-spacing:1px;
 
+  }
+  .readmore-cover{
+    margin-bottom: $gutter-sm;
+    .btn-readmore {
+      display: inline-block;
+      padding: $gutter-xs $gutter-sm ;
+      background-color: $anodyne-dark-gray-clr;
+      color: $white;
+      font-size:0.75rem;
+      font-weight:300;
+      text-transform: uppercase;
+    }
+  }
+}
 {%- if settings.show_back_to_collection -%}
 // Back box
 .back-box {
@@ -8941,7 +8954,7 @@ body:not(.dbtfy-wish_list-destroy) {
         }
         &.active {
           color: $white;
-          background: $anodyne-dark-gray-clr;
+          background: lighten($anodyne-dark-gray-clr, 5%);
         }
       }
     }
@@ -8961,6 +8974,12 @@ body:not(.dbtfy-wish_list-destroy) {
               }
               &:last-child{
                 padding:0.4rem;
+              }
+              img{
+                order:1;
+               @include screenUp($smallPlus){
+                order:0;
+               }
               }
           }
         }
@@ -9150,4 +9169,28 @@ body:not(.dbtfy-wish_list-destroy) {
     }
   }
 
+}
+
+.custom_size_chart{
+  max-width: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: $gutter-sm;
+  border: 1px solid darken($anodyne-background-clr, 10%);
+    // Tables
+    table {
+      cursor: pointer;
+      border-color: red;
+      thead{
+        background-color: $anodyne-background-clr;
+      }
+      tr:nth-of-type(even){
+        background-color: lighten($anodyne-primary-light-clr, 10%);
+      }
+      .tbody{
+        td{
+          padding:0.2rem;
+        }
+      }
+    }
 }
