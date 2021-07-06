@@ -24,4 +24,11 @@
     </div>
   </div>
 </div>
+{%- if settings.nlify_cart_notification != blank -%}
+
+<div class="nlify_custom_text text-center">
+   <p class="small">{%- if settings.nlify_custom_drawer_icon != blank -%}<span class="custom_icon {{ settings.icon }} icon-width">
+    {{ settings.nlify_custom_drawer_icon}} </span> {%- endif-%} {{settings.nlify_cart_notification}}</p>
+</div>
+{%- endif -%}
 {%- endif -%}

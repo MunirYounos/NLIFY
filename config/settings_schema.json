@@ -2018,6 +2018,18 @@
         "label": "Button icon",
         "default": "check_circle",
         "info": "[View all available icons](https:\/\/material.io\/resources\/icons)"
+      },
+      {
+        "type": "text",
+        "id": "nlify_cart_notification",
+        "label": "Add Notification into cart drawer for users"
+      },
+      {
+        "type": "text",
+        "id": "nlify_custom_drawer_icon",
+        "label": "Add a notification icon",
+        "default": "warning_amber",
+        "info": "[View all available icons](https:\/\/material.io\/resources\/icons)"
       }
     ]
   },

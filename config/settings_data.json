@@ -62,6 +62,7 @@
     "dbtfy_sales_countdown": false,
     "dbtfy_sales_pop": false,
     "dbtfy_shop_protect": false,
+    "dbtfy_size_chart": false,
     "dbtfy_social_discount": true,
     "dbtfy_upsell_popup": true,
     "dbtfy_addtocart_animation_type": "shakeX",
@@ -70,6 +71,7 @@
     "dbtfy_cart_discount_label": "Kortingscode",
     "dbtfy_cart_discount_placeholder": "Vul hier je kortingscode in",
     "dbtfy_cart_discount_apply_button_label": "Gebruik kortingscode",
+    "nlify_cart_notification": "Are you sure you have checked the size chart for correct size.",
     "dbtfy_cart_goal_before_text": "Nog",
     "dbtfy_cart_goal_amount": 59,
     "dbtfy_cart_goal_after_text": "te gaan tot GRATIS verzending!",
@@ -198,7 +200,7 @@
           "guarantee-0": {
             "type": "text",
             "settings": {
-              "image": "shopify:\/\/shop_images\/fast-delivery.png",
+              "image": "shopify:\/\/shop_images\/Truck_100px_cad9e25f-fb15-49fd-9f50-252b20f85040.png",
               "guarantee_icon": "",
               "title": "Gratis retourneren en ruilen",
               "text": "",
@@ -210,7 +212,7 @@
           "guarantee-1": {
             "type": "text",
             "settings": {
-              "image": "shopify:\/\/shop_images\/check.png",
+              "image": "shopify:\/\/shop_images\/Checkmark_100px.png",
               "guarantee_icon": "",
               "title": "Gratis verzending bij aankoop van meer dan €59",
               "text": "",
@@ -222,7 +224,7 @@
           "guarantee-2": {
             "type": "text",
             "settings": {
-              "image": "shopify:\/\/shop_images\/return-delivery.png",
+              "image": "shopify:\/\/shop_images\/Returns_100px_eae6abfd-b0c7-420f-a021-300151b7a093.png",
               "guarantee_icon": "",
               "title": "60 dagen volledig retourrecht",
               "text": "",
@@ -234,7 +236,7 @@
           "b0820161-063b-4b1a-9f03-5afb4890dd28": {
             "type": "text",
             "settings": {
-              "image": "shopify:\/\/shop_images\/phone-call.png",
+              "image": "shopify:\/\/shop_images\/Customerservice_copy_100px.png",
               "guarantee_icon": "",
               "title": "Neem contact met ons op",
               "text": "",
@@ -596,7 +598,8 @@
           "dbtfy_faq_banner_icon": "live_help",
           "dbtfy_faq_banner_text": "Didn't find your answer?",
           "dbtfy_faq_banner_subtitle": "Our customer service will be happy to help you.",
-          "dbtfy_faq_btn": "Get in Touch"
+          "dbtfy_faq_btn": "Get in Touch",
+          "dbtfy_faq_link": ""
         }
       },
       "related-products": {
@@ -918,7 +921,7 @@
           "1621508906b5323bb4-0": {
             "type": "text_block",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Anodyne-logo-icon_288.png",
+              "image": "shopify:\/\/shop_images\/Checkmark_100px.png",
               "icon": "",
               "title": "De originele houdingcorrigerende kleding",
               "text": "<p>De originele houdingcorrigerende kleding van Anodyne® kan alleen hier worden gekocht: op <a href=\"http:\/\/www.anodyne.nl\/\" title=\"http:\/\/www.anodyne.nl\/\">www.anodyne.nl<\/a> of bij een van onze goedgekeurde resellers. Houd er rekening mee dat er veel namaakproducten in omloop zijn. Slechts één van deze soorten houdingcorrigerende kleding is zowel geregistreerd als medisch hulpmiddel als FDA-geregistreerd, namelijk de producten van Anodyne®. Let dus goed op wanneer je online iets bestelt.<\/p>",
@@ -930,7 +933,7 @@
           "1621508906b5323bb4-1": {
             "type": "text_block",
             "settings": {
-              "image": "shopify:\/\/shop_images\/tilfreds.png",
+              "image": "shopify:\/\/shop_images\/Smile2_100px.png",
               "icon": "",
               "title": "Houdingcorrigerende kleding met 100% tevredenheidsgarantie",
               "text": "<p>Bij Anodyne® bieden we altijd gratis verzending bij aankoop van meer dan 59 €, 100% tevredenheidsgarantie, 60 dagen retourrecht en gratis ruilen of retourneren. Dit betekent dat je je product 60 dagen vrijblijvend kunt testen en kijken of het aan je verwachtingen voldoet. We voegen een gratis retourlabel toe aan alle verzendingen, zodat je het pakket eenvoudig terug kunt sturen om je artikelen te ruilen of retourneren. Het is de bedoeling dat je 100% tevreden bent – net als onze meer dan 150.000 klanten, die de afgelopen 5 jaar een origineel Anodyne®-product hebben gekocht. Minder dan 1 op de 20 klanten retourneert daadwerkelijk hun product.<\/p>",
@@ -942,7 +945,7 @@
           "1621508906b5323bb4-2": {
             "type": "text_block",
             "settings": {
-              "image": "shopify:\/\/shop_images\/kinoIcon.png",
+              "image": "shopify:\/\/shop_images\/Kinesio2_copy_100px.png",
               "icon": "",
               "title": "Van kinesiotape tot houdingcorrigerende kleding",
               "text": "<p>Houdingcorrigerende kleding activeert de rugspieren, schouders en schouderbladen, zonder je spieren of gewrichten vast te zetten. De technologie achter de houdingcorrigerende kleding is geïnspireerd door kinesiotape - een behandelingsmethode die vaak door Deense fysiotherapeuten en chiropractors wordt gebruikt om pijn en spanning in de nek, schouders en rug te behandelen. Kinesiotaping wordt ook vaak gebruikt door professionele sporters om specifieke spiergroepen te stimuleren en de houding te verbeteren.<\/p>",
@@ -1387,7 +1390,7 @@
             "settings": {
               "title": "Gratis verzending bij aankoop van meer dan €59",
               "description": "Levering in 1-3 werkdagen",
-              "icon": "shopify:\/\/shop_images\/fast-delivery.png",
+              "icon": "shopify:\/\/shop_images\/Truck_100px_cad9e25f-fb15-49fd-9f50-252b20f85040.png",
               "uspLinkUrl": ""
             }
           },
@@ -1396,7 +1399,7 @@
             "settings": {
               "title": "Gratis retourneren en ruilen",
               "description": "Wij zorgen voor een retourlabel",
-              "icon": "shopify:\/\/shop_images\/return-delivery.png",
+              "icon": "shopify:\/\/shop_images\/Returns_100px_eae6abfd-b0c7-420f-a021-300151b7a093.png",
               "uspLinkUrl": ""
             }
           },
@@ -1405,7 +1408,7 @@
             "settings": {
               "title": "100% Tevredenheidsgarantie",
               "description": "100% tevreden of je volledige aankoopbedrag terug",
-              "icon": "shopify:\/\/shop_images\/smilyIcon.png",
+              "icon": "shopify:\/\/shop_images\/Smile2_100px.png",
               "uspLinkUrl": ""
             }
           },
@@ -1414,7 +1417,7 @@
             "settings": {
               "title": "60 dagen volledig retourrecht",
               "description": "Genoeg tijd om een beslissing te maken",
-              "icon": "shopify:\/\/shop_images\/check.png",
+              "icon": "shopify:\/\/shop_images\/Checkmark_100px.png",
               "uspLinkUrl": ""
             }
           }
@@ -1449,7 +1452,7 @@
           "dbtfy_product_description_position": "separate_section",
           "description_style": "section-blank",
           "text_alignment": "",
-          "text_alignment_mobile": "small--text-center"
+          "text_alignment_mobile": "small--text-left"
         }
       },
       "product-cards": {
@@ -1458,7 +1461,7 @@
           "5ad77569-9fea-4ba7-9a40-0c102f7b5ae6": {
             "type": "row",
             "settings": {
-              "card__icon": "shopify:\/\/shop_images\/ai-contact.png",
+              "card__icon": "shopify:\/\/shop_images\/Customerservice_copy_100px.png",
               "title": "Klantenservice",
               "text": "<p>Neem contact met ons op via telefoon <a href=\"tel:+31 (0) 20-26 22 008\"><strong>+31 (0) 20-26 22 008<\/strong><\/a> of <a href=\"mailto:info@anodyne.nl\" title=\"mailto:info@anodyne.nl\"><strong>info@anodyne.nl<\/strong><\/a> als je vragen hebt over maten, prijzen of iets anders.<\/p>",
               "card__alignement": "center",
@@ -1472,9 +1475,9 @@
           "9bd54909-5d18-4bf9-b0f0-ba9fa0e427af": {
             "type": "row",
             "settings": {
-              "card__icon": "shopify:\/\/shop_images\/fast-delivery.png",
+              "card__icon": "shopify:\/\/shop_images\/Truck_100px_cad9e25f-fb15-49fd-9f50-252b20f85040.png",
               "title": "Gratis verzending bij aankoop van meer dan €59",
-              "text": "<p>Levering in 2-4 werkdagen<\/p>",
+              "text": "<p>Levering in 1-3 werkdagen<\/p>",
               "card__alignement": "center",
               "text_alignment": "text-center",
               "type_row": "",
@@ -1486,7 +1489,7 @@
           "29e06d44-f317-4846-82d6-df133956c0a0": {
             "type": "row",
             "settings": {
-              "card__icon": "shopify:\/\/shop_images\/return-delivery.png",
+              "card__icon": "shopify:\/\/shop_images\/Returns_100px_eae6abfd-b0c7-420f-a021-300151b7a093.png",
               "title": "Gratis retourneren en ruilen",
               "text": "<p>Wij zorgen voor een retourlabel<\/p>",
               "card__alignement": "center",
@@ -1500,7 +1503,7 @@
           "35be0bb1-c0ed-4eb2-8979-a181c18413df": {
             "type": "row",
             "settings": {
-              "card__icon": "shopify:\/\/shop_images\/smilyIcon.png",
+              "card__icon": "shopify:\/\/shop_images\/Smile2_100px.png",
               "title": "100% Tevredenheidsgarantie",
               "text": "<p>60 dagen volledig retourrecht<\/p>",
               "card__alignement": "center",
