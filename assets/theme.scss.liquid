@@ -6082,8 +6082,9 @@ cite {
   }
 }
 .hero__btn{
-  background-color: $anodyne-dark-gray-clr;
+  background-color: $anodyne-secondary-clr;
   color:$white;
+  font-size:1rem;
 }
 // Hero-content
 .hero-content {
@@ -6657,7 +6658,7 @@ cite {
     .btn-readmore {
       display: inline-block;
       padding: $gutter-xs $gutter-sm ;
-      background-color: $anodyne-dark-gray-clr;
+      background-color: $anodyne-secondary-clr;
       color: $white;
       font-size:0.75rem;
       font-weight:300;
@@ -7592,7 +7593,7 @@ body:not(.dbtfy-newsletter_popup-destroy) {
     line-height: 1;
     text-transform: uppercase;
     @include transition($transitions);
-    @include button($colorHeadings, $colorBody);
+    @include button($anodyne-secondary-clr, $white);
 
     @include screen($small) {
       font-size: $baseFontSize-sm;
@@ -8852,7 +8853,6 @@ body:not(.dbtfy-wish_list-destroy) {
     .card-contain{
       padding: $gutter;
       background-color: lighten($anodyne-offwhite-clr, 4%);
-      border-radius: $gutter-sm;
       width: 100%;
       margin:($gutter - 8) 0;
       @include shadow($shadow-sm);
@@ -9206,5 +9206,11 @@ body:not(.dbtfy-wish_list-destroy) {
       font-size: 1rem;
       padding-right:5px;
     }
+  }
+}
+.product-single__media-group-wrapper{
+  @include screenUp($postSmall){
+    position: sticky !important;
+    top:100px;
   }
 }
