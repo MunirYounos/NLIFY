@@ -49,6 +49,7 @@
 
 {%- assign variant = product.selected_or_first_available_variant -%}
 
+
 <div class="grid__item grid-product flex {{ grid_item_width }}{% if sold_out %} is-sold-out{% endif %}" data-product-card data-product-handle="{{ product.handle }}" data-product-id="{{ product.id }}">
   <div class="card grid-product__wrapper {% if image_hover %} has-hover-image{% endif %}">
     <div class="grid-product__image-wrapper">
@@ -112,7 +113,6 @@
       {%- endif -%}
 
       <p class="grid-product__title h6{% if settings.grid_product_truncate %} text-ellipsis{% endif %}">{{ title }}</p>
-
       {%- if settings.review_badge_product_grid -%}
         {%- unless emptyState -%}
           {%- render 'review-badge' with product as product, position: 'product_grid' -%}

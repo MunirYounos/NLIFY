@@ -6797,7 +6797,9 @@ body {
 .text-sub {@include textSub}
 .text-strike {text-decoration: line-through!important; text-decoration-color: $anodyne-secondary-clr !important;}
 .text-capitalize {text-transform: capitalize}
-.text-muted {color: mix($colorBody, $colorBodyText, $opacity * 60)}
+.text-muted {color: mix($anodyne-light-gray-clr, $anodyne-background-clr, $opacity * 60)}
+.cart__price--compare.text-muted {color: mix($anodyne-light-gray-clr, $anodyne-background-clr, $opacity * 60)}
+.cart__subtotal-discounted.text-muted {color: mix($anodyne-light-gray-clr, $anodyne-background-clr, $opacity * 60)}
 .text-italic {font-style: italic}
 
 // Borders
