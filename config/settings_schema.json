@@ -834,6 +834,36 @@
         "default": "#F2ECFF"
       },
       {
+        "type": "color",
+        "id": "hero_title_color",
+        "label": "Hero Title color",
+        "default": "#444444"
+      },
+      {
+        "type": "color",
+        "id": "hero_title_color_mobile",
+        "label": "Hero Title color on Mobile",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "hero_text_color",
+        "label": "Hero text color",
+        "default": "#444444"
+      },
+      {
+        "type": "color",
+        "id": "hero_text_color_mobile",
+        "label": "Hero Text color on Mobile",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "hero_button_color",
+        "label": "Hero Button color",
+        "default": "#f48400"
+      },
+      {
         "type": "header",
         "content": "Drawers"
       },
