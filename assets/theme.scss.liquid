@@ -6662,7 +6662,7 @@ cite {
 .product__top_description {
   p {
     font-size:0.85rem;
-    letter-spacing:1px;
+    color: lighten($anodyne-dark-gray-clr, 15%);
 
   }
   .readmore-cover{
@@ -9213,11 +9213,14 @@ body:not(.dbtfy-wish_list-destroy) {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
   margin-bottom: $gutter-sm;
-  border: 1px solid darken($anodyne-background-clr, 10%);
+   p {
+    font-size:0.85rem;
+    color: lighten($anodyne-dark-gray-clr, 15%);
+  }
     // Tables
     table {
       cursor: pointer;
-      border-color: red;
+      border: 1px solid darken($anodyne-background-clr, 10%);
       thead{
         background-color: $anodyne-background-clr;
       }
@@ -9373,13 +9376,16 @@ body:not(.dbtfy-wish_list-destroy) {
   margin-top: $gutter;
   margin-left:0;
   .ps_item{
-    padding: $gutter-sm 0;
+    padding: $gutter-xs 0;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     .material-icons-outlined{
       color: $anodyne-primary-clr;
       padding-right:$gutter-sm;
+    }
+    img{
+      margin-right: $gutter-xs;
     }
   }
   }

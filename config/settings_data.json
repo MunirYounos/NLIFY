@@ -22,6 +22,9 @@
     "color_primary": "#83d0bd",
     "color_secondary": "#ffffff",
     "color_input": "#e5e5e5",
+    "hero_title_color": "#444444",
+    "hero_title_color_mobile": "#ffffff",
+    "hero_button_color": "#f48400",
     "color_drawer_bg": "#f7f7f7",
     "color_drawer_default": "#f7f7f7",
     "color_drawer_border": "#dddddd",
@@ -1582,6 +1585,216 @@
         ],
         "settings": {
           "title": "Houdingcorrigerende kleding van Anodyne®"
+        }
+      },
+      "hero": {
+        "type": "hero",
+        "blocks": {
+          "ffbc0390-118c-49ac-80f4-a8df18461c64": {
+            "type": "slide",
+            "settings": {
+              "overlay": true,
+              "image": "shopify:\/\/shop_images\/hero-mobil.jpg",
+              "image_mobile": "shopify:\/\/shop_images\/Tabs_-_Desk-min.jpg",
+              "image_position": "center center",
+              "image_position_mobile": "center center",
+              "video": "",
+              "title": "Slideshow",
+              "text": "<p>Use overlay text to give your customers insight into your brand. Select imagery and text that relates to your story.<\/p>",
+              "text_position": "align-center",
+              "text_position_mobile": "align-center",
+              "text_alignment": "text-center",
+              "text_alignment_mobile": "text-center",
+              "enable_custom_fonts": false,
+              "slideshow_family": "poppins_n4",
+              "button_label": "",
+              "button_link": "shopify:\/\/collections\/all",
+              "button_style": "btn--primary",
+              "button_label_2": "Learn more",
+              "button_link_2": "shopify:\/\/collections\/all",
+              "button_style_2": ""
+            }
+          }
+        },
+        "block_order": [
+          "ffbc0390-118c-49ac-80f4-a8df18461c64"
+        ],
+        "settings": {
+          "section_height": "xlarge",
+          "section_height_mobile": "xlarge",
+          "arrows": true,
+          "dots": true,
+          "autoplay": false,
+          "autoplayspeed": 8
+        }
+      },
+      "page-hero": {
+        "type": "page-hero",
+        "blocks": {
+          "2ec27270-3444-4380-ae1f-47a9a63cf1aa": {
+            "type": "slide",
+            "settings": {
+              "overlay": true,
+              "image": "shopify:\/\/shop_images\/Couple_in_sofa-min.jpg",
+              "image_mobile": "shopify:\/\/shop_images\/mobile_landing2-min.jpg",
+              "image_position": "center center",
+              "image_position_mobile": "center center",
+              "video": "",
+              "title": "HET SHIRT DAT JE HOUDING VOORGOED VERBETERT",
+              "page_hero_title_color": "#ffffff",
+              "text": "<p>Posture Shirt™ het houdingsshirt dat een betere houding bevordert.<\/p>",
+              "page_hero_text_color": "#ffffff",
+              "text_position": "align-center",
+              "text_position_mobile": "align-center",
+              "text_alignment": "text-left",
+              "text_alignment_mobile": "text-center",
+              "enable_custom_fonts": false,
+              "slideshow_family": "poppins_n4",
+              "page_hero_btn_color": "#ffffff",
+              "page_hero_btn_bgcolor": "#83d0bd",
+              "button_label": "",
+              "button_link": "shopify:\/\/collections\/all",
+              "button_style": "btn--primary",
+              "button_label_2": "",
+              "button_link_2": "",
+              "button_style_2": ""
+            }
+          }
+        },
+        "block_order": [
+          "2ec27270-3444-4380-ae1f-47a9a63cf1aa"
+        ],
+        "settings": {
+          "section_height": "medium",
+          "section_height_mobile": "xlarge",
+          "arrows": true,
+          "dots": true,
+          "autoplay": false,
+          "autoplayspeed": 8
+        }
+      },
+      "featured-columns": {
+        "type": "featured-columns",
+        "blocks": {
+          "ea559887-3861-477c-8651-f1e49753e12f": {
+            "type": "text_block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Kinesio2_copy_100px.png",
+              "icon": "",
+              "title": "Houding verbeteren",
+              "text": "<p>Het houding corrigerend shirt kan voor vele doeleinden worden gebruikt. De voornaamste doeleinden zijn het verbeteren van de houding, het optimaliseren van de voordelen van trainingen en het verminderen van pijn en spanningen.<\/p>",
+              "button_style": "btn--primary",
+              "button_label": "",
+              "button_link": ""
+            }
+          },
+          "2222b2b6-3813-4c06-a9ba-ee60ece4050d": {
+            "type": "text_block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Customerservice_copy_100px.png",
+              "icon": "",
+              "title": "Optimaliseer je trainingen",
+              "text": "<p>Het houding corrigerend shirt van Anodyne geeft steun en vergemakkelijkt een goede en effectieve training. Het corrigerend t-shirt activeert en stimuleert de spieren en stelt je in staat de oefeningen correct uit te voeren met een rechte lichaamshouding. Zo bereik je een gezonde training die de prestaties verhoogt en tegelijkertijd je houding verbetert. <\/p>",
+              "button_style": "btn--primary",
+              "button_label": "",
+              "button_link": ""
+            }
+          },
+          "4438fcc2-ead9-43e5-abdf-42ff06cbac24": {
+            "type": "text_block",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Checkmark_100px.png",
+              "icon": "",
+              "title": "Verlichting van pijn en spanningen",
+              "text": "<p>Een goede lichaamshouding kan bijdragen tot het verlichten van pijn en het losmaken van spanningen, aangezien de spieren zoveel mogelijk worden ontlast als ze in hun optimale positie zijn. Het Posture Shirt™ kan helpen spanningen en pijn te verlichten door te zorgen voor een beter houdingsbewustzijn en door de spieren gedurende de dag te ontlasten. Als je lijdt aan chronische pijn of een medische aandoening hebt, raden wij je aan je fysiotherapeut of arts te raadplegen voordat je een houdingsshirt gaat gebruiken, om er zeker van te zijn dat dit het juiste product voor je is.<\/p>",
+              "button_style": "btn--primary",
+              "button_label": "",
+              "button_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "ea559887-3861-477c-8651-f1e49753e12f",
+          "2222b2b6-3813-4c06-a9ba-ee60ece4050d",
+          "4438fcc2-ead9-43e5-abdf-42ff06cbac24"
+        ],
+        "settings": {
+          "title": "Gebruik van het houdingsshirt",
+          "subtitle": "",
+          "section_style": "section-default",
+          "text_align": "text-center"
+        }
+      },
+      "home-tabs": {
+        "type": "home-tabs",
+        "blocks": {
+          "bcdfa3dd-d86d-45d2-b711-d84f17c6fbbf": {
+            "type": "tab",
+            "settings": {
+              "tab_title": "With or without zipper",
+              "tab_image": "shopify:\/\/shop_images\/Tabs_-_Image1-min.jpg",
+              "tab_inner-title": "Working on Desk could be a problem",
+              "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quis.",
+              "button_text": "Button text",
+              "tab_LinkUrl": ""
+            }
+          },
+          "f7b8ebd3-63ad-4abb-b462-859b1c74c095": {
+            "type": "tab",
+            "settings": {
+              "tab_title": "the neuroband technology",
+              "tab_image": "shopify:\/\/shop_images\/Tabs_-_Desk-min.jpg",
+              "tab_inner-title": "Working on Desk could be a problem",
+              "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quis.",
+              "button_text": "Button text",
+              "tab_LinkUrl": ""
+            }
+          },
+          "1b47ccf7-0423-43c0-9afb-c352af71b155": {
+            "type": "tab",
+            "settings": {
+              "tab_title": "Medical registration",
+              "tab_image": "shopify:\/\/shop_images\/Tabs_-_Injuries-min.jpg",
+              "tab_inner-title": "Working on Desk could be a problem",
+              "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, quis.",
+              "button_text": "Button text",
+              "tab_LinkUrl": ""
+            }
+          }
+        },
+        "block_order": [
+          "bcdfa3dd-d86d-45d2-b711-d84f17c6fbbf",
+          "f7b8ebd3-63ad-4abb-b462-859b1c74c095",
+          "1b47ccf7-0423-43c0-9afb-c352af71b155"
+        ],
+        "settings": {
+          "title": "How posture shirt can help reduce pain?"
+        }
+      },
+      "custom-html": {
+        "type": "custom-html",
+        "blocks": {
+          "4ddc25ff-25b2-4d42-b8b0-418684d2ef88": {
+            "type": "html",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Logo-icon_1000x1000px.png",
+              "mission_title": "Het houding corrigerend shirt is alleen verkrijgbaar bij Anodyne®",
+              "mission_description": "<p>Het Posture Shirt is het originele houdingcorrigerend shirt van het Amerikaanse bedrijf AlignMed. Dit houding correctie shirt is het enige in zijn soort dat zowel geregistreerd is door de FDA (de Amerikaanse Food and Drug Administration) als CE-gecertificeerd is als medisch hulpmiddel in de EU. Anodyne is de officiële dealer van het houdingsshirt in Europa en het is alleen te verkrijgen via onze website www.anodyne.nl of bij een van onze erkende dealers. <\/p>",
+              "column_width": 12,
+              "column_width_mobile": 12,
+              "text_alignment": "text-center",
+              "btn_text": "Kies jouw shirt",
+              "btn_url": ""
+            }
+          }
+        },
+        "block_order": [
+          "4ddc25ff-25b2-4d42-b8b0-418684d2ef88"
+        ],
+        "settings": {
+          "padding_section": true,
+          "section_style": "section-blank",
+          "wrapper_size": "-small"
         }
       }
     },
