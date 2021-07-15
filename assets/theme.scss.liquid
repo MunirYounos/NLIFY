@@ -4773,7 +4773,7 @@ cite {
 
     &::after {
       content: "";
-      border-bottom: $borders;
+      border-bottom: 1px solid darken($anodyne-background-clr, 2%);
       display: block;
       left: -$gutter-sm;
       right: -$gutter-sm;
@@ -9341,14 +9341,14 @@ body:not(.dbtfy-wish_list-destroy) {
   }
 }
 .page_hero__title{
-  font-size:3rem;
+  font-size:2rem;
   text-transform:uppercase;
 }
 .page_hero {
   padding: 0 $gutter-sm;
   .page__ps_title{
     margin-top: $gutter-sm;
-    font-size:2.8rem;
+    font-size:1.6rem;
     text-transform:uppercase;
   }
   .ps_ul{
@@ -9370,10 +9370,20 @@ body:not(.dbtfy-wish_list-destroy) {
   }
   }
   .btn.hero__btn.ps__btn{
+    padding: .8rem 1.6rem;
     @include screen($small){
       position: relative;
       left:50%;
       transform: translateX(-50%);
+    }
+  }
+  .grid__item.ps__grid{
+    background-color: $white;
+    @include screen($small){
+      margin-top:-3.6rem;
+      z-index: 2;
+      padding-top:1rem;
+      padding-left:1rem;
     }
   }
 }
