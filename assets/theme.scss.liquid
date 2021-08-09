@@ -1961,6 +1961,19 @@ $class-type: unquote(".");
   }
 }
 
+.option__notavailable{
+  position: relative;
+  &::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    top:50%;
+    left: 0;
+    height: 1px;
+    background-color: $anodyne-secondary-clr;
+    transform: rotate(-38deg);
+  }
+}
 /*============================================================================
   _Vendor
 ==============================================================================*/
@@ -5016,7 +5029,7 @@ cite {
   
   .grid-product__title{
     font-weight: 100;
-    font-size: $headerSize3;
+    font-size: ($headerSize4 - 3);
     margin-bottom:($gutter-xs /2)
   }
 }
@@ -6676,7 +6689,7 @@ cite {
     align-items: center;
     .btn-readmore {
       display: inline-block;
-      margin-left: $gutter-xs;
+      // margin-left: $gutter-xs;
       padding: $gutter-xs $gutter-sm ;
       background-color: darken($anodyne-background-clr, 10%);
       color: $anodyne-dark-gray-clr;
@@ -6806,7 +6819,7 @@ body {
 .text-link {@include linkStyle}
 .text-lead {@include leadFontStack}
 .text-accent {@include accentFontStack}
-.text-money {@include accentFontStack; font-size: 1.4rem;}
+.text-money {@include accentFontStack; font-size: 1.1rem;}
 .dbtfy-sticky-price-box.text-money{font-size:0.85rem !important;}
 .total-sticky-compare-price.text-money{font-size:0.85rem !important;}
 .text-sub {@include textSub}
@@ -8719,7 +8732,7 @@ body:not(.dbtfy-wish_list-destroy) {
 			.content-imagebox {
 				.img{
 					@include screenUp($postSmall){
-            filter: grayscale(100%);
+            filter: grayscale(0);
           }
 				}
 			}
@@ -8752,7 +8765,7 @@ body:not(.dbtfy-wish_list-destroy) {
           	opacity:1;
 			.content-imagebox {
 				.img{
-					filter: grayscale(0);
+					filter: grayscale(100%);
 				}
 			}
 		}
@@ -9183,15 +9196,15 @@ body:not(.dbtfy-wish_list-destroy) {
       background-color:$anodyne-primary-clr;
       color:$white;
       position: absolute;
-      bottom:20%;
+      bottom:28%;
       left:$gutter-xs;
       padding:$gutter-xs  ($gutter-xs + 8) $gutter-xs $gutter-xs;
       font-size:0.75rem;
       text-transform:uppercase;
       z-index: 12;
       @include screen($small){
-        left: 0;
-        bottom:26%;
+        left: 8px;
+        bottom:30%;
       }
     }
   }
@@ -9389,4 +9402,28 @@ body:not(.dbtfy-wish_list-destroy) {
 }
 .shopify-payment-button .shopify-payment-button__more-options {
 display: none;
+}
+
+.traingle__badge{
+  background-color: transparent;
+  .traingle_porcent{
+    position: absolute;
+    top:-8px;
+    left:-8px;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: sans-serif;
+    color: $white;
+    z-index: 12;
+    &::after{
+      position: absolute;
+      content: '';
+      top:-4px;
+      left:-4px;
+      border-right: 34px solid transparent;
+      border-bottom: 50px solid transparent;
+      border-top: 42px solid  $anodyne-secondary-clr;
+      z-index: -1;
+    }
+  }
 }
