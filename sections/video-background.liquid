@@ -1,0 +1,1174 @@
+{%- style -%}
+	.videoblock {
+		height: 100%;
+		position: relative;
+	}
+	.video-section-wrapper--small, .videoblock-small {
+		min-height: 500px;
+	}
+	.video-section-wrapper--medium, .videoblock-medium {
+		min-height: 650px;
+	}
+	.video-section-wrapper--large, .videoblock-large {
+		min-height: 750px;
+	}
+	.fullscreen-video-wrap--full, .videoblock-full {
+		min-height: 100vh;
+	}
+	.videoblock .fullscreen-video-wrap {
+		position: absolute;
+		top: 0;
+		left: 0;
+		min-width: 100%;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+	.videoblock .fullscreen-video-wrap .video-js {
+		position: absolute;
+		top: 0;
+		left: 0;
+		min-height: 100%;
+		min-width: 100%;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.videoblock .fullscreen-video-wrap video {
+		min-height: 100%;
+		min-width: 100%;
+		object-fit: cover;
+	}
+	.videoblock .video__overlay {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 1;
+		background-color: rgba(0, 0, 0, 0.4);
+	}
+  .videoblock .hero-fixed-width__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-height: 50%;
+    width: 100%;
+  }
+  .videoblock .hero-fixed-width__content .mega-title {
+    text-transform: uppercase;
+    color: white;
+    font-size: clamp(2rem, 5vw, 3.4rem); 
+    font-weight: 500;
+  }
+  .videoblock .hero-fixed-width__content .mega-subtitle {
+    color: white;
+    font-size: clamp(0.8rem, 5vw, 1.4rem); 
+    padding:0 1rem 2rem 1rem;
+  }
+    .scrolldown {
+		z-index: 2;
+		position: absolute;
+		right: 50%;
+    bottom: 10%;
+		display: inline-block;
+	}
+	.scrolldown span {
+		width: 20px;
+		height: 20px;
+		display: block;
+		border-right: 2px solid #fff;
+		border-bottom: 2px solid #fff;
+		transform: rotate(45deg);
+		margin: -10px;
+		animation: animate 2s infinite;
+	}
+	.scrolldown span:nth-child(2) {
+		animation-delay: -0.2s;
+	}
+	.scrolldown span:nth-child(3) {
+		animation-delay: -0.4s;
+	}
+	@keyframes animate {
+		0% {
+			opacity: 0;
+		}
+
+		50% {
+			opacity: 1;
+			transform: rotate(45deg) translate(10px, 10px);
+		}
+
+		100% {
+			opacity: 0;
+		}
+	}
+{%- endstyle -%}
+
+<div class="" data-section-id="{{ section.id }}" data-section-type="video-section">
+	{%- if section.settings.page_width == 'fixed_width' -%}
+    	<div class="page-width">
+  	{%- endif -%}
+
+		<div class="videoblock videoblock-{{ section.settings.height }}">
+			{%- if section.settings.newvideo_link != blank -%}
+				<div class="fullscreen-video-wrap
+							fullscreen-video-wrap--{{ section.settings.height }}
+							fullscreen-video-wrap--{{ section.id }}">
+					<video class="video-js" loop autoplay preload muted playsinline
+						poster="https:{{ section.settings.image | img_url: 'master' }}">
+						<source src="{{ section.settings.newvideo_link }}" type="video/mp4">
+						</source>
+					</video>
+				</div>
+
+			{% elsif section.settings.image != blank %}
+				<div class="video__image box ratio-container lazyload js"
+					data-bgset="{% include 'bgset', image: section.settings.image %}"
+					data-sizes="auto"
+					data-parent-fit="contain"
+					style="background-position: {{ section.settings.image_position }};"
+					data-image-loading-animation>
+				</div>
+
+			{%- else -%}
+				<div class="placeholder-background">
+					{{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+				</div>
+			{%- endif -%}
+
+			{%- if section.settings.show_overlay -%}<div class="video__overlay"></div>{%- endif -%}
+
+			<div class="hero-fixed-width__content">
+				<div class="page-width text-center">
+					{%- if section.settings.video_title != blank -%}
+						<h1 class="h1 mega-title{% if section.settings.text_size == 'large' %} mega-title--large{% endif %}">{{ section.settings.video_title | escape }}</h1>
+					{%- endif -%}
+					{%- if section.settings.text_description != blank -%}
+						<div class="rte-setting mega-subtitle{% if section.settings.text_description_size == 'large' %} mega-subtitle--large{% endif %}">{{ section.settings.text_description }}</div>
+					{%- endif -%}
+					{%- if section.settings.button_label != blank and section.settings.button_link != blank -%}
+						<a href="{{ section.settings.button_link }}" class="btn hero__btn">
+							{{ section.settings.button_label | escape }}
+						</a>
+					{%- endif -%}
+				</div>
+
+				{%- if section.settings.show_scrolldown -%}
+
+					<div class="scrolldown">
+						<div class="scrollto">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+					</div>
+
+				{%- endif -%}
+
+			</div>
+		</div>
+
+	{%- if section.settings.page_width == 'fixed_width' -%}
+    	</div>
+  	{%- endif -%}
+</div>
+
+{% schema %}
+{
+  "name": {
+    "cs": "Video",
+    "da": "Video",
+    "de": "Video",
+    "en": "Video Background",
+    "es": "Video",
+    "fi": "Video",
+    "fr": "Vid√©o",
+    "it": "Video",
+    "ja": "ÂãïÁîª",
+    "ko": "ÎèôÏòÅÏÉÅ",
+    "nb": "Video",
+    "nl": "Video",
+    "pl": "Film",
+    "pt-BR": "V√≠deo",
+    "pt-PT": "V√≠deo",
+    "sv": "Video",
+    "th": "‡∏ß‡∏¥‡∏î‡∏µ‡πÇ‡∏≠",
+    "tr": "Video",
+    "vi": "Video",
+    "zh-CN": "ËßÜÈ¢ë",
+    "zh-TW": "ÂΩ±Áâá"
+  },
+  "class": "index-section video-section index-section--flush",
+  "settings": [
+	{
+      "type": "select",
+      "id": "page_width",
+      "label": {
+        "cs": "Velikost textu",
+        "da": "Tekstst√∏rrelse",
+        "de": "Textgr√∂√üe",
+        "en": "Layout",
+        "es": "Tama√±o del texto",
+        "fi": "Tekstin koko",
+        "fr": "Taille du texte",
+        "it": "Dimensione testo",
+        "ja": "ÊñáÂ≠ó„Çµ„Ç§„Ç∫",
+        "ko": "ÌÖçÏä§Ìä∏ ÏÇ¨Ïù¥Ï¶à",
+        "nb": "Tekstst√∏rrelse",
+        "nl": "Tekengrootte",
+        "pl": "Rozmiar czcionki",
+        "pt-BR": "Tamanho do texto",
+        "pt-PT": "Tamanho do texto",
+        "sv": "Textstorlek",
+        "th": "‡∏Ç‡∏ô‡∏≤‡∏î‡∏ï‡∏±‡∏ß‡∏≠‡∏±‡∏Å‡∏©‡∏£",
+        "tr": "Metin boyutu",
+        "vi": "C·ª° vƒÉn b·∫£n",
+        "zh-CN": "ÊñáÊú¨Â§ßÂ∞è",
+        "zh-TW": "ÊñáÂ≠óÂ∞∫ÂØ∏"
+      },
+      "default": "full_width",
+      "options": [
+        {
+          "label": {
+            "cs": "St≈ôedn√≠",
+            "da": "Medium",
+            "de": "Mittel",
+            "en": "Full width",
+            "es": "Mediano",
+            "fi": "Keskisuuri",
+            "fr": "Moyenne",
+            "it": "Medio",
+            "ja": "‰∏≠",
+            "ko": "Î≥¥ÌÜµ",
+            "nb": "Middels",
+            "nl": "Gemiddeld",
+            "pl": "≈örednia",
+            "pt-BR": "M√©dio",
+            "pt-PT": "Interm√©dio",
+            "sv": "Medium",
+            "th": "‡∏õ‡∏≤‡∏ô‡∏Å‡∏•‡∏≤‡∏á",
+            "tr": "Orta",
+            "vi": "Trung b√¨nh",
+            "zh-CN": "‰∏≠Á≠â",
+            "zh-TW": "‰∏≠Á≠â"
+          },
+          "value": "full_width"
+        },
+        {
+          "label": {
+            "cs": "Velk√°",
+            "da": "Stor",
+            "de": "Gro√ü",
+            "en": "Fixed width",
+            "es": "Grande",
+            "fi": "Suuri",
+            "fr": "Grande",
+            "it": "Grande",
+            "ja": "Â§ß",
+            "ko": "ÎùºÏßÄ",
+            "nb": "Stor",
+            "nl": "Groot",
+            "pl": "Du≈ºa",
+            "pt-BR": "Grande",
+            "pt-PT": "Grande",
+            "sv": "Stor",
+            "th": "‡πÉ‡∏´‡∏ç‡πà",
+            "tr": "B√ºy√ºk",
+            "vi": "L·ªõn",
+            "zh-CN": "Â§ß",
+            "zh-TW": "Â§ßÂûã"
+          },
+          "value": "fixed_width"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "height",
+      "label": {
+        "cs": "V√Ω≈°ka videa",
+        "da": "Videoh√∏jde",
+        "de": "Videoh√∂he",
+        "en": "Section height",
+        "es": "Altura del video",
+        "fi": "Videon korkeus",
+        "fr": "Hauteur de la vid√©o",
+        "it": "Altezza video",
+        "ja": "„Éì„Éá„Ç™„ÅÆÈ´ò„Åï",
+        "ko": "ÎèôÏòÅÏÉÅ ÎÜíÏù¥",
+        "nb": "Videoh√∏yde",
+        "nl": "Videohoogte",
+        "pl": "Wysoko≈õƒá filmu",
+        "pt-BR": "Altura do v√≠deo",
+        "pt-PT": "Altura do v√≠deo",
+        "sv": "Bildh√∂jd",
+        "th": "‡∏Ñ‡∏ß‡∏≤‡∏°‡∏™‡∏π‡∏á‡∏Ç‡∏≠‡∏á‡∏ß‡∏¥‡∏î‡∏µ‡πÇ‡∏≠",
+        "tr": "Video y√ºksekliƒüi",
+        "vi": "Chi·ªÅu cao video",
+        "zh-CN": "ËßÜÈ¢ëÈ´òÂ∫¶",
+        "zh-TW": "ÂΩ±ÁâáÈ´òÂ∫¶"
+      },
+      "default": "full",
+      "options": [
+        {
+          "label": {
+            "cs": "Mal√°",
+            "da": "Lille",
+            "de": "Klein",
+            "en": "Small",
+            "es": "Peque√±a",
+            "fi": "Pieni",
+            "fr": "Petit",
+            "it": "Piccolo",
+            "ja": "„Çπ„É¢„Éº„É´",
+            "ko": "Ïä§Î™∞",
+            "nb": "Liten",
+            "nl": "Klein",
+            "pl": "Ma≈Ça",
+            "pt-BR": "Pequeno",
+            "pt-PT": "Pequeno",
+            "sv": "Liten",
+            "th": "‡πÄ‡∏•‡πá‡∏Å",
+            "tr": "K√º√ß√ºk",
+            "vi": "Nh·ªè",
+            "zh-CN": "Â∞è",
+            "zh-TW": "Â∞èÂûã"
+          },
+          "value": "small"
+        },
+        {
+          "label": {
+            "cs": "St≈ôedn√≠",
+            "da": "Medium",
+            "de": "Mittel",
+            "en": "Medium",
+            "es": "Mediana",
+            "fi": "Keskisuuri",
+            "fr": "Moyen",
+            "it": "Medio",
+            "ja": "‰∏≠",
+            "ko": "Î≥¥ÌÜµ",
+            "nb": "Middels",
+            "nl": "Gemiddeld",
+            "pl": "≈örednia",
+            "pt-BR": "M√©dio",
+            "pt-PT": "M√©dio",
+            "sv": "Medium",
+            "th": "‡∏õ‡∏≤‡∏ô‡∏Å‡∏•‡∏≤‡∏á",
+            "tr": "Orta",
+            "vi": "Trung b√¨nh",
+            "zh-CN": "‰∏≠Á≠â",
+            "zh-TW": "‰∏≠Á≠â"
+          },
+          "value": "medium"
+        },
+        {
+          "label": {
+            "cs": "Velk√°",
+            "da": "Stor",
+            "de": "Gro√ü",
+            "en": "Large",
+            "es": "Larga",
+            "fi": "Suuri",
+            "fr": "Grand",
+            "it": "Grande",
+            "ja": "„É©„Éº„Ç∏",
+            "ko": "ÎùºÏßÄ",
+            "nb": "Stor",
+            "nl": "Groot",
+            "pl": "Du≈ºa",
+            "pt-BR": "Grande",
+            "pt-PT": "Grande",
+            "sv": "Stor",
+            "th": "‡πÉ‡∏´‡∏ç‡πà",
+            "tr": "B√ºy√ºk",
+            "vi": "L·ªõn",
+            "zh-CN": "Â§ß",
+            "zh-TW": "Â§ßÂûã"
+          },
+          "value": "large"
+        },
+        {
+          "label": {
+            "cs": "Velk√°",
+            "da": "Stor",
+            "de": "Gro√ü",
+            "en": "Full screen",
+            "es": "Larga",
+            "fi": "Suuri",
+            "fr": "Grand",
+            "it": "Grande",
+            "ja": "„É©„Éº„Ç∏",
+            "ko": "ÎùºÏßÄ",
+            "nb": "Stor",
+            "nl": "Groot",
+            "pl": "Du≈ºa",
+            "pt-BR": "Grande",
+            "pt-PT": "Grande",
+            "sv": "Stor",
+            "th": "‡πÉ‡∏´‡∏ç‡πà",
+            "tr": "B√ºy√ºk",
+            "vi": "L·ªõn",
+            "zh-CN": "Â§ß",
+            "zh-TW": "Â§ßÂûã"
+          },
+          "value": "full"
+        }
+      ]
+    },
+	{
+      "type": "url",
+      "id": "newvideo_link",
+      "label": {
+        "cs": "Odkaz na video",
+        "da": "Videolink",
+        "de": "Video-Link",
+        "en": "Video link",
+        "es": "Enlace de video",
+        "fi": "Videolinkki",
+        "fr": "Lien de la vid√©o",
+        "it": "Link video",
+        "ja": "„Éì„Éá„Ç™„É™„É≥„ÇØ",
+        "ko": "ÎèôÏòÅÏÉÅ ÎßÅÌÅ¨",
+        "nb": "Videokobling",
+        "nl": "Videolink",
+        "pl": "Link filmu",
+        "pt-BR": "Link do v√≠deo",
+        "pt-PT": "Liga√ß√£o do v√≠deo",
+        "sv": "Videol√§nk",
+        "th": "‡∏•‡∏¥‡∏á‡∏Å‡πå‡∏ß‡∏¥‡∏î‡∏µ‡πÇ‡∏≠",
+        "tr": "Video baƒülantƒ±sƒ±",
+        "vi": "Li√™n k·∫øt video",
+        "zh-CN": "ËßÜÈ¢ëÈìæÊé•",
+        "zh-TW": "ÂΩ±ÁâáÈÄ£Áµê"
+      }
+    },
+    {
+      "type": "checkbox",
+      "id": "show_overlay",
+      "label": {
+        "cs": "Zobrazit p≈ôekryv",
+        "da": "Vis overlejring",
+        "de": "√úberlagerung zeigen",
+        "en": "Show overlay",
+        "es": "Mostrar superposici√≥n",
+        "fi": "N√§yt√§ peittokuva",
+        "fr": "Afficher la superposition",
+        "it": "Mostra sovrapposizione",
+        "ja": "„Ç™„Éº„Éê„Éº„É¨„Ç§„ÇíË°®Á§∫„Åô„Çã",
+        "ko": "Ïò§Î≤ÑÎ†àÏù¥ ÌëúÏãú",
+        "nb": "Vis overlegg",
+        "nl": "Overlay weergeven",
+        "pl": "Poka≈º nak≈Çadkƒô",
+        "pt-BR": "Exibir sobreposi√ß√£o",
+        "pt-PT": "Mostrar sobreposi√ß√£o",
+        "sv": "Visa √∂verlagring",
+        "th": "‡πÅ‡∏™‡∏î‡∏á‡∏Å‡∏≤‡∏£‡∏ß‡∏≤‡∏á‡∏ã‡πâ‡∏≠‡∏ô",
+        "tr": "Yer payla≈üƒ±mƒ±nƒ± g√∂ster",
+        "vi": "Hi·ªÉn th·ªã l·ªõp ph·ªß",
+        "zh-CN": "ÊòæÁ§∫Âè†Âä†",
+        "zh-TW": "È°ØÁ§∫ÁñäÂä†Â±§"
+      },
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": {
+        "cs": "Tituln√≠ obr√°zek",
+        "da": "Coverbillede",
+        "de": "Titelbild",
+        "en": "Cover image",
+        "es": "Imagen de portada",
+        "fi": "Kansikuva",
+        "fr": "Image de couverture",
+        "it": "Immagine di copertina",
+        "ja": "Ë°®Á¥ôÁîªÂÉè",
+        "ko": "Ïª§Î≤Ñ Ïù¥ÎØ∏ÏßÄ",
+        "nb": "Forsidebilde",
+        "nl": "Coverafbeelding",
+        "pl": "Obraz w tle",
+        "pt-BR": "Imagem de capa",
+        "pt-PT": "Imagem de capa",
+        "sv": "Omslagsbild",
+        "th": "‡∏£‡∏π‡∏õ‡∏†‡∏≤‡∏û‡∏´‡∏ô‡πâ‡∏≤‡∏õ‡∏Å",
+        "tr": "Kapak g√∂rseli",
+        "vi": "·∫¢nh b√¨a",
+        "zh-CN": "Â∞ÅÈù¢ÂõæÁâá",
+        "zh-TW": "Â∞ÅÈù¢ÂúñÁâá"
+      },
+      "info": {
+        "cs": "V≈ædy zobrazit na mobiln√≠ch za≈ô√≠zen√≠ch",
+        "da": "Vises altid p√• mobilenheder",
+        "de": "Wird immer auf Mobilger√§ten angezeigt",
+        "en": "Always shown on mobile devices",
+        "es": "Mostrar siempre dispositivos m√≥viles",
+        "fi": "N√§ytet√§√§n aina mobiililaitteissa",
+        "fr": "S'affiche toujours sur les appareils mobiles",
+        "it": "Sempre visualizzata sui dispositivi mobili",
+        "ja": "Â∏∏„Å´„É¢„Éê„Ç§„É´„Éá„Éê„Ç§„Çπ„Å´Ë°®Á§∫",
+        "ko": "Î™®Î∞îÏùº Ïû•ÏπòÏóê Ìï≠ÏÉÅ ÌëúÏãúÎê®",
+        "nb": "Vises alltid p√• mobilenheter",
+        "nl": "Altijd weergeven op mobiele apparaten",
+        "pl": "Wy≈õwietlane zawsze na urzƒÖdzeniach mobilnych",
+        "pt-BR": "Sempre exibida em dispositivos m√≥veis",
+        "pt-PT": "Sempre mostrado em dispositivos m√≥veis",
+        "sv": "Visas alltid p√• mobila enheter",
+        "th": "‡πÅ‡∏™‡∏î‡∏á‡∏ö‡∏ô‡∏≠‡∏∏‡∏õ‡∏Å‡∏£‡∏ì‡πå‡∏°‡∏∑‡∏≠‡∏ñ‡∏∑‡∏≠‡πÄ‡∏™‡∏°‡∏≠",
+        "tr": "Mobil cihazlarda her zaman g√∂sterilir",
+        "vi": "Lu√¥n hi·ªÉn th·ªã tr√™n thi·∫øt b·ªã di ƒë·ªông",
+        "zh-CN": "ÂßãÁªàÂú®ÁßªÂä®ËÆæÂ§á‰∏äÊòæÁ§∫",
+        "zh-TW": "‰∏ÄÂæãÂú®Ë°åÂãïË£ùÁΩÆ‰∏äÈ°ØÁ§∫"
+      }
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": {
+        "cs": "Zarovn√°n√≠ obr√°zku",
+        "da": "Justering af billede",
+        "de": "Fotoausrichtung",
+        "en": "Image alignment",
+        "es": "Alineaci√≥n de imagen",
+        "fi": "Kuvan tasaus",
+        "fr": "Alignement de l'image",
+        "it": "Allineamento immagine",
+        "ja": "ÁîªÂÉè„Ç¢„É©„Ç§„É≥„É°„É≥„Éà",
+        "ko": "Ïù¥ÎØ∏ÏßÄ Ï†ïÎ†¨",
+        "nb": "Bildejustering",
+        "nl": "Afbeelding uitlijnen",
+        "pl": "Wyr√≥wnanie obrazu",
+        "pt-BR": "Alinhamento da imagem",
+        "pt-PT": "Alinhamento da imagem",
+        "sv": "Bildjustering",
+        "th": "‡∏Å‡∏≤‡∏£‡∏à‡∏±‡∏î‡∏ß‡∏≤‡∏á‡∏£‡∏π‡∏õ‡∏†‡∏≤‡∏û",
+        "tr": "G√∂rsel hizalamasƒ±",
+        "vi": "CƒÉn ch·ªânh h√¨nh ·∫£nh",
+        "zh-CN": "ÂõæÁâáÂØπÈΩêÊñπÂºè",
+        "zh-TW": "ÂúñÁâáÂ∞çÈΩä"
+      },
+      "default": "center center",
+      "options": [
+        {
+          "label": {
+            "cs": "Naho≈ôe doleva",
+            "da": "√òverst til venstre",
+            "de": "Oben links",
+            "en": "Top left",
+            "es": "Superior izquierda",
+            "fi": "Ylh√§√§ll√§ vasemmalla",
+            "fr": "En haut √† gauche",
+            "it": "In alto a sinistra",
+            "ja": "Â∑¶‰∏ä",
+            "ko": "ÏôºÏ™Ω ÏÉÅÎã®",
+            "nb": "√òverst til venstre",
+            "nl": "Linksboven",
+            "pl": "Na g√≥rze po lewej",
+            "pt-BR": "Superior esquerdo",
+            "pt-PT": "Canto superior esquerdo",
+            "sv": "√ñverst till v√§nster",
+            "th": "‡∏ã‡πâ‡∏≤‡∏¢‡∏ö‡∏ô",
+            "tr": "√úst sol",
+            "vi": "Tr√™n c√πng b√™n tr√°i",
+            "zh-CN": "Â∑¶‰∏äÊñπ",
+            "zh-TW": "Â∑¶‰∏äËßí"
+          },
+          "value": "left top"
+        },
+        {
+          "label": {
+            "cs": "Naho≈ôe na st≈ôed",
+            "da": "√òverst i midten",
+            "de": "Oben Mitte",
+            "en": "Top center",
+            "es": "Superior centrada",
+            "fi": "Keskell√§ ylh√§√§ll√§",
+            "fr": "En haut au centre",
+            "it": "In alto al centro",
+            "ja": "‰∏≠Â§Æ‰∏ä",
+            "ko": "Îß® ÏúÑ Ï§ëÍ∞Ñ",
+            "nb": "Toppsentrert",
+            "nl": "Midden boven",
+            "pl": "Na g√≥rze na ≈õrodku",
+            "pt-BR": "Superior centro",
+            "pt-PT": "Superior centro",
+            "sv": "L√§ngst upp i mitten",
+            "th": "‡∏Å‡∏•‡∏≤‡∏á‡∏ö‡∏ô",
+            "tr": "√úst orta",
+            "vi": "Tr√™n c√πng ·ªü gi·ªØa",
+            "zh-CN": "È°∂ÈÉ®Â±Ö‰∏≠",
+            "zh-TW": "‰∏≠Â§Æ‰∏äÊñπ"
+          },
+          "value": "center top"
+        },
+        {
+          "label": {
+            "cs": "Naho≈ôe doprava",
+            "da": "√òverst til h√∏jre",
+            "de": "Oben rechts",
+            "en": "Top right",
+            "es": "Superior derecha",
+            "fi": "Ylh√§√§ll√§ oikealla",
+            "fr": "En haut √† droite",
+            "it": "In alto a destra",
+            "ja": "Âè≥‰∏ä",
+            "ko": "Ïò§Î•∏Ï™Ω ÏÉÅÎã®",
+            "nb": "√òverst til h√∏yre",
+            "nl": "Rechtsboven",
+            "pl": "Na g√≥rze po prawej",
+            "pt-BR": "Superior direito",
+            "pt-PT": "Canto superior direito",
+            "sv": "√ñverst till h√∂ger",
+            "th": "‡∏Ç‡∏ß‡∏≤‡∏ö‡∏ô",
+            "tr": "√úst saƒü",
+            "vi": "Tr√™n c√πng b√™n ph·∫£i",
+            "zh-CN": "Âè≥‰∏äÊñπ",
+            "zh-TW": "Âè≥‰∏äËßí"
+          },
+          "value": "right top"
+        },
+        {
+          "label": {
+            "cs": "Uprost≈ôed doleva",
+            "da": "Midt p√• til venstre",
+            "de": "Mitte links",
+            "en": "Middle left",
+            "es": "Al medio a la izquierda",
+            "fi": "Keskell√§ vasemmalla",
+            "fr": "Au milieu √† gauche",
+            "it": "Nel mezzo a sinistra",
+            "ja": "‰∏≠Â§ÆÈÉ®Â∑¶ÂÅ¥",
+            "ko": "ÏôºÏ™Ω Ï§ëÍ∞Ñ",
+            "nb": "Midt til venstre",
+            "nl": "Midden links",
+            "pl": "Na ≈õrodku po lewej",
+            "pt-BR": "Meio esquerdo",
+            "pt-PT": "Interm√©dio √† esquerda",
+            "sv": "Mitten till v√§nster",
+            "th": "‡∏ã‡πâ‡∏≤‡∏¢‡∏Å‡∏•‡∏≤‡∏á",
+            "tr": "Orta sol",
+            "vi": "·ªû gi·ªØa b√™n tr√°i",
+            "zh-CN": "‰∏≠Èó¥Â±ÖÂ∑¶",
+            "zh-TW": "‰∏≠Â§ÆÂ∑¶Êñπ"
+          },
+          "value": "left center"
+        },
+        {
+          "label": {
+            "cs": "Uprost≈ôed na st≈ôed",
+            "da": "Midt p√• centreret",
+            "de": "Mitte mittig",
+            "en": "Middle center",
+            "es": "Centrada en el medio",
+            "fi": "Keskell√§ keskell√§",
+            "fr": "Centr√©e au milieu",
+            "it": "In mezzo",
+            "ja": "‰∏≠ÂøÉ",
+            "ko": "Í∞ÄÏö¥Îç∞ Ï§ëÍ∞Ñ",
+            "nb": "Midt i senter",
+            "nl": "Midden centrum",
+            "pl": "Na ≈õrodku",
+            "pt-BR": "Meio centro",
+            "pt-PT": "Interm√©dio ao centro",
+            "sv": "Mitten centrerat",
+            "th": "‡∏Å‡∏∂‡πà‡∏á‡∏Å‡∏•‡∏≤‡∏á",
+            "tr": "Orta kƒ±smƒ±n ortasƒ±",
+            "vi": "Ch√≠nh gi·ªØa",
+            "zh-CN": "‰∏≠Èó¥Â±Ö‰∏≠",
+            "zh-TW": "Ê≠£‰∏≠Â§Æ"
+          },
+          "value": "center center"
+        },
+        {
+          "label": {
+            "cs": "Uprost≈ôed doprava",
+            "da": "Midt p√• til h√∏jre",
+            "de": "Mitte rechts",
+            "en": "Middle right",
+            "es": "Centrado a la derecha",
+            "fi": "Keskell√§ oikealla",
+            "fr": "Au milieu √† droite",
+            "it": "Nel mezzo a destra",
+            "ja": "‰∏≠Â§ÆÈÉ®Âè≥ÂÅ¥",
+            "ko": "Ïò§Î•∏Ï™Ω Ï§ëÍ∞Ñ",
+            "nb": "Midt til h√∏yre",
+            "nl": "Midden rechts",
+            "pl": "Na ≈õrodku po prawej",
+            "pt-BR": "Meio direito",
+            "pt-PT": "Interm√©dio √† direita",
+            "sv": "Mitten till h√∂ger",
+            "th": "‡∏Ç‡∏ß‡∏≤‡∏Å‡∏•‡∏≤‡∏á",
+            "tr": "Orta saƒü",
+            "vi": "·ªû gi·ªØa b√™n ph·∫£i",
+            "zh-CN": "‰∏≠Èó¥Â±ÖÂè≥",
+            "zh-TW": "‰∏≠Â§ÆÂè≥Êñπ"
+          },
+          "value": "right center"
+        },
+        {
+          "label": {
+            "cs": "Dole doleva",
+            "da": "Nederst til venstre",
+            "de": "Unten links",
+            "en": "Bottom left",
+            "es": "Inferior izquierda",
+            "fi": "Alhaalla vasemmalla",
+            "fr": "En bas √† gauche",
+            "it": "In basso a sinistra",
+            "ja": "Â∑¶‰∏ã",
+            "ko": "ÏôºÏ™Ω ÌïòÎã®",
+            "nb": "Nederst til venstre",
+            "nl": "Linksonder",
+            "pl": "Na dole po lewej",
+            "pt-BR": "Inferior esquerdo",
+            "pt-PT": "Canto inferior esquerdo",
+            "sv": "Nere till v√§nster",
+            "th": "‡∏ã‡πâ‡∏≤‡∏¢‡∏•‡πà‡∏≤‡∏á",
+            "tr": "Alt sol",
+            "vi": "D∆∞·ªõi c√πng b√™n tr√°i",
+            "zh-CN": "Â∑¶‰∏ãÊñπ",
+            "zh-TW": "Â∑¶‰∏ãËßí"
+          },
+          "value": "left bottom"
+        },
+        {
+          "label": {
+            "cs": "Dole na st≈ôed",
+            "da": "Nederst i midten",
+            "de": "Unten mittig",
+            "en": "Bottom center",
+            "es": "Inferior centrada",
+            "fi": "Keskell√§ alhaalla",
+            "fr": "En bas au centre",
+            "it": "In basso al centro",
+            "ja": "‰∏≠Â§Æ‰∏ã",
+            "ko": "Îß®ÏïÑÎûò Ï§ëÍ∞Ñ",
+            "nb": "Bunnsentrert",
+            "nl": "Midden onder",
+            "pl": "Na dole na ≈õrodku",
+            "pt-BR": "Inferior centro",
+            "pt-PT": "Inferior centro",
+            "sv": "L√§ngst ner i mitten",
+            "th": "‡∏Å‡∏•‡∏≤‡∏á‡∏•‡πà‡∏≤‡∏á",
+            "tr": "Alt orta",
+            "vi": "D∆∞·ªõi c√πng ·ªü gi·ªØa",
+            "zh-CN": "Â∫ïÈÉ®Â±Ö‰∏≠",
+            "zh-TW": "‰∏≠Â§Æ‰∏ãÊñπ"
+          },
+          "value": "center bottom"
+        },
+        {
+          "label": {
+            "cs": "Dole doprava",
+            "da": "Nederst til h√∏jre",
+            "de": "Unten rechts",
+            "en": "Bottom right",
+            "es": "Inferior derecha",
+            "fi": "Alhaalla oikealla",
+            "fr": "En bas √† droite",
+            "it": "In basso a destra",
+            "ja": "Âè≥‰∏ã",
+            "ko": "Ïò§Î•∏Ï™Ω ÏïÑÎûò",
+            "nb": "Nederst til h√∏yre",
+            "nl": "Rechtsonder",
+            "pl": "Na dole po prawej",
+            "pt-BR": "Inferior direito",
+            "pt-PT": "Canto inferior direito",
+            "sv": "Nere till h√∂ger",
+            "th": "‡∏Ç‡∏ß‡∏≤‡∏•‡πà‡∏≤‡∏á",
+            "tr": "Alt saƒü",
+            "vi": "D∆∞·ªõi c√πng b√™n ph·∫£i",
+            "zh-CN": "Âè≥‰∏ãÊñπ",
+            "zh-TW": "Âè≥‰∏ãËßí"
+          },
+          "value": "right bottom"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "video_title",
+      "label": {
+        "cs": "Nadpis",
+        "da": "Overskrift",
+        "de": "√úberschrift",
+        "en": "Heading",
+        "es": "T√≠tulo",
+        "fi": "Otsake",
+        "fr": "En-t√™te",
+        "it": "Heading",
+        "ja": "Ë¶ãÂá∫„Åó",
+        "ko": "Ï†úÎ™©",
+        "nb": "Overskrift",
+        "nl": "Kop",
+        "pl": "Nag≈Ç√≥wek",
+        "pt-BR": "T√≠tulo",
+        "pt-PT": "T√≠tulo",
+        "sv": "Rubrik",
+        "th": "‡∏™‡πà‡∏ß‡∏ô‡∏´‡∏±‡∏ß",
+        "tr": "Ba≈ülƒ±k",
+        "vi": "Ti√™u ƒë·ªÅ",
+        "zh-CN": "Ê†áÈ¢ò",
+        "zh-TW": "Ê®ôÈ°å"
+      },
+	  "default": {
+        "en": "How To Add A Video Background On Shopify"
+      }
+    },
+    {
+      "type": "select",
+      "id": "text_size",
+      "label": {
+        "cs": "Velikost textu",
+        "da": "Tekstst√∏rrelse",
+        "de": "Textgr√∂√üe",
+        "en": "Heading size",
+        "es": "Tama√±o del texto",
+        "fi": "Tekstin koko",
+        "fr": "Taille du texte",
+        "it": "Dimensione testo",
+        "ja": "ÊñáÂ≠ó„Çµ„Ç§„Ç∫",
+        "ko": "ÌÖçÏä§Ìä∏ ÏÇ¨Ïù¥Ï¶à",
+        "nb": "Tekstst√∏rrelse",
+        "nl": "Tekengrootte",
+        "pl": "Rozmiar czcionki",
+        "pt-BR": "Tamanho do texto",
+        "pt-PT": "Tamanho do texto",
+        "sv": "Textstorlek",
+        "th": "‡∏Ç‡∏ô‡∏≤‡∏î‡∏ï‡∏±‡∏ß‡∏≠‡∏±‡∏Å‡∏©‡∏£",
+        "tr": "Metin boyutu",
+        "vi": "C·ª° vƒÉn b·∫£n",
+        "zh-CN": "ÊñáÊú¨Â§ßÂ∞è",
+        "zh-TW": "ÊñáÂ≠óÂ∞∫ÂØ∏"
+      },
+      "default": "medium",
+      "options": [
+        {
+          "label": {
+            "cs": "St≈ôedn√≠",
+            "da": "Medium",
+            "de": "Mittel",
+            "en": "Medium",
+            "es": "Mediano",
+            "fi": "Keskisuuri",
+            "fr": "Moyenne",
+            "it": "Medio",
+            "ja": "‰∏≠",
+            "ko": "Î≥¥ÌÜµ",
+            "nb": "Middels",
+            "nl": "Gemiddeld",
+            "pl": "≈örednia",
+            "pt-BR": "M√©dio",
+            "pt-PT": "Interm√©dio",
+            "sv": "Medium",
+            "th": "‡∏õ‡∏≤‡∏ô‡∏Å‡∏•‡∏≤‡∏á",
+            "tr": "Orta",
+            "vi": "Trung b√¨nh",
+            "zh-CN": "‰∏≠Á≠â",
+            "zh-TW": "‰∏≠Á≠â"
+          },
+          "value": "medium"
+        },
+        {
+          "label": {
+            "cs": "Velk√°",
+            "da": "Stor",
+            "de": "Gro√ü",
+            "en": "Large",
+            "es": "Grande",
+            "fi": "Suuri",
+            "fr": "Grande",
+            "it": "Grande",
+            "ja": "Â§ß",
+            "ko": "ÎùºÏßÄ",
+            "nb": "Stor",
+            "nl": "Groot",
+            "pl": "Du≈ºa",
+            "pt-BR": "Grande",
+            "pt-PT": "Grande",
+            "sv": "Stor",
+            "th": "‡πÉ‡∏´‡∏ç‡πà",
+            "tr": "B√ºy√ºk",
+            "vi": "L·ªõn",
+            "zh-CN": "Â§ß",
+            "zh-TW": "Â§ßÂûã"
+          },
+          "value": "large"
+        }
+      ]
+    },
+	{
+      "type": "richtext",
+      "id": "text_description",
+      "label": {
+        "cs": "Text",
+        "da": "Tekst",
+        "de": "Text",
+        "en": "Text",
+        "es": "Texto",
+        "fi": "Teksti",
+        "fr": "Texte",
+        "it": "Testo",
+        "ja": "„ÉÜ„Ç≠„Çπ„Éà",
+        "ko": "ÌÖçÏä§Ìä∏",
+        "nb": "Tekst",
+        "nl": "Tekst",
+        "pl": "Tekst",
+        "pt-BR": "Texto",
+        "pt-PT": "Texto",
+        "sv": "Text",
+        "th": "‡∏Ç‡πâ‡∏≠‡∏Ñ‡∏ß‡∏≤‡∏°",
+        "tr": "Metin",
+        "vi": "VƒÉn b·∫£n",
+        "zh-CN": "ÊñáÊú¨",
+        "zh-TW": "ÊñáÂ≠ó"
+      },
+      "default": {
+        "cs": "<p>Informujte z√°kazn√≠ky prost≈ôednictv√≠m tohoto textu o sv√© znaƒçce. Z√°rove≈à m≈Ø≈æete popsat nƒõkter√Ω z produkt≈Ø, ozn√°mit d≈Øle≈æit√© informace nebo p≈ôiv√≠tat z√°kazn√≠ky ve sv√©m obchodƒõ.</p>",
+        "da": "<p>Brug denne tekst til at dele oplysninger om dit brand med dine kunder. Beskriv et produkt, del meddelelser, eller byd kunder velkommen til din butik.</p>",
+        "de": "<p>Nutzen Sie diesen Text, um Infos √ºber Ihre Marke mitzuteilen. Beschreiben Sie ein Produkt, k√ºndigen Sie etwas an oder hei√üen Sie Kunden willkommen.</p>",
+        "en": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
+        "es": "<p>Usa este texto para compartir informaci√≥n sobre tu marca con tus clientes. Describe un producto, comparte anuncios o recibe clientes en tu tienda.</p>",
+        "fi": "<p>T√§m√§n tekstin avulla voit jakaa br√§ndi√§si koskevia tietoja asiakkaille. Kuvaile tuotetta, jaa ilmoituksia tai toivota asiakkaat tervetulleiksi kauppaasi.</p>",
+        "fr": "<p>Utilisez ce texte pour partager des informations sur votre marque. D√©crivez un produit, partagez des annonces, ou souhaitez la bienvenue √† vos clients.</p>",
+        "it": "<p>Utilizza questo testo per condividere le informazioni sul tuo brand con i tuoi clienti. Descrivi un prodotto, condividi gli annunci o dai il benvenuto ai clienti nel tuo negozio.</p>",
+        "ja": "<p>„Åì„ÅÆ„ÉÜ„Ç≠„Çπ„Éà„Çí‰ΩøÁî®„Åó„Å¶„ÄÅ„ÅÇ„Å™„Åü„ÅÆ„Éñ„É©„É≥„Éâ„Å´Èñ¢„Åô„ÇãÊÉÖÂ†±„Çí„ÅäÂÆ¢Êßò„Å®ÂÖ±Êúâ„Åó„Åæ„Åô„ÄÇÂïÜÂìÅ„ÇíË™¨Êòé„Åó„Åü„Çä„ÄÅÂëäÁü•„ÅÆÂÖ±Êúâ„Çí„Åó„Åü„Çä„ÄÅ„ÅÇ„Çã„ÅÑ„ÅØ„ÅÇ„Å™„Åü„ÅÆ„Çπ„Éà„Ç¢„ÅÆ„ÅäÂÆ¢Êßò„ÇíÊ≠ìËøé„Åó„Åæ„Åô„ÄÇ</p>",
+        "ko": "<p>Ïù¥ ÌÖçÏä§Ìä∏Î•º ÏÇ¨Ïö©ÌïòÏó¨ Í≥†Í∞ùÍ≥º Î∏åÎûúÎìúÏóê ÎåÄÌïú Ï†ïÎ≥¥Î•º Í≥µÏú†ÌïòÏã≠ÏãúÏò§. Ï†úÌíà ÏÑ§Î™Ö, Í≥µÏßÄ ÏÇ¨Ìï≠ Í≥µÏú† ÎòêÎäî Í≥†Í∞ùÏùò Ïä§ÌÜ†Ïñ¥ Î∞©Î¨∏ÏùÑ ÌôòÏòÅÌï©ÎãàÎã§.</p>",
+        "nb": "<p>Bruk denne teksten for √• dele informasjon om merkevaren med kundene dine. Beskriv et produkt, del kunngj√∏ringer eller √∏nsk kunder velkommen til butikken din.</p>",
+        "nl": "<p>Gebruik deze tekst om informatie over je merk te delen met je klanten. Beschrijf een product, deel aankondigingen of verwelkom klanten in je winkel.</p>",
+        "pl": "<p>U≈ºyj tego tekstu, aby udostƒôpniƒá klientom informacje o swojej marce. Opisz produkt, udostƒôpnij og≈Çoszenia lub przywitaj klient√≥w w swoim sklepie.</p>",
+        "pt-BR": "<p>Use este texto para compartilhar informa√ß√µes sobre sua marca com seus clientes. Descreva um produto, compartilhe novidades ou receba os clientes em sua loja.</p>",
+        "pt-PT": "<p>Utilize este texto para partilhar informa√ß√µes sobre a sua marca com seus clientes. Descreva um produto, partilhe comunicados ou receba clientes na sua loja.</p>",
+        "sv": "<p>Anv√§nd den h√§r texten f√∂r att dela information om ditt varum√§rke med dina kunder. Beskriv en produkt, dela meddelanden eller v√§lkomna kunder till din butik.</p>",
+        "th": "<p>‡πÉ‡∏ä‡πâ‡∏Ç‡πâ‡∏≠‡∏Ñ‡∏ß‡∏≤‡∏°‡∏ô‡∏µ‡πâ‡πÉ‡∏ô‡∏Å‡∏≤‡∏£‡πÅ‡∏ä‡∏£‡πå‡∏Ç‡πâ‡∏≠‡∏°‡∏π‡∏•‡πÄ‡∏Å‡∏µ‡πà‡∏¢‡∏ß‡∏Å‡∏±‡∏ö‡πÅ‡∏ö‡∏£‡∏ô‡∏î‡πå‡∏Ç‡∏≠‡∏á‡∏Ñ‡∏∏‡∏ì‡∏Å‡∏±‡∏ö‡∏•‡∏π‡∏Å‡∏Ñ‡πâ‡∏≤‡∏Ç‡∏≠‡∏á‡∏Ñ‡∏∏‡∏ì ‡∏≠‡∏ò‡∏¥‡∏ö‡∏≤‡∏¢‡∏Ñ‡∏∏‡∏ì‡∏™‡∏°‡∏ö‡∏±‡∏ï‡∏¥‡∏Ç‡∏≠‡∏á‡∏™‡∏¥‡∏ô‡∏Ñ‡πâ‡∏≤ ‡πÅ‡∏ä‡∏£‡πå‡∏õ‡∏£‡∏∞‡∏Å‡∏≤‡∏® ‡∏´‡∏£‡∏∑‡∏≠‡∏ï‡πâ‡∏≠‡∏ô‡∏£‡∏±‡∏ö‡∏•‡∏π‡∏Å‡∏Ñ‡πâ‡∏≤‡∏™‡∏π‡πà‡∏£‡πâ‡∏≤‡∏ô‡∏Ñ‡πâ‡∏≤‡∏Ç‡∏≠‡∏á‡∏Ñ‡∏∏‡∏ì</p>",
+        "tr": "<p>M√º≈üterilerinizle markanƒ±z hakkƒ±nda bilgi payla≈ümak i√ßin bu metni kullanƒ±n. √úr√ºn a√ßƒ±klamasƒ± girin, duyuru payla≈üƒ±n veya maƒüazanƒ±za gelen m√º≈üterileri kar≈üƒ±layƒ±n.</p>",
+        "vi": "<p>S·ª≠ d·ª•ng vƒÉn b·∫£n n√†y ƒë·ªÉ chia s·∫ª th√¥ng tin v·ªÅ th∆∞∆°ng hi·ªáu c·ªßa b·∫°n v·ªõi kh√°ch h√†ng. M√¥ t·∫£ s·∫£n ph·∫©m, chia s·∫ª th√¥ng b√°o ho·∫∑c ch√†o m·ª´ng kh√°ch h√†ng t·ªõi c·ª≠a h√†ng c·ªßa b·∫°n.</p>",
+        "zh-CN": "<p>‰ΩøÁî®Ê≠§ÊñáÊú¨‰∏éÊÇ®ÁöÑÂÆ¢Êà∑ÂàÜ‰∫´ÊúâÂÖ≥ÊÇ®ÂìÅÁâåÁöÑ‰ø°ÊÅØ„ÄÇÊèèËø∞‰∫ßÂìÅ„ÄÅÂàÜ‰∫´ÂÖ¨ÂëäÊàñÊ¨¢ËøéÂÆ¢Êà∑ËÆøÈóÆÊÇ®ÁöÑÂïÜÂ∫ó„ÄÇ</p>",
+        "zh-TW": "<p>ÊÇ®ÂèØ‰ª•Áî®ÈÄôÊÆµÊñáÂ≠óÂíåÈ°ßÂÆ¢ÂàÜ‰∫´ÂìÅÁâåË≥áË®ä„ÄÅÊèèËø∞Áî¢ÂìÅ„ÄÅÂàÜ‰∫´ÂÖ¨ÂëäÔºåÊàñÊ≠°ËøéÈ°ßÂÆ¢ÂÖâËá®ÊÇ®ÁöÑÂïÜÂ∫ó„ÄÇ</p>"
+      }
+    },
+    {
+      "type": "select",
+      "id": "text_description_size",
+      "label": {
+        "cs": "Velikost",
+        "da": "St√∏rrelse",
+        "de": "Gr√∂√üe",
+        "en": "Text Size",
+        "es": "Tama√±o",
+        "fi": "Koko",
+        "fr": "Taille",
+        "it": "Dimensione",
+        "ja": "„Çµ„Ç§„Ç∫",
+        "ko": "ÏÇ¨Ïù¥Ï¶à",
+        "nb": "St√∏rrelse",
+        "nl": "Grootte",
+        "pl": "Rozmiar",
+        "pt-BR": "Tamanho",
+        "pt-PT": "Tamanho",
+        "sv": "Storlek",
+        "th": "‡∏Ç‡∏ô‡∏≤‡∏î",
+        "tr": "Boyut",
+        "vi": "C·ª°",
+        "zh-CN": "Â§ßÂ∞è",
+        "zh-TW": "Â∞∫ÂØ∏"
+      },
+      "default": "medium",
+      "options": [
+        {
+          "label": {
+            "cs": "St≈ôedn√≠",
+            "da": "Medium",
+            "de": "Mittel",
+            "en": "Medium",
+            "es": "Mediano",
+            "fi": "Keskisuuri",
+            "fr": "Moyenne",
+            "it": "Medio",
+            "ja": "‰∏≠",
+            "ko": "Î≥¥ÌÜµ",
+            "nb": "Middels",
+            "nl": "Gemiddeld",
+            "pl": "≈örednie",
+            "pt-BR": "M√©dio",
+            "pt-PT": "Interm√©dio",
+            "sv": "Medium",
+            "th": "‡∏õ‡∏≤‡∏ô‡∏Å‡∏•‡∏≤‡∏á",
+            "tr": "Orta",
+            "vi": "Trung b√¨nh",
+            "zh-CN": "‰∏≠Á≠â",
+            "zh-TW": "‰∏≠Á≠â"
+          },
+          "value": "medium"
+        },
+        {
+          "label": {
+            "cs": "Velk√°",
+            "da": "Stor",
+            "de": "Gro√ü",
+            "en": "Large",
+            "es": "Grande",
+            "fi": "Suuri",
+            "fr": "Grande",
+            "it": "Grande",
+            "ja": "Â§ß",
+            "ko": "ÎùºÏßÄ",
+            "nb": "Stor",
+            "nl": "Groot",
+            "pl": "Du≈ºy",
+            "pt-BR": "Grande",
+            "pt-PT": "Grande",
+            "sv": "Stor",
+            "th": "‡πÉ‡∏´‡∏ç‡πà",
+            "tr": "B√ºy√ºk",
+            "vi": "L·ªõn",
+            "zh-CN": "Â§ß",
+            "zh-TW": "Â§ßÂûã"
+          },
+          "value": "large"
+        }
+      ]
+    },
+	{
+		"type": "text",
+		"id": "button_label",
+		"label": {
+		"cs": "Text tlaƒç√≠tka",
+		"da": "Knaptekst",
+		"de": "Button-Name",
+		"en": "Button label",
+		"es": "Etiqueta de bot√≥n",
+		"fi": "Tekstipainike",
+		"fr": "Texte du bouton",
+		"it": "Etichetta pulsante",
+		"ja": "„Éú„Çø„É≥„ÅÆ„É©„Éô„É´",
+		"ko": "Î≤ÑÌäº Î†àÏù¥Î∏î",
+		"nb": "Knappetikett",
+		"nl": "Knoplabel",
+		"pl": "Przycisk z etykietƒÖ",
+		"pt-BR": "Etiqueta de bot√£o",
+		"pt-PT": "Etiqueta do bot√£o",
+		"sv": "Knappetikett",
+		"th": "‡∏õ‡πâ‡∏≤‡∏¢‡∏Å‡∏≥‡∏Å‡∏±‡∏ö‡∏õ‡∏∏‡πà‡∏°",
+		"tr": "D√ºƒüme etiketi",
+		"vi": "Nh√£n n√∫t",
+		"zh-CN": "ÊåâÈíÆÊ†áÁ≠æ",
+		"zh-TW": "ÊåâÈàïÊ®ôÁ±§"
+		}
+	},
+	{
+		"type": "url",
+		"id": "button_link",
+		"label": {
+		"cs": "Tlaƒç√≠tkov√Ω odkaz",
+		"da": "Knaplink",
+		"de": "Button-Link",
+		"en": "Button link",
+		"es": "Enlace de la diapositiva",
+		"fi": "Painikelinkki",
+		"fr": "Lien du bouton",
+		"it": "Link slide",
+		"ja": "„Éú„Çø„É≥„ÅÆ„É™„É≥„ÇØ",
+		"ko": "Î≤ÑÌäº ÎßÅÌÅ¨",
+		"nb": "Kobling for knapp",
+		"nl": "Knoplink",
+		"pl": "Link przycisku",
+		"pt-BR": "Link do slide",
+		"pt-PT": "Liga√ß√£o do bot√£o",
+		"sv": "Knappl√§nk",
+		"th": "‡∏•‡∏¥‡∏á‡∏Å‡πå‡∏õ‡∏∏‡πà‡∏°",
+		"tr": "D√ºƒüme baƒülantƒ±sƒ±",
+		"vi": "Li√™n k·∫øt tr√™n n√∫t",
+		"zh-CN": "ÊåâÈíÆÈìæÊé•",
+		"zh-TW": "ÊåâÈàïÈÄ£Áµê"
+		}
+	},
+	{
+      "type": "checkbox",
+      "id": "show_scrolldown",
+      "label": {
+        "cs": "Zobrazit p≈ôekryv",
+        "da": "Vis overlejring",
+        "de": "√úberlagerung zeigen",
+        "en": "Show scrolldown",
+        "es": "Mostrar superposici√≥n",
+        "fi": "N√§yt√§ peittokuva",
+        "fr": "Afficher la superposition",
+        "it": "Mostra sovrapposizione",
+        "ja": "„Ç™„Éº„Éê„Éº„É¨„Ç§„ÇíË°®Á§∫„Åô„Çã",
+        "ko": "Ïò§Î≤ÑÎ†àÏù¥ ÌëúÏãú",
+        "nb": "Vis overlegg",
+        "nl": "Overlay weergeven",
+        "pl": "Poka≈º nak≈Çadkƒô",
+        "pt-BR": "Exibir sobreposi√ß√£o",
+        "pt-PT": "Mostrar sobreposi√ß√£o",
+        "sv": "Visa √∂verlagring",
+        "th": "‡πÅ‡∏™‡∏î‡∏á‡∏Å‡∏≤‡∏£‡∏ß‡∏≤‡∏á‡∏ã‡πâ‡∏≠‡∏ô",
+        "tr": "Yer payla≈üƒ±mƒ±nƒ± g√∂ster",
+        "vi": "Hi·ªÉn th·ªã l·ªõp ph·ªß",
+        "zh-CN": "ÊòæÁ§∫Âè†Âä†",
+        "zh-TW": "È°ØÁ§∫ÁñäÂä†Â±§"
+      },
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": {
+        "cs": "Video",
+        "da": "Video",
+        "de": "Video",
+        "en": "Video Background",
+        "es": "Video",
+        "fi": "Video",
+        "fr": "Vid√©o",
+        "it": "Video",
+        "ja": "ÂãïÁîª",
+        "ko": "ÎèôÏòÅÏÉÅ",
+        "nb": "Video",
+        "nl": "Video",
+        "pl": "Film",
+        "pt-BR": "V√≠deo",
+        "pt-PT": "V√≠deo",
+        "sv": "Video",
+        "th": "‡∏ß‡∏¥‡∏î‡∏µ‡πÇ‡∏≠",
+        "tr": "Video",
+        "vi": "Video",
+        "zh-CN": "ËßÜÈ¢ë",
+        "zh-TW": "ÂΩ±Áâá"
+      },
+      "category": {
+        "cs": "Video",
+        "da": "Video",
+        "de": "Video",
+        "en": "Video Background",
+        "es": "Video",
+        "fi": "Video",
+        "fr": "Vid√©o",
+        "it": "Video",
+        "ja": "ÂãïÁîª",
+        "ko": "ÎèôÏòÅÏÉÅ",
+        "nb": "Video",
+        "nl": "Video",
+        "pl": "Film",
+        "pt-BR": "V√≠deo",
+        "pt-PT": "V√≠deo",
+        "sv": "Video",
+        "th": "‡∏ß‡∏¥‡∏î‡∏µ‡πÇ‡∏≠",
+        "tr": "Video",
+        "vi": "Video",
+        "zh-CN": "ËßÜÈ¢ë",
+        "zh-TW": "ÂΩ±Áâá"
+      },
+      "settings": {
+        "image_position": "center center",
+        "show_overlay": true,
+        "height": "medium"
+      }
+    }
+  ]
+}
+{% endschema %}

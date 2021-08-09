@@ -1,13 +1,16 @@
-<div id="CollectionSection" data-section-id="{{ section.id }}" data-section-type="collection-template">
+<div id="CollectionSection" data-section-id="{{ section.id }}" data-section-type="collection-top-content">
   <div class="box">
     <div class="wrapper">
       {%- capture collection_header -%}
           <div class="section-header">
             <div class="page-title-wrapper">
               <h1 class="page-title">{{ collection.title }}</h1>
+                                      <div class="section-bottom">
+            <p class="collection-description text-lead">{{ collection.description }}</p>
+            </div>
       </div>
-
       {%- endcapture -%}
+      
           {%- if collection.handle == 'all' or collection.handle == 'frontpage' -%}
           {%- unless settings.show_hero and collection.image -%}
             {{ collection_header }}

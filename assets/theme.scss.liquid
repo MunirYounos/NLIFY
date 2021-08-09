@@ -5818,7 +5818,7 @@ cite {
 .mobile-nav__has-sublist a,
 .mobile-nav > .mobile-nav__item:not(.mobile-nav__item--secondary) > a {
   @include accentFontStack;
-  font-size: $headerSize5;
+  font-size: $headerSize6;
 }
 
 // Second level links
@@ -6329,7 +6329,7 @@ cite {
 // Order discount
 .order-discount {
   margin-bottom: $spacer-xs;
-  color: $colorSecondary;
+  color: #676767;
   @include accentFontStack;
 }
 
@@ -7634,7 +7634,7 @@ body:not(.dbtfy-newsletter_popup-destroy) {
     line-height: 1;
     text-transform: uppercase;
     @include transition($transitions);
-    @include button($anodyne-secondary-clr, $white);
+    @include button($colorAnnouncement, $white);
 
     @include screen($small) {
       font-size: $baseFontSize-sm;
@@ -9386,4 +9386,7 @@ body:not(.dbtfy-wish_list-destroy) {
       padding-left:1rem;
     }
   }
+}
+.shopify-payment-button .shopify-payment-button__more-options {
+display: none;
 }
