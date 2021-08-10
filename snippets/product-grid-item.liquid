@@ -54,6 +54,8 @@
   <div class="card grid-product__wrapper {% if image_hover %} has-hover-image{% endif %}">
     <div class="grid-product__image-wrapper">
       <a href="{{ product_link }}?variant={{ product.first_available_variant.id }}" class="grid-product__image-link">
+        {% if product_link  contains 'zipper' %}
+        <span class="zipper__product"></span>{% endif %}
         {%- if product.images != blank -%}
           <div id="ProductImageWrapper-{{ product.featured_image.id }}" class="product--wrapper card-image grid-product--wrapper media-wrapper" style="padding-top:{{ 1 | divided_by: product.featured_image.aspect_ratio | times: 100 }}%;">
             <img class="product--image media lazyload ProductImage-{{ product.featured_image.id }}"
@@ -109,7 +111,8 @@
         {%- render "dbtfy-color-swatches" with product as product, type: 'product_grid' -%}
       {%- endif -%}
 
-      <p class="grid-product__title h6{% if settings.grid_product_truncate %} text-ellipsis{% endif %}">{{ title }}</p>
+      <p class="grid-product__title  h6{% if settings.grid_product_truncate %} text-ellipsis{% endif %}">{{ title }}</p>
+
       {%- if settings.review_badge_product_grid -%}
         {%- unless emptyState -%}
           {%- render 'review-badge' with product as product, position: 'product_grid' -%}

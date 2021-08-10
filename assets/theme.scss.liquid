@@ -4727,6 +4727,16 @@ cite {
   &[class*="push--"] {
     position: relative;
   }
+  .zipper__product{
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    background-image: url('zippericon.png');
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 50px;
+    z-index: 12;
+  }
 }
 
 /*================ _Grid_breakpoint ================*/
@@ -5030,7 +5040,10 @@ cite {
   .grid-product__title{
     font-weight: 100;
     font-size: ($headerSize4 - 3);
-    margin-bottom:($gutter-xs /2)
+    margin-bottom:($gutter-xs /2);
+    @include screenUp($postSmall){
+      font-size: $headerSize4;
+    }
   }
 }
 
@@ -8697,6 +8710,7 @@ body:not(.dbtfy-wish_list-destroy) {
 .services{
 	.services-wrapper{
 		margin-top: -3rem;
+    margin-left: -$gutter;
 		background-color: $white;
 		display: block;
 		position: relative;
@@ -8954,6 +8968,7 @@ body:not(.dbtfy-wish_list-destroy) {
   padding: ($gutter * 1.5) 0  ($gutter * 2) 0;
   margin: $gutter 0;
   .home-tabs__wrapper{
+    margin-left: -$gutter;
     .section-header__title{
       text-align: center;
       margin-bottom: $gutter;
@@ -9408,8 +9423,8 @@ display: none;
   background-color: transparent;
   .traingle_porcent{
     position: absolute;
-    top:-8px;
-    left:-8px;
+    top:4px;
+    left:4px;
     font-size: 1rem;
     font-weight: 500;
     font-family: sans-serif;
@@ -9427,3 +9442,4 @@ display: none;
     }
   }
 }
+
