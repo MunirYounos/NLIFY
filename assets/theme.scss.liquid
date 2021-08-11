@@ -3388,9 +3388,9 @@ button {
 /*================ _Cards ================*/
 
 .card {
-   border: 1px solid darken($colorDefault, 10%);
+   border: 1px solid darken($colorDefault, 3%);
   border-radius: $borderRadius;
-  background-color: $white;
+  background-color: darken($white, 3%) !important;
   @include display-flexbox;
   @include flex-direction(column);
 
@@ -5016,7 +5016,7 @@ cite {
 /*================ _Product_grid ================*/
 .grid-product__wrapper {
   width: 100%;
-	padding: floor($gutter-sm / 1.3 );
+	padding: floor($gutter-sm / 1.8 );
   .is-sold-out & {
     opacity: $opacity;
   }
