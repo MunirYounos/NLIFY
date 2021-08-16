@@ -826,7 +826,7 @@
         "settings": {
           "title": "Meest verkochte producten",
           "subtitle": "",
-          "section_style": "section-default",
+          "section_style": "section-blank",
           "home_featured_products": "alle-producten",
           "rows": "1",
           "desktop_grid": "4",

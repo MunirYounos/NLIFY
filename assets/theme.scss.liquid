@@ -4731,11 +4731,14 @@ cite {
     position: absolute;
     top: 12px;
     right: 14px;
-    background-image: url('zippericon.png');
+    background-image: url('zipper.svg');
     background-repeat: no-repeat;
     height: 50px;
     width: 50px;
     z-index: 12;
+    @include screen($small){
+      max-width: 20%;
+    }
   }
 }
 
@@ -8710,13 +8713,15 @@ body:not(.dbtfy-wish_list-destroy) {
 .services{
 	.services-wrapper{
 		margin-top: -3rem;
-    margin-left: -$gutter;
 		background-color: $white;
 		display: block;
 		position: relative;
 		text-align: center;
 		border-bottom: none !important;
     z-index: $zindexOverBody;
+    @include screenUp($postSmall){
+      margin-left: -$gutter;
+    }
 	}
 	.services-title{
 		font-size: clamp($baseFontSize-sm, 4vw, $baseFontSize-lg);
@@ -8968,7 +8973,9 @@ body:not(.dbtfy-wish_list-destroy) {
   padding: ($gutter * 1.5) 0  ($gutter * 2) 0;
   margin: $gutter 0;
   .home-tabs__wrapper{
-    margin-left: -$gutter;
+    @include screenUp($postSmall){
+      margin-left: -$gutter;
+    }
     .section-header__title{
       text-align: center;
       margin-bottom: $gutter;
