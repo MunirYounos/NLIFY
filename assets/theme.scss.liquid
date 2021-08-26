@@ -1402,7 +1402,7 @@ $class-type: unquote(".");
 
 // Button small
 @mixin buttonSmall {
-  padding: ($paddingButtonSmallX + 4) ($paddingButtonSmallX * 2);
+  padding: ($paddingButtonSmallX ) ($paddingButtonSmallX * 1.8);
 }
 
 // Button xsmall
@@ -1679,7 +1679,7 @@ $class-type: unquote(".");
 
   > * {
     display: inline-block;
-    margin-right: $spacer-sm;
+    margin-right: ($spacer-sm - 4);
     margin-bottom: $spacer-sm;
     vertical-align: middle;
   }
@@ -1966,12 +1966,12 @@ $class-type: unquote(".");
   &::after{
     position: absolute;
     content: '';
-    width: 100%;
+    width: 60;
     top:50%;
-    left: 0;
+    left: 50%;
     height: 1px;
     background-color: $anodyne-secondary-clr;
-    transform: rotate(-38deg);
+    transform: translateX(-50%) rotate(-38deg);
   }
 }
 /*============================================================================
@@ -6622,7 +6622,7 @@ cite {
   label {
     @include buttonBase;
     @include buttonSmall;
-    min-width: $heightInputSmall;
+    min-width: ($heightInputSmall - 3);
 
     &.disabled {
       .lt-ie9 & {
